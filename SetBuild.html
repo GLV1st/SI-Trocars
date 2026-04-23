@@ -44,6 +44,23 @@ select {
     margin-top:10px;
 }
 
+/* IMAGE BOXES */
+#cannulaImageBox,
+#trocarImageBox {
+    margin-top:10px;
+    text-align:center;
+}
+
+#cannulaImageBox img,
+#trocarImageBox img {
+    max-height:140px;
+    margin:5px;
+    border-radius:8px;
+    border:1px solid #ddd;
+    padding:5px;
+    background:white;
+}
+
 #valveDisplay {
     margin-top:10px;
     padding:10px;
@@ -65,7 +82,7 @@ th { background:#0f2e5d; color:white; }
 
 .delete-btn { color:red; cursor:pointer; }
 
-/* DEBUG PANEL */
+/* DEBUG */
 #debugPanel {
     position:fixed;
     bottom:0;
@@ -101,16 +118,25 @@ th { background:#0f2e5d; color:white; }
 
 <div class="config-grid">
 
+<!-- CANNULA -->
 <div class="panel">
     <h4>1. Select Cannula</h4>
     <select id="variantSelect" disabled></select>
+
+    <div id="cannulaImageBox">
+        <img id="cannulaImage" style="display:none;">
+    </div>
 </div>
 
+<!-- TROCAR -->
 <div class="panel">
     <h4>2. Select Trocars (max 2)</h4>
     <select id="trocarSelect" multiple size="6" disabled></select>
+
+    <div id="trocarImageBox"></div>
 </div>
 
+<!-- VALVE -->
 <div class="panel">
     <h4>3. Valve</h4>
     <div id="valveDisplay">Select a cannula</div>
@@ -149,14 +175,6 @@ let selectedFamily = null;
 let selectedVariant = null;
 let selectedTrocars = [];
 let CONFIG = [];
-
-/* DEBUG */
-function log(msg, obj=null) {
-    const panel = document.getElementById("debugPanel");
-    let text = typeof msg === "string" ? msg : JSON.stringify(msg);
-    if (obj) text += " → " + JSON.stringify(obj);
-    panel.innerHTML += text + "<br>";
-}
 
 /* INIT */
 async function init() {
@@ -203,9 +221,10 @@ function onFamilyChange(e) {
 
     buildVariants();
 
-    document.getElementById("variantSelect").disabled = false;
-    document.getElementById("trocarSelect").disabled = true;
+    variantSelect.disabled = false;
+    trocarSelect.disabled = true;
 
+    clearImages();
     updateValve();
 }
 
@@ -219,18 +238,16 @@ function buildVariants() {
         )
     ];
 
-    const select = document.getElementById("variantSelect");
-
-    select.innerHTML = "<option value=''>Select Variant</option>";
+    variantSelect.innerHTML = "<option value=''>Select Variant</option>";
 
     variants.forEach(v => {
         const opt = document.createElement("option");
         opt.value = v;
         opt.textContent = v;
-        select.appendChild(opt);
+        variantSelect.appendChild(opt);
     });
 
-    select.onchange = onVariantChange;
+    variantSelect.onchange = onVariantChange;
 }
 
 /* VARIANT CHANGE */
@@ -240,7 +257,22 @@ function onVariantChange(e) {
 
     buildTrocars();
 
-    document.getElementById("trocarSelect").disabled = false;
+    trocarSelect.disabled = false;
+
+    // SHOW CANNULA IMAGE
+    const cannula = DATA.cannulas.find(c =>
+        c.family === selectedFamily &&
+        c.variant === selectedVariant
+    );
+
+    const img = document.getElementById("cannulaImage");
+
+    if (cannula?.variant_image) {
+        img.src = cannula.variant_image;
+        img.style.display = "block";
+    } else {
+        img.style.display = "none";
+    }
 
     updateValve();
 }
@@ -251,17 +283,16 @@ function buildTrocars() {
         t.family === selectedFamily
     );
 
-    const select = document.getElementById("trocarSelect");
-    select.innerHTML = "";
+    trocarSelect.innerHTML = "";
 
     trocars.forEach(t => {
         const opt = document.createElement("option");
         opt.value = t.part_no;
         opt.textContent = `${t.name} (${t.part_no})`;
-        select.appendChild(opt);
+        trocarSelect.appendChild(opt);
     });
 
-    select.onchange = onTrocarChange;
+    trocarSelect.onchange = onTrocarChange;
 }
 
 /* TROCAR CHANGE */
@@ -275,6 +306,25 @@ function onTrocarChange(e) {
     }
 
     selectedTrocars = selected.map(o => o.value);
+
+    const box = document.getElementById("trocarImageBox");
+    box.innerHTML = "";
+
+    selectedTrocars.forEach(code => {
+        const t = DATA.trocars.find(x => x.part_no === code);
+
+        if (t?.variant_image) {
+            const img = document.createElement("img");
+            img.src = t.variant_image;
+            box.appendChild(img);
+        }
+    });
+}
+
+/* CLEAR IMAGES */
+function clearImages() {
+    document.getElementById("cannulaImage").style.display = "none";
+    document.getElementById("trocarImageBox").innerHTML = "";
 }
 
 /* VALVE */
@@ -306,7 +356,6 @@ function addToSet() {
 
     selectedTrocars.forEach(code => {
         const trocar = DATA.trocars.find(t => t.part_no === code);
-
         CONFIG.push({ cannula, trocar });
     });
 
