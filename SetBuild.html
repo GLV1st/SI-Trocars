@@ -44,7 +44,7 @@ select {
     margin-top:10px;
 }
 
-/* IMAGE BOXES */
+/* IMAGES */
 #cannulaImageBox,
 #trocarImageBox {
     margin-top:10px;
@@ -77,7 +77,6 @@ table {
 }
 
 th, td { padding:10px; border-bottom:1px solid #eee; }
-
 th { background:#0f2e5d; color:white; }
 
 .delete-btn { color:red; cursor:pointer; }
@@ -88,7 +87,7 @@ th { background:#0f2e5d; color:white; }
     bottom:0;
     left:0;
     right:0;
-    height:160px;
+    height:150px;
     background:#111;
     color:#0f0;
     font-family:monospace;
@@ -130,8 +129,10 @@ th { background:#0f2e5d; color:white; }
 
 <!-- TROCAR -->
 <div class="panel">
-    <h4>2. Select Trocars (max 2)</h4>
-    <select id="trocarSelect" multiple size="6" disabled></select>
+    <h4>2. Select Trocars</h4>
+
+    <select id="trocarSelect1" disabled></select>
+    <select id="trocarSelect2" disabled></select>
 
     <div id="trocarImageBox"></div>
 </div>
@@ -153,7 +154,7 @@ Add to Configuration
 <tr>
 <th>#</th>
 <th>Cannula</th>
-<th>Trocar</th>
+<th>Trocars</th>
 <th>Codes</th>
 <th></th>
 </tr>
@@ -173,7 +174,8 @@ Add to Configuration
 let DATA;
 let selectedFamily = null;
 let selectedVariant = null;
-let selectedTrocars = [];
+let selectedTrocar1 = null;
+let selectedTrocar2 = null;
 let CONFIG = [];
 
 /* INIT */
@@ -217,15 +219,14 @@ function buildFamily() {
 function onFamilyChange(e) {
     selectedFamily = e.target.value;
     selectedVariant = null;
-    selectedTrocars = [];
 
     buildVariants();
 
     variantSelect.disabled = false;
-    trocarSelect.disabled = true;
+    trocarSelect1.disabled = true;
+    trocarSelect2.disabled = true;
 
     clearImages();
-    updateValve();
 }
 
 /* VARIANTS */
@@ -253,13 +254,13 @@ function buildVariants() {
 /* VARIANT CHANGE */
 function onVariantChange(e) {
     selectedVariant = e.target.value;
-    selectedTrocars = [];
 
     buildTrocars();
 
-    trocarSelect.disabled = false;
+    trocarSelect1.disabled = false;
+    trocarSelect2.disabled = false;
 
-    // SHOW CANNULA IMAGE
+    // show cannula image
     const cannula = DATA.cannulas.find(c =>
         c.family === selectedFamily &&
         c.variant === selectedVariant
@@ -277,40 +278,48 @@ function onVariantChange(e) {
     updateValve();
 }
 
-/* TROCAR */
+/* BUILD TROCAR DROPDOWNS */
 function buildTrocars() {
     const trocars = DATA.trocars.filter(t =>
         t.family === selectedFamily
     );
 
-    trocarSelect.innerHTML = "";
+    trocarSelect1.innerHTML = "<option value=''>Select Trocar 1</option>";
+    trocarSelect2.innerHTML = "<option value=''>Select Trocar 2 (optional)</option>";
 
     trocars.forEach(t => {
-        const opt = document.createElement("option");
-        opt.value = t.part_no;
-        opt.textContent = `${t.name} (${t.part_no})`;
-        trocarSelect.appendChild(opt);
+        const opt1 = document.createElement("option");
+        opt1.value = t.part_no;
+        opt1.textContent = `${t.name} (${t.part_no})`;
+
+        const opt2 = opt1.cloneNode(true);
+
+        trocarSelect1.appendChild(opt1);
+        trocarSelect2.appendChild(opt2);
     });
 
-    trocarSelect.onchange = onTrocarChange;
+    trocarSelect1.onchange = updateTrocarSelection;
+    trocarSelect2.onchange = updateTrocarSelection;
 }
 
-/* TROCAR CHANGE */
-function onTrocarChange(e) {
-    const selected = Array.from(e.target.selectedOptions);
+/* TROCAR SELECTION */
+function updateTrocarSelection() {
 
-    if (selected.length > 2) {
-        selected[selected.length - 1].selected = false;
-        alert("Max 2 trocars");
-        return;
+    selectedTrocar1 = trocarSelect1.value || null;
+    selectedTrocar2 = trocarSelect2.value || null;
+
+    if (selectedTrocar1 && selectedTrocar1 === selectedTrocar2) {
+        alert("Trocar 2 must be different");
+        trocarSelect2.value = "";
+        selectedTrocar2 = null;
     }
-
-    selectedTrocars = selected.map(o => o.value);
 
     const box = document.getElementById("trocarImageBox");
     box.innerHTML = "";
 
-    selectedTrocars.forEach(code => {
+    [selectedTrocar1, selectedTrocar2].forEach(code => {
+        if (!code) return;
+
         const t = DATA.trocars.find(x => x.part_no === code);
 
         if (t?.variant_image) {
@@ -321,19 +330,8 @@ function onTrocarChange(e) {
     });
 }
 
-/* CLEAR IMAGES */
-function clearImages() {
-    document.getElementById("cannulaImage").style.display = "none";
-    document.getElementById("trocarImageBox").innerHTML = "";
-}
-
 /* VALVE */
 function updateValve() {
-    if (!selectedFamily || !selectedVariant) {
-        valveDisplay.innerText = "Select a cannula";
-        return;
-    }
-
     const cannula = DATA.cannulas.find(c =>
         c.family === selectedFamily &&
         c.variant === selectedVariant
@@ -344,8 +342,9 @@ function updateValve() {
 
 /* ADD */
 function addToSet() {
-    if (!selectedVariant || !selectedTrocars.length) {
-        alert("Complete selection first");
+
+    if (!selectedVariant || !selectedTrocar1) {
+        alert("Select at least one trocar");
         return;
     }
 
@@ -354,9 +353,15 @@ function addToSet() {
         c.variant === selectedVariant
     );
 
-    selectedTrocars.forEach(code => {
-        const trocar = DATA.trocars.find(t => t.part_no === code);
-        CONFIG.push({ cannula, trocar });
+    const trocar1 = DATA.trocars.find(t => t.part_no === selectedTrocar1);
+    const trocar2 = selectedTrocar2
+        ? DATA.trocars.find(t => t.part_no === selectedTrocar2)
+        : null;
+
+    CONFIG.push({
+        cannula,
+        trocar1,
+        trocar2
     });
 
     renderTable();
@@ -368,30 +373,44 @@ function renderTable() {
     tbody.innerHTML = "";
 
     CONFIG.forEach((item, i) => {
+
+        const trocars = [
+            item.trocar1?.name,
+            item.trocar2?.name
+        ].filter(Boolean).join(" + ");
+
+        const codes = [
+            item.cannula.part_no,
+            item.trocar1?.part_no,
+            item.trocar2?.part_no
+        ].filter(Boolean).join(" / ");
+
         tbody.innerHTML += `
         <tr>
             <td>${i+1}</td>
             <td>${item.cannula.family}</td>
-            <td>${item.trocar.name}</td>
-            <td>${item.cannula.part_no} / ${item.trocar.part_no}</td>
+            <td>${trocars}</td>
+            <td>${codes}</td>
             <td><span class="delete-btn" onclick="removeItem(${i})">🗑</span></td>
         </tr>`;
     });
 }
 
-/* REMOVE */
 function removeItem(i) {
     CONFIG.splice(i,1);
     renderTable();
 }
 
-/* CLEAR */
 function clearAll() {
     CONFIG = [];
     renderTable();
 }
 
-/* NAV */
+function clearImages() {
+    document.getElementById("cannulaImage").style.display = "none";
+    document.getElementById("trocarImageBox").innerHTML = "";
+}
+
 function goBack() {
     window.location.href = "/index.html";
 }
