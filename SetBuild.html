@@ -10,9 +10,9 @@ body { margin:0; font-family:"Segoe UI", Arial; background:#f3f5f9; }
 .wrapper { display:grid; grid-template-columns:260px 1fr; height:100vh; }
 
 .sidebar { background:#0f2e5d; color:white; padding:20px; }
-.sidebar select { width:100%; padding:8px; }
+.sidebar select { width:100%; padding:10px; border-radius:6px; border:none; }
 
-.main { padding:20px; }
+.main { padding:25px; overflow:auto; }
 
 .header { display:flex; justify-content:space-between; align-items:center; }
 
@@ -38,17 +38,18 @@ body { margin:0; font-family:"Segoe UI", Arial; background:#f3f5f9; }
     padding:15px;
 }
 
-.item {
-    border:1px solid #ddd;
-    border-radius:8px;
+select {
+    width:100%;
     padding:10px;
     margin-top:10px;
-    cursor:pointer;
 }
 
-.item.selected {
-    border-color:#0f2e5d;
+#valveDisplay {
+    margin-top:10px;
+    padding:10px;
     background:#eef4ff;
+    border-radius:8px;
+    text-align:center;
 }
 
 table {
@@ -70,14 +71,13 @@ th { background:#0f2e5d; color:white; }
     bottom:0;
     left:0;
     right:0;
-    height:180px;
+    height:160px;
     background:#111;
     color:#0f0;
     font-family:monospace;
     font-size:12px;
     overflow:auto;
     padding:10px;
-    z-index:9999;
 }
 </style>
 </head>
@@ -89,7 +89,7 @@ th { background:#0f2e5d; color:white; }
 <div class="sidebar">
     <h2>YelloPort</h2>
     <h3>Family</h3>
-    <select id="familyFilter"></select>
+    <select id="familySelect"></select>
 </div>
 
 <div class="main">
@@ -103,17 +103,17 @@ th { background:#0f2e5d; color:white; }
 
 <div class="panel">
     <h4>1. Select Cannula</h4>
-    <div id="cannulaList"></div>
+    <select id="variantSelect" disabled></select>
 </div>
 
 <div class="panel">
-    <h4>2. Select Trocar</h4>
-    <div id="trocarList"></div>
+    <h4>2. Select Trocars (max 2)</h4>
+    <select id="trocarSelect" multiple size="6" disabled></select>
 </div>
 
 <div class="panel">
     <h4>3. Valve</h4>
-    <div id="valveDisplay">Auto (coming later)</div>
+    <div id="valveDisplay">Select a cannula</div>
 </div>
 
 </div>
@@ -145,75 +145,45 @@ Add to Configuration
 <script>
 
 let DATA;
-let selectedCannula = null;
-let selectedTrocar = null;
+let selectedFamily = null;
+let selectedVariant = null;
+let selectedTrocars = [];
 let CONFIG = [];
 
-/* DEBUG LOGGER */
+/* DEBUG */
 function log(msg, obj=null) {
     const panel = document.getElementById("debugPanel");
-
     let text = typeof msg === "string" ? msg : JSON.stringify(msg);
-
     if (obj) text += " → " + JSON.stringify(obj);
-
-    console.log(msg, obj || "");
     panel.innerHTML += text + "<br>";
-    panel.scrollTop = panel.scrollHeight;
 }
 
-/* LOAD JSON SAFELY */
+/* INIT */
 async function init() {
-    try {
-        log("Fetching ./YP.json...");
+    const res = await fetch("./YP.json");
+    const json = await res.json();
 
-        const res = await fetch("./YP.json");
+    DATA = {
+        cannulas: (json.cannulas || []).map(c => ({
+            ...c,
+            family: (c.family || "").trim().toLowerCase()
+        })),
+        trocars: (json.trocars || []).map(t => ({
+            ...t,
+            family: (t.family || "").trim().toLowerCase()
+        }))
+    };
 
-        log("Status:", res.status);
-
-        const text = await res.text();
-
-        // Detect Azure returning HTML instead of JSON
-        if (text.startsWith("<!DOCTYPE")) {
-            throw new Error("Azure returned HTML instead of JSON (routing issue)");
-        }
-
-        const json = JSON.parse(text);
-
-        log("JSON parsed OK");
-
-        // NORMALISE DATA
-        DATA = {
-            cannulas: (json.cannulas || []).map(c => ({
-                ...c,
-                family: (c.family || "").trim().toLowerCase()
-            })),
-            trocars: (json.trocars || []).map(t => ({
-                ...t,
-                family: (t.family || "").trim().toLowerCase()
-            }))
-        };
-
-        log("Data normalised", DATA);
-
-        buildFamilyFilter();
-        buildCannulas();
-
-    } catch (err) {
-        log("LOAD ERROR:", err.message);
-        alert("JSON failed to load: " + err.message);
-    }
+    buildFamily();
 }
 
-/* FAMILY FILTER */
-function buildFamilyFilter() {
-    const select = document.getElementById("familyFilter");
+/* FAMILY */
+function buildFamily() {
+    const select = document.getElementById("familySelect");
 
     const families = [...new Set(DATA.cannulas.map(c => c.family))];
 
-    log("Families:", families);
-
-    select.innerHTML = "";
+    select.innerHTML = "<option value=''>Select Family</option>";
 
     families.forEach(f => {
         const opt = document.createElement("option");
@@ -222,99 +192,123 @@ function buildFamilyFilter() {
         select.appendChild(opt);
     });
 
-    select.onchange = buildCannulas;
+    select.onchange = onFamilyChange;
 }
 
-/* BUILD CANNULAS */
-function buildCannulas() {
-    const list = document.getElementById("cannulaList");
-    list.innerHTML = "";
+/* FAMILY CHANGE */
+function onFamilyChange(e) {
+    selectedFamily = e.target.value;
+    selectedVariant = null;
+    selectedTrocars = [];
 
-    const filter = document.getElementById("familyFilter").value;
+    buildVariants();
 
-    const filtered = DATA.cannulas.filter(c =>
-        !filter || c.family === filter
+    document.getElementById("variantSelect").disabled = false;
+    document.getElementById("trocarSelect").disabled = true;
+
+    updateValve();
+}
+
+/* VARIANTS */
+function buildVariants() {
+    const variants = [
+        ...new Set(
+            DATA.cannulas
+                .filter(c => c.family === selectedFamily)
+                .map(c => c.variant)
+        )
+    ];
+
+    const select = document.getElementById("variantSelect");
+
+    select.innerHTML = "<option value=''>Select Variant</option>";
+
+    variants.forEach(v => {
+        const opt = document.createElement("option");
+        opt.value = v;
+        opt.textContent = v;
+        select.appendChild(opt);
+    });
+
+    select.onchange = onVariantChange;
+}
+
+/* VARIANT CHANGE */
+function onVariantChange(e) {
+    selectedVariant = e.target.value;
+    selectedTrocars = [];
+
+    buildTrocars();
+
+    document.getElementById("trocarSelect").disabled = false;
+
+    updateValve();
+}
+
+/* TROCAR */
+function buildTrocars() {
+    const trocars = DATA.trocars.filter(t =>
+        t.family === selectedFamily
     );
 
-    log("Cannulas found:", filtered.length);
+    const select = document.getElementById("trocarSelect");
+    select.innerHTML = "";
 
-    if (!filtered.length) {
-        list.innerHTML = "<p>No cannulas</p>";
+    trocars.forEach(t => {
+        const opt = document.createElement("option");
+        opt.value = t.part_no;
+        opt.textContent = `${t.name} (${t.part_no})`;
+        select.appendChild(opt);
+    });
+
+    select.onchange = onTrocarChange;
+}
+
+/* TROCAR CHANGE */
+function onTrocarChange(e) {
+    const selected = Array.from(e.target.selectedOptions);
+
+    if (selected.length > 2) {
+        selected[selected.length - 1].selected = false;
+        alert("Max 2 trocars");
         return;
     }
 
-    filtered.forEach(c => {
-        const div = document.createElement("div");
-        div.className = "item";
-        div.innerHTML = `<b>${c.variant}</b><br>${c.length}mm`;
-
-        div.onclick = () => {
-            selectedCannula = c;
-            selectedTrocar = null;
-
-            log("Selected cannula", c);
-
-            selectUI(list, div);
-            buildTrocars(c.family);
-        };
-
-        list.appendChild(div);
-    });
+    selectedTrocars = selected.map(o => o.value);
 }
 
-/* BUILD TROCAR */
-function buildTrocars(family) {
-    const list = document.getElementById("trocarList");
-    list.innerHTML = "";
-
-    const filtered = DATA.trocars.filter(t =>
-        t.family === family
-    );
-
-    log("Trocars matched:", filtered.length);
-
-    if (!filtered.length) {
-        list.innerHTML = "<p style='color:red;'>No matching trocars</p>";
+/* VALVE */
+function updateValve() {
+    if (!selectedFamily || !selectedVariant) {
+        valveDisplay.innerText = "Select a cannula";
         return;
     }
 
-    filtered.forEach(t => {
-        const div = document.createElement("div");
-        div.className = "item";
-        div.innerHTML = `<b>${t.name}</b><br>${t.type}`;
-
-        div.onclick = () => {
-            selectedTrocar = t;
-            log("Selected trocar", t);
-            selectUI(list, div);
-        };
-
-        list.appendChild(div);
-    });
-}
-
-/* UI SELECT */
-function selectUI(container, element) {
-    container.querySelectorAll(".item").forEach(i =>
-        i.classList.remove("selected")
+    const cannula = DATA.cannulas.find(c =>
+        c.family === selectedFamily &&
+        c.variant === selectedVariant
     );
-    element.classList.add("selected");
+
+    valveDisplay.innerText = cannula?.valve || "Standard Valve";
 }
 
 /* ADD */
 function addToSet() {
-    if (!selectedCannula || !selectedTrocar) {
-        log("Missing selection");
-        alert("Select cannula AND trocar");
+    if (!selectedVariant || !selectedTrocars.length) {
+        alert("Complete selection first");
         return;
     }
 
-    CONFIG.push({
-        cannula: selectedCannula,
-        trocar: selectedTrocar
-    });
+    const cannula = DATA.cannulas.find(c =>
+        c.family === selectedFamily &&
+        c.variant === selectedVariant
+    );
 
-    log("Added", CONFIG);
+    selectedTrocars.forEach(code => {
+        const trocar = DATA.trocars.find(t => t.part_no === code);
+
+        CONFIG.push({ cannula, trocar });
+    });
 
     renderTable();
 }
@@ -346,7 +340,6 @@ function removeItem(i) {
 function clearAll() {
     CONFIG = [];
     renderTable();
-    log("Cleared");
 }
 
 /* NAV */
