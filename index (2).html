@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Universal Surgical Catalogue</title>
+
+<style>
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: #f6f8fa;
+margin: 0;
+padding: 20px;
+}
+
+#rangeSelectorHeader {
+text-align: center;
+font-size: 28px;
+font-weight: bold;
+margin-bottom: 20px;
+color: #0077cc;
+opacity: 0;
+animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn { to { opacity: 1; } }
+
+#rangeSelector {
+display: flex;
+justify-content: center;
+gap: 30px;
+margin-bottom: 30px;
+flex-wrap: wrap;
+}
+
+.rangeCard {
+cursor: pointer;
+background: #fff;
+border-radius: 14px;
+padding: 20px;
+text-align: center;
+transition: 0.2s ease;
+border: 2px solid transparent;
+}
+
+.rangeCard:hover {
+border-color: #0077cc;
+transform: scale(1.05);
+}
+
+.rangeCard img {
+max-height: 180px;
+object-fit: contain;
+}
+
+/* CONFIG CARD */
+#configCard {
+border: 2px dashed #0077cc;
+}
+
+/* MAIN */
+#catalogue { display: none; }
+
+#backBtn {
+margin-bottom: 20px;
+padding: 12px 24px;
+font-size: 18px;
+cursor: pointer;
+background: #fff;
+border: 1px solid #ccc;
+border-radius: 6px;
+}
+
+#controls { text-align: center; margin-bottom: 20px; }
+
+select { padding: 10px; font-size: 16px; }
+
+#familyImage {
+display: block;
+margin: 20px auto;
+max-width: 380px;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 25px;
+background: #fff;
+}
+
+th, td {
+padding: 10px;
+border: 1px solid #ddd;
+text-align: center;
+}
+
+th { background: #eef2f6; }
+
+td img {
+max-width: 120px;
+max-height: 120px;
+cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1 id="rangeSelectorHeader">Select Your Product Family</h1>
+
+<div id="rangeSelector"></div>
+
+<div id="catalogue">
+<button id="backBtn">← Back to product Range </button>
+
+<div id="controls">
+<select id="familyDropdown"></select>
+</div>
+
+<img id="familyImage">
+
+<table>
+<thead><tr id="primaryHeader"></tr></thead>
+<tbody id="primaryTable"></tbody>
+</table>
+
+<table>
+<thead><tr id="secondaryHeader"></tr></thead>
+<tbody id="secondaryTable"></tbody>
+</table>
+</div>
+
+<script>
+
+/* ================= GLOBAL ================= */
+let DATA = {};
+let activeRange = null;
+
+/* ================= LOAD JSON ================= */
+async function loadData() {
+    try {
+        const res = await fetch("YP.json");
+
+        if (!res.ok) throw new Error("YP.json missing");
+
+        const json = await res.json();
+
+        // 🔥 IMPORTANT: clean + normalize data
+        DATA = {
+            YelloPort: {
+                primary: (json.cannulas || []).map(c => ({
+                    ...c,
+                    family: (c.family || "").trim()
+                })),
+                secondary: (json.trocars || []).map(t => ({
+                    ...t,
+                    family: (t.family || "").trim()
+                }))
+            }
+        };
+
+        console.log("DATA LOADED:", DATA);
+
+        initUI();
+
+    } catch (err) {
+        console.error("LOAD ERROR:", err);
+
+        // fallback so UI still shows
+        DATA = {
+            YelloPort: { primary: [], secondary: [] }
+        };
+
+        initUI();
+    }
+}
+
+/* ================= INIT UI ================= */
+function initUI() {
+    const rangeSelector = document.getElementById("rangeSelector");
+    rangeSelector.innerHTML = "";
+
+    // ✅ CONFIGURATOR CARD
+    const config = document.createElement("div");
+    config.className = "rangeCard";
+    config.id = "configCard";
+    config.innerHTML = "<h3>⚙ Build a Set</h3>";
+    config.addEventListener("click", () => {
+        window.location.assign("/SetBuild.html");
+    });
+    rangeSelector.appendChild(config);
+
+    // ✅ RANGE CARDS
+    Object.keys(DATA).forEach(range => {
+        const div = document.createElement("div");
+        div.className = "rangeCard";
+
+        const img = DATA[range].primary[0]?.family_image || "";
+
+        div.innerHTML = `
+            ${img ? `<img src="${img}">` : ""}
+            <h3>${range}</h3>
+        `;
+
+        div.addEventListener("click", () => openRange(range));
+
+        rangeSelector.appendChild(div);
+    });
+}
+
+/* ================= OPEN RANGE ================= */
+function openRange(range) {
+    console.log("Opening range:", range);
+
+    activeRange = range;
+
+    document.getElementById("rangeSelector").style.display = "none";
+    document.getElementById("catalogue").style.display = "block";
+
+    buildDropdown();
+}
+
+/* ================= BACK ================= */
+document.getElementById("backBtn").onclick = () => {
+    activeRange = null;
+    document.getElementById("catalogue").style.display = "none";
+    document.getElementById("rangeSelector").style.display = "flex";
+};
+
+/* ================= DROPDOWN ================= */
+function buildDropdown() {
+
+    const dropdown = document.getElementById("familyDropdown");
+
+    if (!DATA[activeRange] || !DATA[activeRange].primary.length) {
+        dropdown.innerHTML = "<option>No data</option>";
+        return;
+    }
+
+    const families = [
+        ...new Set(DATA[activeRange].primary.map(i => i.family))
+    ];
+
+    dropdown.innerHTML = "";
+
+    families.forEach(f => {
+        const opt = document.createElement("option");
+        opt.value = f;
+        opt.textContent = f;
+        dropdown.appendChild(opt);
+    });
+
+    renderFamily(families[0]);
+}
+
+document.getElementById("familyDropdown").onchange = e => {
+    renderFamily(e.target.value);
+};
+
+/* ================= RENDER ================= */
+function renderFamily(family) {
+
+    console.log("Rendering family:", family);
+
+    const primary = DATA[activeRange].primary.filter(i =>
+        i.family === family
+    );
+
+    const secondary = DATA[activeRange].secondary.filter(i =>
+        i.family === family
+    );
+
+    console.log("Primary:", primary.length);
+    console.log("Secondary:", secondary.length);
+
+    document.getElementById("familyImage").src =
+        primary[0]?.family_image || "";
+
+    renderTable(primary, "primaryHeader", "primaryTable");
+    renderTable(secondary, "secondaryHeader", "secondaryTable");
+}
+
+/* ================= TABLE ================= */
+function renderTable(items, headerId, tableId) {
+    const header = document.getElementById(headerId);
+    const table = document.getElementById(tableId);
+
+    header.innerHTML = "";
+    table.innerHTML = "";
+
+    if (!items.length) {
+        table.innerHTML = "<tr><td colspan='10'>No data</td></tr>";
+        return;
+    }
+
+    const keys = Object.keys(items[0]);
+
+    header.innerHTML = keys.map(k => `<th>${k}</th>`).join("");
+
+    items.forEach(i => {
+        table.innerHTML += "<tr>" +
+            keys.map(k => {
+                const v = i[k] || "";
+                if (k.includes("image") && v) {
+                    return `<td><img src="${v}"></td>`;
+                }
+                return `<td>${v}</td>`;
+            }).join("") +
+        "</tr>";
+    });
+}
+
+/* ================= INIT ================= */
+loadData();
+
+</script>
+
+</body>
+</html>
