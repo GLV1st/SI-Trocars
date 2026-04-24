@@ -105,7 +105,7 @@ select{
   object-fit:contain;
 }
 
-/* TABLE (RESTORED) */
+/* TABLE */
 table{
   width:100%;
   margin-top:20px;
@@ -120,6 +120,12 @@ th,td{
 
 th{
   background:#1e293b;
+}
+
+/* SPACER ROW */
+.spacer{
+  background:#020617;
+  height:8px;
 }
 </style>
 </head>
@@ -157,29 +163,25 @@ th{
   </div>
 </div>
 
-<!-- ACTION BUTTONS -->
 <div id="actionRow">
   <button id="hassonBtn" onclick="toggleHasson()" style="display:none;">
-   Add Hasson Adapter
+    Toggle Hasson
   </button>
 
-  <button id="clearBtn" onclick="clearSelection()">
-    Clear Selection
-  </button>
+  <button onclick="clearSelection()">Clear Selection</button>
 </div>
 
 <button class="center-btn" onclick="addConfig()">Add to List</button>
 
 <div class="grid" id="cards"></div>
 
-<!-- ✅ ORIGINAL TABLE STRUCTURE RESTORED -->
 <table id="table">
 <thead>
 <tr>
-<th>Cannula</th>
-<th>Trocars</th>
-<th>Accessory</th>
-<th>Codes</th>
+<th>Type</th>
+<th>Description</th>
+<th>Part Number</th>
+<th></th>
 </tr>
 </thead>
 <tbody></tbody>
@@ -234,12 +236,12 @@ function initFamilies(range){
       x.range===range && x.family===sel.value && x.variant==="Hasson"
     );
 
-    const hassonBtn = document.getElementById("hassonBtn");
+    const btn = document.getElementById("hassonBtn");
 
     if(hasHasson){
-      hassonBtn.style.display = "block";
+      btn.style.display = "block";
     }else{
-      hassonBtn.style.display = "none";
+      btn.style.display = "none";
       selectedHasson = null;
     }
 
@@ -331,31 +333,44 @@ function makeCard(item){
   return div;
 }
 
-/* ADD (RESTORED FORMAT) */
+/* ADD (PICK LIST STYLE) */
 function addConfig(){
-  const row = document.createElement("tr");
+  const tbody = document.querySelector("#table tbody");
 
-  const trocarCodes = [
-    selectedTrocar1?.part_no,
-    selectedTrocar2?.part_no
-  ].filter(Boolean).join(", ");
+  function addRow(type, name, code){
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${type}</td>
+      <td>${name}</td>
+      <td>${code}</td>
+      <td></td>
+    `;
+    tbody.appendChild(row);
+  }
 
-  const codes = [
-    selectedCannula?.part_no,
-    selectedTrocar1?.part_no,
-    selectedTrocar2?.part_no,
-    selectedValve?.part_no,
-    selectedHasson?.part_no
-  ].filter(Boolean).join(" / ");
+  if(selectedCannula){
+    addRow("Cannula", `${selectedCannula.family} - ${selectedCannula.variant}`, selectedCannula.part_no);
+  }
 
-  row.innerHTML = `
-    <td>${selectedCannula?.variant || ""}</td>
-    <td>${trocarCodes}</td>
-    <td>${selectedHasson ? "Hasson" : "Valve"}</td>
-    <td>${codes}</td>
-  `;
+  if(selectedTrocar1){
+    addRow("Trocar", selectedTrocar1.variant, selectedTrocar1.part_no);
+  }
 
-  document.querySelector("#table tbody").appendChild(row);
+  if(selectedTrocar2){
+    addRow("Trocar", selectedTrocar2.variant, selectedTrocar2.part_no);
+  }
+
+  if(selectedValve){
+    addRow("Accessory", "Valve", selectedValve.part_no);
+  }
+
+  if(selectedHasson){
+    addRow("Accessory", "Hasson", selectedHasson.part_no);
+  }
+
+  const spacer = document.createElement("tr");
+  spacer.innerHTML = `<td colspan="4" class="spacer"></td>`;
+  tbody.appendChild(spacer);
 
   clearSelection();
 }
@@ -369,7 +384,6 @@ function clearSelection(){
   selectedHasson = null;
 
   document.querySelectorAll("select").forEach(s=> s.selectedIndex = 0);
-
   document.getElementById("cards").innerHTML="";
 }
 
