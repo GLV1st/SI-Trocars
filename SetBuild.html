@@ -169,7 +169,17 @@ th{
 
 </div>
 
-<button id="hassonBtn" onclick="toggleHasson()" style="display:none;">Toggle Hasson</button>
+<div>
+  <button id="hassonBtn" onclick="toggleHasson()" style="display:none;">Toggle Hasson</button>
+
+  <button onclick="clearSelection()" style="
+    margin-left:10px;
+    background:#ef4444;
+    color:#fff;
+  ">
+    Clear Selection
+  </button>
+</div>
 
 <div style="text-align:center; margin:20px 0;">
   <button onclick="addConfig()" style="
@@ -208,9 +218,9 @@ let selectedTrocars = [];
 let selectedValve = null;
 let selectedHasson = null;
 
-/* BACK FUNCTION */
+/* BACK */
 function goBack(){
-  window.location.href = "index.html"; // change if needed
+  window.location.href = "index.html";
 }
 
 /* DEBUG */
@@ -218,7 +228,7 @@ function log(msg){
   document.getElementById("debug").innerHTML += msg + "<br>";
 }
 
-/* LOAD JSON */
+/* LOAD */
 async function load(){
   log("Loading JSON...");
   try{
@@ -309,7 +319,7 @@ function initTrocars(range,family){
   };
 }
 
-/* AUTO VALVE */
+/* VALVE */
 function autoValve(range,family){
   selectedValve = data.accessories.find(x =>
     x.range===range &&
@@ -318,7 +328,7 @@ function autoValve(range,family){
   );
 }
 
-/* HASSOn */
+/* HASSon */
 function toggleHasson(){
   if(!selectedCannula) return;
 
@@ -334,7 +344,6 @@ function toggleHasson(){
   renderCards();
 }
 
-/* SHOW/HIDE HASSOn */
 function updateHassonButton(){
   const btn = document.getElementById("hassonBtn");
 
@@ -350,6 +359,25 @@ function updateHassonButton(){
   );
 
   btn.style.display = exists ? "inline-block" : "none";
+}
+
+/* CLEAR */
+function clearSelection(){
+  selectedCannula = null;
+  selectedTrocars = [];
+  selectedValve = null;
+  selectedHasson = null;
+
+  document.getElementById("rangeSelect").value = "";
+  document.getElementById("familySelect").innerHTML = `<option>Select Family</option>`;
+  document.getElementById("cannulaSelect").innerHTML = `<option>Select Cannula</option>`;
+  document.getElementById("trocarSelect").innerHTML = `<option>Select Primary Trocar</option>`;
+  document.getElementById("trocarSelect2").innerHTML = `<option>Select Optional Trocar</option>`;
+
+  document.getElementById("cards").innerHTML = "";
+  document.getElementById("hassonBtn").style.display = "none";
+
+  log("Selection cleared");
 }
 
 /* RENDER */
@@ -393,7 +421,7 @@ function makeCard(item){
   return div;
 }
 
-/* ADD CONFIG */
+/* ADD */
 function addConfig(){
   const row = document.createElement("tr");
 
@@ -415,18 +443,7 @@ function addConfig(){
 
   document.querySelector("#table tbody").appendChild(row);
 
-  /* RESET */
-  selectedCannula = null;
-  selectedTrocars = [];
-  selectedValve = null;
-  selectedHasson = null;
-
-  document.getElementById("cannulaSelect").value = "";
-  document.getElementById("trocarSelect").value = "";
-  document.getElementById("trocarSelect2").value = "";
-
-  document.getElementById("cards").innerHTML = "";
-  updateHassonButton();
+  clearSelection();
 }
 
 /* INIT */
