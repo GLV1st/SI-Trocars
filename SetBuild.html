@@ -2,147 +2,31 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Surgical Configurator</title>
+<title>YelloPort Set Builder</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <style>
-body{
-  font-family: Arial;
-  background:#ffffff;
-  color:#0f172a;
-  margin:0;
-  padding:20px;
-}
-
-/* BACK BUTTON */
-#backBtn{
-  position:absolute;
-  top:20px;
-  left:20px;
-  padding:8px 14px;
-  background:#1F8A86;
-  color:#fff;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
-}
-
-/* HEADER */
-h1{
-  text-align:center;
-  margin-bottom:20px;
-  color:#1F8A86;
-}
-
-/* DROPDOWNS */
-.top-row{
-  display:grid;
-  grid-template-columns: repeat(5,1fr);
-  gap:10px;
-}
-
-.top-row div{
-  display:flex;
-  flex-direction:column;
-  font-size:12px;
-}
-
-/* DROPDOWN STYLE */
-select{
-  padding:10px;
-  border-radius:8px;
-  border:2px solid #1F8A86;
-  background:#fff;
-  color:#0f172a;
-}
-
-/* ACTION BUTTON ROW */
-#actionRow{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  margin-top:15px;
-}
-
-#actionRow button{
-  flex:1;
-  max-width:250px;
-  padding:10px;
-  border:none;
-  border-radius:10px;
-  background:#1F8A86;
-  color:#fff;
-  cursor:pointer;
-}
-
-/* ADD BUTTON */
-.center-btn{
-  display:block;
-  margin:20px auto;
-  width:50%;
-  padding:12px;
-  border:none;
-  border-radius:10px;
-  background:#1F8A86;
-  color:#fff;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
-  gap:15px;
-  margin-top:15px;
-}
-
-/* CARD */
-.card{
-  background:#f1f5f9;
-  border-radius:14px;
-  padding:15px;
-  text-align:center;
-  color:#0f172a;
-  border:1px solid #e2e8f0;
-}
-
-.card img{
-  max-width:100px;
-  height:80px;
-  object-fit:contain;
-}
-
-/* TABLE */
-table{
-  width:100%;
-  margin-top:20px;
-  border-collapse:collapse;
-}
-
-th{
-  background:#1F8A86;
-  color:#fff;
-}
-
-td{
-  border:1px solid #e2e8f0;
-  padding:10px;
-  text-align:left;
-}
-
-td img{
-  width:80px;
-  height:50px;
-  object-fit:contain;
-  display:block;
-  margin:auto;
-}
-
-/* SPACER */
-.spacer{
-  background:#f1f5f9;
-  height:8px;
-}
+body{font-family: Arial;background:#ffffff;color:#0f172a;margin:0;padding:20px;}
+#backBtn{position:absolute;top:20px;left:20px;padding:8px 14px;background:#1F8A86;color:#fff;border:none;border-radius:8px;cursor:pointer;}
+h1{text-align:center;margin-bottom:20px;color:#1F8A86;}
+.top-row{display:grid;grid-template-columns: repeat(5,1fr);gap:10px;}
+.top-row div{display:flex;flex-direction:column;font-size:12px;}
+select{padding:10px;border-radius:8px;border:2px solid #1F8A86;background:#fff;color:#0f172a;}
+#actionRow{display:flex;justify-content:center;gap:10px;margin-top:15px;}
+#actionRow button{flex:1;max-width:250px;padding:10px;border:none;border-radius:10px;background:#1F8A86;color:#fff;cursor:pointer;}
+.center-btn{display:block;margin:20px auto;width:50%;padding:12px;border:none;border-radius:10px;background:#1F8A86;color:#fff;font-weight:bold;cursor:pointer;}
+.grid{display:grid;grid-template-columns: repeat(auto-fill,minmax(200px,1fr));gap:15px;margin-top:15px;}
+.card{background:#f1f5f9;border-radius:14px;padding:15px;text-align:center;color:#0f172a;border:1px solid #e2e8f0;}
+.card img{max-width:100px;height:80px;object-fit:contain;}
+table{width:100%;margin-top:20px;border-collapse:collapse;}
+th{background:#1F8A86;color:#fff;}
+td{border:1px solid #e2e8f0;padding:10px;text-align:left;}
+td img{width:80px;height:50px;object-fit:contain;display:block;margin:auto;}
+.spacer{background:#f1f5f9;height:8px;}
+.remove-btn{background:#ef4444;color:#fff;border:none;border-radius:6px;padding:6px 10px;cursor:pointer;}
+.export-row{display:flex;justify-content:center;gap:10px;margin-top:20px;}
+.export-row button{padding:10px 20px;border:none;border-radius:8px;background:#1F8A86;color:#fff;cursor:pointer;}
 </style>
 </head>
 
@@ -150,40 +34,18 @@ td img{
 
 <button id="backBtn" onclick="history.back()">← Back</button>
 
-<h1>Surgical Configurator</h1>
+<h1>YelloPort Set Builder</h1>
 
 <div class="top-row">
-  <div>
-    <label>Selected YelloPort Range</label>
-    <select id="rangeSelect"></select>
-  </div>
-
-  <div>
-    <label>Select Cannula Size</label>
-    <select id="familySelect"></select>
-  </div>
-
-  <div>
-    <label>Select Cannula Variant</label>
-    <select id="cannulaSelect"></select>
-  </div>
-
-  <div>
-    <label>Select Trocar 1</label>
-    <select id="trocarSelect1"></select>
-  </div>
-
-  <div>
-    <label>Select Trocar 2</label>
-    <select id="trocarSelect2"></select>
-  </div>
+  <div><label>Selected YelloPort Range</label><select id="rangeSelect"></select></div>
+  <div><label>Select Cannula Size</label><select id="familySelect"></select></div>
+  <div><label>Select Cannula Variant</label><select id="cannulaSelect"></select></div>
+  <div><label>Select Trocar 1</label><select id="trocarSelect1"></select></div>
+  <div><label>Select Trocar 2</label><select id="trocarSelect2"></select></div>
 </div>
 
 <div id="actionRow">
-  <button id="hassonBtn" onclick="toggleHasson()" style="display:none;">
-    Toggle Hasson
-  </button>
-
+  <button id="hassonBtn" onclick="toggleHasson()" style="display:none;">Toggle Hasson</button>
   <button onclick="clearSelection()">Clear Selection</button>
 </div>
 
@@ -198,212 +60,80 @@ td img{
 <th>Image</th>
 <th>Description</th>
 <th>Part Number</th>
+<th>Remove</th>
 </tr>
 </thead>
 <tbody></tbody>
 </table>
 
+<div class="export-row">
+  <button onclick="exportPDF()">Export PDF</button>
+  <button onclick="emailList()">Email List</button>
+</div>
+
 <script>
 let data = {};
+let selectedCannula=null, selectedTrocar1=null, selectedTrocar2=null, selectedValve=null, selectedHasson=null;
 
-let selectedCannula = null;
-let selectedTrocar1 = null;
-let selectedTrocar2 = null;
-let selectedValve = null;
-let selectedHasson = null;
+async function load(){const res=await fetch("YP.json");data=await res.json();initRanges();}
 
-/* LOAD */
-async function load(){
-  const res = await fetch("YP.json");
-  data = await res.json();
-  initRanges();
-}
+function initRanges(){const ranges=[...new Set(data.cannulas.map(x=>x.range))];const sel=rangeSelect;sel.innerHTML=`<option>Select Range</option>`;ranges.forEach(r=>sel.innerHTML+=`<option>${r}</option>`);sel.onchange=()=>initFamilies(sel.value);}
 
-/* RANGE */
-function initRanges(){
-  const ranges = [...new Set(data.cannulas.map(x=>x.range))];
-  const sel = document.getElementById("rangeSelect");
+function initFamilies(range){const families=[...new Set(data.cannulas.filter(x=>x.range===range).map(x=>x.family))];const sel=familySelect;sel.innerHTML=`<option>Select Size</option>`;families.forEach(f=>sel.innerHTML+=`<option>${f}</option>`);
+sel.onchange=()=>{initCannulas(range,sel.value);initTrocars(range,sel.value);
+selectedValve=data.accessories.find(x=>x.range===range&&x.family===sel.value&&x.variant==="Valve");
+const hasH=data.accessories.find(x=>x.range===range&&x.family===sel.value&&x.variant==="Hasson");
+hassonBtn.style.display=hasH?"block":"none";if(!hasH)selectedHasson=null;renderCards();};}
 
-  sel.innerHTML = `<option>Select Range</option>`;
-  ranges.forEach(r=> sel.innerHTML += `<option>${r}</option>`);
+function initCannulas(range,family){const list=data.cannulas.filter(x=>x.range===range&&x.family===family);
+cannulaSelect.innerHTML=`<option>Select Variant</option>`;
+list.forEach((c,i)=>cannulaSelect.innerHTML+=`<option value="${i}">${c.variant}</option>`);
+cannulaSelect.onchange=()=>{selectedCannula=list[cannulaSelect.value];renderCards();};}
 
-  sel.onchange = ()=> initFamilies(sel.value);
-}
+function initTrocars(range,family){const list=data.trocars.filter(x=>x.range===range&&x.family===family);
+trocarSelect1.innerHTML=`<option>Select</option>`;trocarSelect2.innerHTML=`<option>Optional</option>`;
+list.forEach((t,i)=>{trocarSelect1.innerHTML+=`<option value="${i}">${t.variant}</option>`;trocarSelect2.innerHTML+=`<option value="${i}">${t.variant}</option>`;});
+trocarSelect1.onchange=()=>{selectedTrocar1=list[trocarSelect1.value]||null;renderCards();};
+trocarSelect2.onchange=()=>{selectedTrocar2=list[trocarSelect2.value]||null;renderCards();};}
 
-/* FAMILY */
-function initFamilies(range){
-  const families = [...new Set(data.cannulas
-    .filter(x=>x.range===range)
-    .map(x=>x.family))];
+function toggleHasson(){const r=rangeSelect.value,f=familySelect.value;
+selectedHasson=selectedHasson?null:data.accessories.find(x=>x.range===r&&x.family===f&&x.variant==="Hasson");renderCards();}
 
-  const sel = document.getElementById("familySelect");
-  sel.innerHTML = `<option>Select Size</option>`;
-  families.forEach(f=> sel.innerHTML += `<option>${f}</option>`);
+function renderCards(){cards.innerHTML="";
+[selectedCannula,selectedTrocar1,selectedTrocar2,selectedValve,selectedHasson].forEach(i=>{if(i)cards.appendChild(makeCard(i));});}
 
-  sel.onchange = ()=>{
-    initCannulas(range, sel.value);
-    initTrocars(range, sel.value);
+function makeCard(item){const d=document.createElement("div");d.className="card";
+d.innerHTML=`<img src="${item.variant_image||''}"><div>${item.variant}</div><div>${item.part_no}</div>`;return d;}
 
-    selectedValve = data.accessories.find(x =>
-      x.range===range && x.family===sel.value && x.variant==="Valve"
-    );
+function addRow(type,name,code,img){const row=document.createElement("tr");
+row.innerHTML=`<td>${type}</td><td><img src="${img||''}"></td><td>${name}</td><td>${code}</td><td><button class="remove-btn">X</button></td>`;
+row.querySelector("button").onclick=()=>row.remove();
+table.querySelector("tbody").appendChild(row);}
 
-    const hasHasson = data.accessories.find(x =>
-      x.range===range && x.family===sel.value && x.variant==="Hasson"
-    );
-
-    const btn = document.getElementById("hassonBtn");
-
-    if(hasHasson){
-      btn.style.display = "block";
-    }else{
-      btn.style.display = "none";
-      selectedHasson = null;
-    }
-
-    renderCards();
-  };
-}
-
-/* CANNULA */
-function initCannulas(range,family){
-  const list = data.cannulas.filter(x=>x.range===range && x.family===family);
-  const sel = document.getElementById("cannulaSelect");
-
-  sel.innerHTML = `<option>Select Variant</option>`;
-  list.forEach((c,i)=> sel.innerHTML += `<option value="${i}">${c.variant}</option>`);
-
-  sel.onchange = ()=>{
-    selectedCannula = list[sel.value];
-    renderCards();
-  };
-}
-
-/* TROCAR */
-function initTrocars(range,family){
-  const list = data.trocars.filter(x=>x.range===range && x.family===family);
-
-  const sel1 = document.getElementById("trocarSelect1");
-  const sel2 = document.getElementById("trocarSelect2");
-
-  sel1.innerHTML = `<option>Select</option>`;
-  sel2.innerHTML = `<option>Optional</option>`;
-
-  list.forEach((t,i)=>{
-    sel1.innerHTML += `<option value="${i}">${t.variant}</option>`;
-    sel2.innerHTML += `<option value="${i}">${t.variant}</option>`;
-  });
-
-  sel1.onchange = ()=>{
-    selectedTrocar1 = list[sel1.value] || null;
-    renderCards();
-  };
-
-  sel2.onchange = ()=>{
-    selectedTrocar2 = list[sel2.value] || null;
-    renderCards();
-  };
-}
-
-/* HASSON */
-function toggleHasson(){
-  const range = document.getElementById("rangeSelect").value;
-  const family = document.getElementById("familySelect").value;
-
-  if(selectedHasson){
-    selectedHasson = null;
-  }else{
-    selectedHasson = data.accessories.find(x =>
-      x.range === range &&
-      x.family === family &&
-      x.variant === "Hasson"
-    );
-  }
-
-  renderCards();
-}
-
-/* RENDER */
-function renderCards(){
-  const c = document.getElementById("cards");
-  c.innerHTML="";
-
-  if(selectedCannula) c.appendChild(makeCard(selectedCannula));
-  if(selectedTrocar1) c.appendChild(makeCard(selectedTrocar1));
-  if(selectedTrocar2) c.appendChild(makeCard(selectedTrocar2));
-  if(selectedValve) c.appendChild(makeCard(selectedValve));
-  if(selectedHasson) c.appendChild(makeCard(selectedHasson));
-}
-
-/* CARD */
-function makeCard(item){
-  const div = document.createElement("div");
-  div.className="card";
-
-  div.innerHTML = `
-    <img src="${item.variant_image || ''}">
-    <div>${item.variant}</div>
-    <div>${item.part_no}</div>
-  `;
-
-  return div;
-}
-
-/* ADD */
 function addConfig(){
-  const tbody = document.querySelector("#table tbody");
+if(selectedCannula)addRow("Cannula",`${selectedCannula.family} - ${selectedCannula.variant}`,selectedCannula.part_no,selectedCannula.variant_image);
+if(selectedTrocar1)addRow("Trocar",selectedTrocar1.variant,selectedTrocar1.part_no,selectedTrocar1.variant_image);
+if(selectedTrocar2)addRow("Trocar",selectedTrocar2.variant,selectedTrocar2.part_no,selectedTrocar2.variant_image);
+if(selectedValve)addRow("Accessory","Valve",selectedValve.part_no,selectedValve.variant_image);
+if(selectedHasson)addRow("Accessory","Hasson",selectedHasson.part_no,selectedHasson.variant_image);
 
-  function addRow(type, name, code, image){
-    const row = document.createElement("tr");
-    row.innerHTML = `
-      <td>${type}</td>
-      <td><img src="${image || ''}"></td>
-      <td>${name}</td>
-      <td>${code}</td>
-    `;
-    tbody.appendChild(row);
-  }
+const spacer=document.createElement("tr");spacer.innerHTML=`<td colspan="5" class="spacer"></td>`;table.querySelector("tbody").appendChild(spacer);
+clearSelection();}
 
-  if(selectedCannula){
-    addRow("Cannula", `${selectedCannula.family} - ${selectedCannula.variant}`, selectedCannula.part_no, selectedCannula.variant_image);
-  }
+function clearSelection(){selectedCannula=null;selectedTrocar1=null;selectedTrocar2=null;selectedValve=null;selectedHasson=null;
+document.querySelectorAll("select").forEach(s=>s.selectedIndex=0);cards.innerHTML="";}
 
-  if(selectedTrocar1){
-    addRow("Trocar", selectedTrocar1.variant, selectedTrocar1.part_no, selectedTrocar1.variant_image);
-  }
+function exportPDF(){const { jsPDF } = window.jspdf;const doc=new jsPDF();
+let y=10;document.querySelectorAll("#table tbody tr").forEach(row=>{
+const cols=row.querySelectorAll("td");if(cols.length>=4){doc.text(`${cols[0].innerText} - ${cols[2].innerText} (${cols[3].innerText})`,10,y);y+=8;}
+});doc.save("yelloport-set.pdf");}
 
-  if(selectedTrocar2){
-    addRow("Trocar", selectedTrocar2.variant, selectedTrocar2.part_no, selectedTrocar2.variant_image);
-  }
+function emailList(){let body="YelloPort Set:\n\n";
+document.querySelectorAll("#table tbody tr").forEach(row=>{
+const c=row.querySelectorAll("td");if(c.length>=4){body+=`${c[0].innerText} - ${c[2].innerText} (${c[3].innerText})\n`;}
+});
+window.location.href=`mailto:?subject=YelloPort Set&body=${encodeURIComponent(body)}`;}
 
-  if(selectedValve){
-    addRow("Accessory", "Valve", selectedValve.part_no, selectedValve.variant_image);
-  }
-
-  if(selectedHasson){
-    addRow("Accessory", "Hasson", selectedHasson.part_no, selectedHasson.variant_image);
-  }
-
-  const spacer = document.createElement("tr");
-  spacer.innerHTML = `<td colspan="4" class="spacer"></td>`;
-  tbody.appendChild(spacer);
-
-  clearSelection();
-}
-
-/* CLEAR */
-function clearSelection(){
-  selectedCannula = null;
-  selectedTrocar1 = null;
-  selectedTrocar2 = null;
-  selectedValve = null;
-  selectedHasson = null;
-
-  document.querySelectorAll("select").forEach(s=> s.selectedIndex = 0);
-  document.getElementById("cards").innerHTML="";
-}
-
-/* INIT */
 load();
 </script>
 
