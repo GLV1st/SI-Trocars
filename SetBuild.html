@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>YelloPort Kit Builder</title>
+<title>Surgical Configurator</title>
 
 <style>
 body{
@@ -131,7 +131,9 @@ td{
 }
 
 td img{
+  width:80px;
   height:50px;
+  object-fit:contain;
   display:block;
   margin:auto;
 }
@@ -148,7 +150,7 @@ td img{
 
 <button id="backBtn" onclick="history.back()">← Back</button>
 
-<h1>YelloPort Kit Builder</h1>
+<h1>Surgical Configurator</h1>
 
 <div class="top-row">
   <div>
@@ -192,8 +194,8 @@ td img{
 <table id="table">
 <thead>
 <tr>
-<th>Image</th>
 <th>Type</th>
+<th>Image</th>
 <th>Description</th>
 <th>Part Number</th>
 </tr>
@@ -354,8 +356,8 @@ function addConfig(){
   function addRow(type, name, code, image){
     const row = document.createElement("tr");
     row.innerHTML = `
-      <td><img src="${image || ''}"></td>
       <td>${type}</td>
+      <td><img src="${image || ''}"></td>
       <td>${name}</td>
       <td>${code}</td>
     `;
