@@ -173,10 +173,14 @@ function initFamilies(range){
   sel.innerHTML = `<option>Select Family</option>`;
   families.forEach(f=> sel.innerHTML += `<option>${f}</option>`);
 
-  sel.onchange = ()=> {
-    initCannulas(range, sel.value);
-    initTrocars(range, sel.value);
-  };
+sel.onchange = ()=> {
+  initCannulas(range, sel.value);
+  initTrocars(range, sel.value);
+
+  // ✅ LOAD VALVE IMMEDIATELY
+  autoValve(range, sel.value);
+  renderCards();
+};
 }
 
 /* CANNULA */
