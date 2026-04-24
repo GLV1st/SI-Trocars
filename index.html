@@ -128,7 +128,7 @@ td img{
 
 <body>
 
-<h1>Select YelloPort Range</h1>
+<h1>Select Product Range</h1>
 
 <div id="rangeSelector"></div>
 
@@ -142,7 +142,7 @@ td img{
 
 <img id="familyImage">
 
-<h2>Cannulas</h2>
+<h2 id="tableTitle1">Cannulas</h2>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -156,7 +156,7 @@ td img{
 </table>
 </div>
 
-<h2>Trocars</h2>
+<h2 id="tableTitle2">Trocars</h2>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -176,16 +176,13 @@ td img{
 
 let DATA = {};
 let activeRange = null;
+let activeMode = "yelloport"; // 🔥 NEW
 
 /* LOAD JSON */
 async function loadData(){
-  try{
-    const res = await fetch("YP.json");
-    DATA = await res.json();
-    initUI();
-  }catch(e){
-    console.error("JSON LOAD ERROR", e);
-  }
+  const res = await fetch("YP.json");
+  DATA = await res.json();
+  initUI();
 }
 
 /* INIT RANGE CARDS */
@@ -202,26 +199,54 @@ function initUI(){
   config.onclick = ()=> window.location.href = "SetBuild.html";
   container.appendChild(config);
 
-  // RANGES
+  // 🔥 LOGIC CARD
+  const logic = document.createElement("div");
+  logic.className = "rangeCard";
+  logic.innerHTML = "<h3>Logic Instruments</h3>";
+  logic.onclick = ()=>{
+    activeMode = "logic";
+    openLogic();
+  };
+  container.appendChild(logic);
+
+  // YELLOPORT RANGES
   const ranges = [...new Set(DATA.cannulas.map(x=>x.range))];
 
   ranges.forEach(r=>{
     const div = document.createElement("div");
     div.className="rangeCard";
     div.innerHTML=`<h3>${r}</h3>`;
-    div.onclick=()=>openRange(r);
+    div.onclick=()=>{
+      activeMode = "yelloport";
+      openRange(r);
+    };
     container.appendChild(div);
   });
 }
 
-/* OPEN RANGE */
+/* OPEN YELLOPORT */
 function openRange(range){
   activeRange = range;
 
   document.getElementById("rangeSelector").style.display="none";
   document.getElementById("catalogue").style.display="block";
 
+  document.getElementById("tableTitle1").innerText = "Cannulas";
+  document.getElementById("tableTitle2").innerText = "Trocars";
+
   buildDropdown();
+}
+
+/* OPEN LOGIC */
+function openLogic(){
+
+  document.getElementById("rangeSelector").style.display="none";
+  document.getElementById("catalogue").style.display="block";
+
+  document.getElementById("tableTitle1").innerText = "Instruments";
+  document.getElementById("tableTitle2").innerText = "Components";
+
+  buildLogicDropdown();
 }
 
 /* BACK */
@@ -230,7 +255,7 @@ document.getElementById("backBtn").onclick=()=>{
   document.getElementById("rangeSelector").style.display="flex";
 };
 
-/* BUILD DROPDOWN */
+/* YELLOPORT DROPDOWN */
 function buildDropdown(){
 
   const families = [...new Set(
@@ -252,12 +277,36 @@ function buildDropdown(){
   renderFamily(families[0]);
 }
 
-/* CHANGE FAMILY */
+/* LOGIC DROPDOWN */
+function buildLogicDropdown(){
+
+  const families = [...new Set(
+    DATA.logic.families.map(x=>x.family)
+  )];
+
+  const dropdown = document.getElementById("familyDropdown");
+  dropdown.innerHTML="";
+
+  families.forEach(f=>{
+    const opt = document.createElement("option");
+    opt.value=f;
+    opt.textContent=f;
+    dropdown.appendChild(opt);
+  });
+
+  renderLogicFamily(families[0]);
+}
+
+/* CHANGE */
 document.getElementById("familyDropdown").onchange = (e)=>{
-  renderFamily(e.target.value);
+  if(activeMode==="logic"){
+    renderLogicFamily(e.target.value);
+  } else {
+    renderFamily(e.target.value);
+  }
 };
 
-/* RENDER FAMILY */
+/* YELLOPORT RENDER */
 function renderFamily(family){
 
   const cannulas = DATA.cannulas.filter(x=>x.range===activeRange && x.family===family);
@@ -270,7 +319,20 @@ function renderFamily(family){
   renderTrocars(trocars);
 }
 
-/* RENDER CANNULAS */
+/* LOGIC RENDER */
+function renderLogicFamily(family){
+
+  const instruments = DATA.logic.families.filter(x=>x.family===family);
+  const variants = DATA.logic.variants.filter(x=>x.family===family);
+
+  document.getElementById("familyImage").src =
+    instruments[0]?.family_image || "";
+
+  renderCannulas(instruments); // reuse table
+  renderTrocars(variants);
+}
+
+/* TABLE RENDER */
 function renderCannulas(list){
   const table = document.getElementById("cannulaTable");
   table.innerHTML="";
@@ -279,14 +341,13 @@ function renderCannulas(list){
     table.innerHTML+=`
       <tr>
         <td><img src="${i.variant_image || ''}"></td>
-        <td>${i.family} - ${i.variant}</td>
+        <td>${i.family || i.variant}</td>
         <td>${i.part_no}</td>
       </tr>
     `;
   });
 }
 
-/* RENDER TROCAR */
 function renderTrocars(list){
   const table = document.getElementById("trocarTable");
   table.innerHTML="";
@@ -295,7 +356,7 @@ function renderTrocars(list){
     table.innerHTML+=`
       <tr>
         <td><img src="${i.variant_image || ''}"></td>
-        <td>${i.variant}</td>
+        <td>${i.variant || i.type}</td>
         <td>${i.part_no}</td>
       </tr>
     `;
