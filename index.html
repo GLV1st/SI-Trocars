@@ -220,7 +220,7 @@ function initUI(){
   container.appendChild(config);
 
   // LOGIC BUTTON ✅
-  if(DATA.logic){
+  if(DATA.Logic){
     const logic = document.createElement("div");
     logic.className = "rangeCard";
     logic.innerHTML = "<h3>Logic Instruments</h3>";
@@ -253,7 +253,7 @@ function openRange(range){
   buildDropdown();
 }
 
-/* OPEN LOGIC ✅ */
+/* OPEN LOGIC */
 function openLogic(){
 
   document.getElementById("rangeSelector").style.display="none";
@@ -353,7 +353,7 @@ function renderTrocars(list){
 function buildLogicDropdown(){
 
   const families = [...new Set(
-    DATA.logic.map(x => (x.family || "").trim())
+    DATA.Logic.map(x => (x.family || "").trim())
   )];
 
   const dropdown = document.getElementById("familyDropdown");
@@ -372,7 +372,7 @@ function buildLogicDropdown(){
 /* RENDER LOGIC */
 function renderLogic(family){
 
-  const items = DATA.logic.filter(x => x.family === family);
+  const items = DATA.Logic.filter(x => x.family === family);
 
   document.getElementById("familyImage").src =
     items.find(i => i.variant_image)?.variant_image || "";
