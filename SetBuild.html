@@ -273,6 +273,20 @@ function makeCard(item){
   return div;
 }
 
+/* RESET CONFIGURATOR */
+function resetConfigurator(){
+  selectedCannula = null;
+  selectedTrocars = [];
+  selectedValve = null;
+  selectedHasson = null;
+
+  document.getElementById("familySelect").innerHTML = `<option>Select Family</option>`;
+  document.getElementById("cannulaSelect").innerHTML = `<option>Select Cannula</option>`;
+  document.getElementById("trocarSelect").innerHTML = `<option>Add Trocar</option>`;
+
+  document.getElementById("cards").innerHTML = "";
+}
+
 /* ADD CONFIG */
 function addConfig(){
   const row = document.createElement("tr");
@@ -294,6 +308,9 @@ function addConfig(){
   `;
 
   document.querySelector("#table tbody").appendChild(row);
+
+  // ✅ RESET AFTER ADD
+  resetConfigurator();
 }
 
 /* INIT */
