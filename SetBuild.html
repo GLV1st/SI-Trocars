@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>YelloPort Kit Builder</title>
+<title>Surgical Configurator</title>
 
 <style>
 body{
@@ -105,18 +105,21 @@ select{
   object-fit:contain;
 }
 
-/* TABLE */
+/* TABLE (RESTORED) */
 table{
   width:100%;
   margin-top:20px;
   border-collapse:collapse;
 }
 
-td{
+th,td{
   border:1px solid #334155;
-  padding:10px;
-  text-align:left;
-  vertical-align:top;
+  padding:8px;
+  text-align:center;
+}
+
+th{
+  background:#1e293b;
 }
 </style>
 </head>
@@ -157,7 +160,7 @@ td{
 <!-- ACTION BUTTONS -->
 <div id="actionRow">
   <button id="hassonBtn" onclick="toggleHasson()" style="display:none;">
-    Toggle Hasson
+   Add Hasson Adapter
   </button>
 
   <button id="clearBtn" onclick="clearSelection()">
@@ -169,8 +172,17 @@ td{
 
 <div class="grid" id="cards"></div>
 
-<table>
-<tbody id="tableBody"></tbody>
+<!-- ✅ ORIGINAL TABLE STRUCTURE RESTORED -->
+<table id="table">
+<thead>
+<tr>
+<th>Cannula</th>
+<th>Trocars</th>
+<th>Accessory</th>
+<th>Codes</th>
+</tr>
+</thead>
+<tbody></tbody>
 </table>
 
 <script>
@@ -319,37 +331,31 @@ function makeCard(item){
   return div;
 }
 
-/* ADD */
+/* ADD (RESTORED FORMAT) */
 function addConfig(){
   const row = document.createElement("tr");
 
+  const trocarCodes = [
+    selectedTrocar1?.part_no,
+    selectedTrocar2?.part_no
+  ].filter(Boolean).join(", ");
+
+  const codes = [
+    selectedCannula?.part_no,
+    selectedTrocar1?.part_no,
+    selectedTrocar2?.part_no,
+    selectedValve?.part_no,
+    selectedHasson?.part_no
+  ].filter(Boolean).join(" / ");
+
   row.innerHTML = `
-    <td>
-      <b>Cannula:</b><br>
-      ${selectedCannula?.variant || ""}<br>
-      ${selectedCannula?.part_no || ""}
-
-      <br><br><b>Trocar 1:</b><br>
-      ${selectedTrocar1?.variant || ""}<br>
-      ${selectedTrocar1?.part_no || ""}
-
-      <br><br><b>Trocar 2:</b><br>
-      ${selectedTrocar2?.variant || ""}<br>
-      ${selectedTrocar2?.part_no || ""}
-
-      <br><br><b>Valve:</b><br>
-      ${selectedValve?.variant || ""}<br>
-      ${selectedValve?.part_no || ""}
-
-      ${selectedHasson ? `
-      <br><br><b>Hasson:</b><br>
-      ${selectedHasson.variant}<br>
-      ${selectedHasson.part_no}
-      ` : ""}
-    </td>
+    <td>${selectedCannula?.variant || ""}</td>
+    <td>${trocarCodes}</td>
+    <td>${selectedHasson ? "Hasson" : "Valve"}</td>
+    <td>${codes}</td>
   `;
 
-  document.getElementById("tableBody").appendChild(row);
+  document.querySelector("#table tbody").appendChild(row);
 
   clearSelection();
 }
