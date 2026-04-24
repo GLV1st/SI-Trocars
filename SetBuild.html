@@ -5,28 +5,140 @@
 <title>YelloPort Set Builder</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
 
 <style>
-body{font-family: Arial;background:#ffffff;color:#0f172a;margin:0;padding:20px;}
-#backBtn{position:absolute;top:20px;left:20px;padding:8px 14px;background:#1F8A86;color:#fff;border:none;border-radius:8px;cursor:pointer;}
-h1{text-align:center;margin-bottom:20px;color:#1F8A86;}
-.top-row{display:grid;grid-template-columns: repeat(5,1fr);gap:10px;}
-.top-row div{display:flex;flex-direction:column;font-size:12px;}
-select{padding:10px;border-radius:8px;border:2px solid #1F8A86;background:#fff;color:#0f172a;}
-#actionRow{display:flex;justify-content:center;gap:10px;margin-top:15px;}
-#actionRow button{flex:1;max-width:250px;padding:10px;border:none;border-radius:10px;background:#1F8A86;color:#fff;cursor:pointer;}
-.center-btn{display:block;margin:20px auto;width:50%;padding:12px;border:none;border-radius:10px;background:#1F8A86;color:#fff;font-weight:bold;cursor:pointer;}
-.grid{display:grid;grid-template-columns: repeat(auto-fill,minmax(200px,1fr));gap:15px;margin-top:15px;}
-.card{background:#f1f5f9;border-radius:14px;padding:15px;text-align:center;color:#0f172a;border:1px solid #e2e8f0;}
-.card img{max-width:100px;height:80px;object-fit:contain;}
-table{width:100%;margin-top:20px;border-collapse:collapse;}
-th{background:#1F8A86;color:#fff;}
-td{border:1px solid #e2e8f0;padding:10px;text-align:left;}
-td img{width:80px;height:50px;object-fit:contain;display:block;margin:auto;}
-.spacer{background:#f1f5f9;height:8px;}
-.remove-btn{background:#ef4444;color:#fff;border:none;border-radius:6px;padding:6px 10px;cursor:pointer;}
-.export-row{display:flex;justify-content:center;gap:10px;margin-top:20px;}
-.export-row button{padding:10px 20px;border:none;border-radius:8px;background:#1F8A86;color:#fff;cursor:pointer;}
+body{
+  font-family: Arial;
+  background:#ffffff;
+  color:#0f172a;
+  margin:0;
+  padding:20px;
+}
+
+#backBtn{
+  position:absolute;
+  top:20px;
+  left:20px;
+  padding:8px 14px;
+  background:#1F8A86;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:20px;
+  color:#1F8A86;
+}
+
+.top-row{
+  display:grid;
+  grid-template-columns: repeat(5,1fr);
+  gap:10px;
+}
+
+.top-row div{
+  display:flex;
+  flex-direction:column;
+  font-size:12px;
+}
+
+select{
+  padding:10px;
+  border-radius:8px;
+  border:2px solid #1F8A86;
+}
+
+#actionRow{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-top:15px;
+}
+
+#actionRow button{
+  flex:1;
+  max-width:250px;
+  padding:10px;
+  border:none;
+  border-radius:10px;
+  background:#1F8A86;
+  color:#fff;
+  cursor:pointer;
+}
+
+.center-btn{
+  display:block;
+  margin:20px auto;
+  width:50%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:#1F8A86;
+  color:#fff;
+  font-weight:bold;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+  gap:15px;
+  margin-top:15px;
+}
+
+.card{
+  background:#f1f5f9;
+  border-radius:14px;
+  padding:15px;
+  text-align:center;
+}
+
+.card img{
+  max-width:100px;
+  height:80px;
+  object-fit:contain;
+}
+
+table{
+  width:100%;
+  margin-top:20px;
+  border-collapse:collapse;
+}
+
+th{
+  background:#1F8A86;
+  color:#fff;
+}
+
+td{
+  border:1px solid #e2e8f0;
+  padding:10px;
+}
+
+.remove-btn{
+  background:#ef4444;
+  color:#fff;
+  border:none;
+  padding:5px 8px;
+  cursor:pointer;
+}
+
+.export-row{
+  text-align:center;
+  margin-top:20px;
+}
+
+.export-row button{
+  padding:10px 20px;
+  margin:5px;
+  background:#1F8A86;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+}
 </style>
 </head>
 
@@ -57,7 +169,6 @@ td img{width:80px;height:50px;object-fit:contain;display:block;margin:auto;}
 <thead>
 <tr>
 <th>Type</th>
-<th>Image</th>
 <th>Description</th>
 <th>Part Number</th>
 <th>Remove</th>
@@ -75,64 +186,165 @@ td img{width:80px;height:50px;object-fit:contain;display:block;margin:auto;}
 let data = {};
 let selectedCannula=null, selectedTrocar1=null, selectedTrocar2=null, selectedValve=null, selectedHasson=null;
 
-async function load(){const res=await fetch("YP.json");data=await res.json();initRanges();}
+async function load(){
+  const res = await fetch("YP.json");
+  data = await res.json();
+  initRanges();
+}
 
-function initRanges(){const ranges=[...new Set(data.cannulas.map(x=>x.range))];const sel=rangeSelect;sel.innerHTML=`<option>Select Range</option>`;ranges.forEach(r=>sel.innerHTML+=`<option>${r}</option>`);sel.onchange=()=>initFamilies(sel.value);}
+function initRanges(){
+  const ranges=[...new Set(data.cannulas.map(x=>x.range))];
+  rangeSelect.innerHTML=`<option>Select Range</option>`;
+  ranges.forEach(r=>rangeSelect.innerHTML+=`<option>${r}</option>`);
+  rangeSelect.onchange=()=>initFamilies(rangeSelect.value);
+}
 
-function initFamilies(range){const families=[...new Set(data.cannulas.filter(x=>x.range===range).map(x=>x.family))];const sel=familySelect;sel.innerHTML=`<option>Select Size</option>`;families.forEach(f=>sel.innerHTML+=`<option>${f}</option>`);
-sel.onchange=()=>{initCannulas(range,sel.value);initTrocars(range,sel.value);
-selectedValve=data.accessories.find(x=>x.range===range&&x.family===sel.value&&x.variant==="Valve");
-const hasH=data.accessories.find(x=>x.range===range&&x.family===sel.value&&x.variant==="Hasson");
-hassonBtn.style.display=hasH?"block":"none";if(!hasH)selectedHasson=null;renderCards();};}
+function initFamilies(range){
+  const families=[...new Set(data.cannulas.filter(x=>x.range===range).map(x=>x.family))];
+  familySelect.innerHTML=`<option>Select Size</option>`;
+  families.forEach(f=>familySelect.innerHTML+=`<option>${f}</option>`);
 
-function initCannulas(range,family){const list=data.cannulas.filter(x=>x.range===range&&x.family===family);
-cannulaSelect.innerHTML=`<option>Select Variant</option>`;
-list.forEach((c,i)=>cannulaSelect.innerHTML+=`<option value="${i}">${c.variant}</option>`);
-cannulaSelect.onchange=()=>{selectedCannula=list[cannulaSelect.value];renderCards();};}
+  familySelect.onchange=()=>{
+    initCannulas(range,familySelect.value);
+    initTrocars(range,familySelect.value);
 
-function initTrocars(range,family){const list=data.trocars.filter(x=>x.range===range&&x.family===family);
-trocarSelect1.innerHTML=`<option>Select</option>`;trocarSelect2.innerHTML=`<option>Optional</option>`;
-list.forEach((t,i)=>{trocarSelect1.innerHTML+=`<option value="${i}">${t.variant}</option>`;trocarSelect2.innerHTML+=`<option value="${i}">${t.variant}</option>`;});
-trocarSelect1.onchange=()=>{selectedTrocar1=list[trocarSelect1.value]||null;renderCards();};
-trocarSelect2.onchange=()=>{selectedTrocar2=list[trocarSelect2.value]||null;renderCards();};}
+    selectedValve=data.accessories.find(x=>x.range===range && x.family===familySelect.value && x.variant==="Valve");
 
-function toggleHasson(){const r=rangeSelect.value,f=familySelect.value;
-selectedHasson=selectedHasson?null:data.accessories.find(x=>x.range===r&&x.family===f&&x.variant==="Hasson");renderCards();}
+    const hasH=data.accessories.find(x=>x.range===range && x.family===familySelect.value && x.variant==="Hasson");
+    hassonBtn.style.display=hasH?"block":"none";
+    if(!hasH) selectedHasson=null;
 
-function renderCards(){cards.innerHTML="";
-[selectedCannula,selectedTrocar1,selectedTrocar2,selectedValve,selectedHasson].forEach(i=>{if(i)cards.appendChild(makeCard(i));});}
+    renderCards();
+  };
+}
 
-function makeCard(item){const d=document.createElement("div");d.className="card";
-d.innerHTML=`<img src="${item.variant_image||''}"><div>${item.variant}</div><div>${item.part_no}</div>`;return d;}
+function initCannulas(range,family){
+  const list=data.cannulas.filter(x=>x.range===range && x.family===family);
+  cannulaSelect.innerHTML=`<option>Select Variant</option>`;
+  list.forEach((c,i)=>cannulaSelect.innerHTML+=`<option value="${i}">${c.variant}</option>`);
+  cannulaSelect.onchange=()=>{selectedCannula=list[cannulaSelect.value];renderCards();};
+}
 
-function addRow(type,name,code,img){const row=document.createElement("tr");
-row.innerHTML=`<td>${type}</td><td><img src="${img||''}"></td><td>${name}</td><td>${code}</td><td><button class="remove-btn">X</button></td>`;
-row.querySelector("button").onclick=()=>row.remove();
-table.querySelector("tbody").appendChild(row);}
+function initTrocars(range,family){
+  const list=data.trocars.filter(x=>x.range===range && x.family===family);
+
+  trocarSelect1.innerHTML=`<option>Select</option>`;
+  trocarSelect2.innerHTML=`<option>Optional</option>`;
+
+  list.forEach((t,i)=>{
+    trocarSelect1.innerHTML+=`<option value="${i}">${t.variant}</option>`;
+    trocarSelect2.innerHTML+=`<option value="${i}">${t.variant}</option>`;
+  });
+
+  trocarSelect1.onchange=()=>{selectedTrocar1=list[trocarSelect1.value]||null;renderCards();};
+  trocarSelect2.onchange=()=>{selectedTrocar2=list[trocarSelect2.value]||null;renderCards();};
+}
+
+function toggleHasson(){
+  const r=rangeSelect.value, f=familySelect.value;
+  selectedHasson = selectedHasson ? null : data.accessories.find(x=>x.range===r && x.family===f && x.variant==="Hasson");
+  renderCards();
+}
+
+function renderCards(){
+  cards.innerHTML="";
+  [selectedCannula,selectedTrocar1,selectedTrocar2,selectedValve,selectedHasson].forEach(i=>{
+    if(i){
+      const d=document.createElement("div");
+      d.className="card";
+      d.innerHTML=`<img src="${i.variant_image||''}"><div>${i.variant}</div><div>${i.part_no}</div>`;
+      cards.appendChild(d);
+    }
+  });
+}
+
+function addRow(type,name,code){
+  const row=document.createElement("tr");
+  row.innerHTML=`
+    <td>${type}</td>
+    <td>${name}</td>
+    <td>${code}</td>
+    <td><button class="remove-btn">X</button></td>
+  `;
+  row.querySelector("button").onclick=()=>row.remove();
+  table.querySelector("tbody").appendChild(row);
+}
 
 function addConfig(){
-if(selectedCannula)addRow("Cannula",`${selectedCannula.family} - ${selectedCannula.variant}`,selectedCannula.part_no,selectedCannula.variant_image);
-if(selectedTrocar1)addRow("Trocar",selectedTrocar1.variant,selectedTrocar1.part_no,selectedTrocar1.variant_image);
-if(selectedTrocar2)addRow("Trocar",selectedTrocar2.variant,selectedTrocar2.part_no,selectedTrocar2.variant_image);
-if(selectedValve)addRow("Accessory","Valve",selectedValve.part_no,selectedValve.variant_image);
-if(selectedHasson)addRow("Accessory","Hasson",selectedHasson.part_no,selectedHasson.variant_image);
+  if(selectedCannula) addRow("Cannula",`${selectedCannula.family} - ${selectedCannula.variant}`,selectedCannula.part_no);
+  if(selectedTrocar1) addRow("Trocar",selectedTrocar1.variant,selectedTrocar1.part_no);
+  if(selectedTrocar2) addRow("Trocar",selectedTrocar2.variant,selectedTrocar2.part_no);
+  if(selectedValve) addRow("Accessory","Valve",selectedValve.part_no);
+  if(selectedHasson) addRow("Accessory","Hasson",selectedHasson.part_no);
+  clearSelection();
+}
 
-const spacer=document.createElement("tr");spacer.innerHTML=`<td colspan="5" class="spacer"></td>`;table.querySelector("tbody").appendChild(spacer);
-clearSelection();}
+function clearSelection(){
+  selectedCannula=null; selectedTrocar1=null; selectedTrocar2=null; selectedValve=null; selectedHasson=null;
+  document.querySelectorAll("select").forEach(s=>s.selectedIndex=0);
+  cards.innerHTML="";
+}
 
-function clearSelection(){selectedCannula=null;selectedTrocar1=null;selectedTrocar2=null;selectedValve=null;selectedHasson=null;
-document.querySelectorAll("select").forEach(s=>s.selectedIndex=0);cards.innerHTML="";}
+/* PDF */
+async function exportPDF(){
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
 
-function exportPDF(){const { jsPDF } = window.jspdf;const doc=new jsPDF();
-let y=10;document.querySelectorAll("#table tbody tr").forEach(row=>{
-const cols=row.querySelectorAll("td");if(cols.length>=4){doc.text(`${cols[0].innerText} - ${cols[2].innerText} (${cols[3].innerText})`,10,y);y+=8;}
-});doc.save("yelloport-set.pdf");}
+  // Cover
+  doc.setTextColor(31,138,134);
+  doc.setFontSize(28);
+  doc.text("Your YelloPort",105,110,{align:"center"});
+  doc.text("Set Build",105,130,{align:"center"});
 
-function emailList(){let body="YelloPort Set:\n\n";
-document.querySelectorAll("#table tbody tr").forEach(row=>{
-const c=row.querySelectorAll("td");if(c.length>=4){body+=`${c[0].innerText} - ${c[2].innerText} (${c[3].innerText})\n`;}
-});
-window.location.href=`mailto:?subject=YelloPort Set&body=${encodeURIComponent(body)}`;}
+  try{
+    const swoosh = await toBase64("assets/SISwoosh.png");
+    doc.addImage(swoosh,"PNG",0,180,210,120);
+  }catch(e){}
+
+  doc.addPage();
+
+  doc.setTextColor(31,138,134);
+  doc.setFontSize(16);
+  doc.text("YelloPort Set Details",14,20);
+
+  doc.setTextColor(0,0,0);
+
+  let rows=[];
+  document.querySelectorAll("#table tbody tr").forEach(r=>{
+    const c=r.querySelectorAll("td");
+    if(c.length<3) return;
+    rows.push([c[0].innerText,c[1].innerText,c[2].innerText]);
+  });
+
+  doc.autoTable({
+    startY:30,
+    head:[["Type","Description","Part Number"]],
+    body:rows,
+    headStyles:{fillColor:[31,138,134]}
+  });
+
+  doc.save("YelloPort_Set.pdf");
+}
+
+async function toBase64(url){
+  const res = await fetch(url);
+  const blob = await res.blob();
+  return new Promise(r=>{
+    const reader=new FileReader();
+    reader.onloadend=()=>r(reader.result);
+    reader.readAsDataURL(blob);
+  });
+}
+
+function emailList(){
+  let body="YelloPort Set:\n\n";
+  document.querySelectorAll("#table tbody tr").forEach(r=>{
+    const c=r.querySelectorAll("td");
+    if(c.length<3) return;
+    body+=`${c[0].innerText} - ${c[1].innerText} (${c[2].innerText})\n`;
+  });
+  window.location.href=`mailto:?subject=YelloPort Set&body=${encodeURIComponent(body)}`;
+}
 
 load();
 </script>
