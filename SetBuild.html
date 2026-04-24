@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>YelloPort Set Builder</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -16,10 +18,10 @@ body{
   padding:20px;
 }
 
+/* BACK BUTTON FIXED FOR MOBILE */
 #backBtn{
-  position:absolute;
-  top:20px;
-  left:20px;
+  position:relative;
+  margin-bottom:10px;
   padding:8px 14px;
   background:#1F8A86;
   color:#fff;
@@ -28,24 +30,30 @@ body{
   cursor:pointer;
 }
 
+/* HEADER */
 h1{
   text-align:center;
   margin-bottom:20px;
   color:#1F8A86;
 }
 
+/* DROPDOWNS */
 .top-row{
   display:grid;
   grid-template-columns: repeat(5,1fr);
   gap:10px;
 }
 
+/* DROPDOWN STYLE */
 select{
   padding:10px;
   border-radius:8px;
   border:2px solid #1F8A86;
+  min-height:44px;
+  font-size:16px;
 }
 
+/* ACTION BUTTON ROW */
 #actionRow{
   display:flex;
   justify-content:center;
@@ -62,8 +70,10 @@ select{
   background:#1F8A86;
   color:#fff;
   cursor:pointer;
+  min-height:44px;
 }
 
+/* ADD BUTTON */
 .center-btn{
   display:block;
   margin:20px auto;
@@ -74,8 +84,11 @@ select{
   background:#1F8A86;
   color:#fff;
   font-weight:bold;
+  cursor:pointer;
+  min-height:44px;
 }
 
+/* GRID */
 .grid{
   display:grid;
   grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
@@ -83,6 +96,7 @@ select{
   margin-top:15px;
 }
 
+/* CARD */
 .card{
   background:#f1f5f9;
   border-radius:14px;
@@ -97,10 +111,16 @@ select{
   object-fit:contain;
 }
 
+/* TABLE */
 table{
   width:100%;
   margin-top:20px;
   border-collapse:collapse;
+
+  /* MOBILE SCROLL FIX */
+  display:block;
+  overflow-x:auto;
+  white-space:nowrap;
 }
 
 th{
@@ -126,6 +146,7 @@ td:last-child, th:last-child{
   text-align:center;
 }
 
+/* REMOVE BUTTON */
 .remove-btn{
   background:red;
   color:#fff;
@@ -137,6 +158,7 @@ td:last-child, th:last-child{
   margin:auto;
 }
 
+/* EXPORT BUTTONS */
 .export-row{
   display:flex;
   justify-content:center;
@@ -151,6 +173,40 @@ td:last-child, th:last-child{
   cursor:pointer;
   background:#1F8A86;
   color:#fff;
+  min-height:44px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px){
+
+  .top-row{
+    grid-template-columns: 1fr;
+  }
+
+  #actionRow{
+    flex-direction:column;
+  }
+
+  #actionRow button{
+    width:100%;
+    max-width:none;
+  }
+
+  .center-btn{
+    width:100%;
+  }
+
+  .export-row{
+    flex-direction:column;
+  }
+
+  .export-row button{
+    width:100%;
+  }
+
+  .grid{
+    grid-template-columns: 1fr 1fr;
+  }
 }
 </style>
 </head>
@@ -200,12 +256,14 @@ td:last-child, th:last-child{
 let data = {};
 let selectedCannula=null, selectedTrocar1=null, selectedTrocar2=null, selectedValve=null, selectedHasson=null;
 
+/* LOAD */
 async function load(){
   const res = await fetch("YP.json");
   data = await res.json();
   initRanges();
 }
 
+/* RANGE */
 function initRanges(){
   const ranges = [...new Set(data.cannulas.map(x=>x.range))];
   rangeSelect.innerHTML = `<option>Select Range</option>`;
@@ -213,11 +271,11 @@ function initRanges(){
   rangeSelect.onchange = ()=> initFamilies(rangeSelect.value);
 }
 
+/* FAMILY */
 function initFamilies(range){
   const families=[...new Set(data.cannulas.filter(x=>x.range===range).map(x=>x.family))];
   familySelect.innerHTML=`<option>Select Size</option>`;
   families.forEach(f=> familySelect.innerHTML+=`<option>${f}</option>`);
-
   familySelect.onchange=()=>{
     initCannulas(range,familySelect.value);
     initTrocars(range,familySelect.value);
@@ -232,6 +290,7 @@ function initFamilies(range){
   };
 }
 
+/* CANNULA */
 function initCannulas(range,family){
   const list=data.cannulas.filter(x=>x.range===range && x.family===family);
   cannulaSelect.innerHTML=`<option>Select Variant</option>`;
@@ -239,6 +298,7 @@ function initCannulas(range,family){
   cannulaSelect.onchange=()=>{selectedCannula=list[cannulaSelect.value];renderCards();};
 }
 
+/* TROCAR */
 function initTrocars(range,family){
   const list=data.trocars.filter(x=>x.range===range && x.family===family);
 
@@ -254,12 +314,14 @@ function initTrocars(range,family){
   trocarSelect2.onchange=()=>{selectedTrocar2=list[trocarSelect2.value];renderCards();};
 }
 
+/* HASSON */
 function toggleHasson(){
   selectedHasson = selectedHasson ? null :
   data.accessories.find(x=>x.range===rangeSelect.value && x.family===familySelect.value && x.variant==="Hasson");
   renderCards();
 }
 
+/* RENDER */
 function renderCards(){
   cards.innerHTML="";
   [selectedCannula,selectedTrocar1,selectedTrocar2,selectedValve,selectedHasson]
@@ -267,6 +329,7 @@ function renderCards(){
   .forEach(i=>cards.appendChild(makeCard(i)));
 }
 
+/* CARD */
 function makeCard(i){
   const d=document.createElement("div");
   d.className="card";
@@ -274,6 +337,7 @@ function makeCard(i){
   return d;
 }
 
+/* ADD */
 function addConfig(){
   const tbody=document.querySelector("#table tbody");
 
@@ -297,6 +361,7 @@ function addConfig(){
   clearSelection();
 }
 
+/* CLEAR */
 function clearSelection(){
   selectedCannula=selectedTrocar1=selectedTrocar2=selectedValve=selectedHasson=null;
   document.querySelectorAll("select").forEach(s=>s.selectedIndex=0);
@@ -329,19 +394,14 @@ function exportPDF(){
   doc.save("YelloPort_Set.pdf");
 }
 
-/* EMAIL (PLAIN TEXT - MOBILE SAFE) */
+/* EMAIL (SAFE) */
 function emailList(){
-  let body = "YelloPort Set Build\n-----------------------\n\n";
-
+  let body="YelloPort Set Build\n\n";
   document.querySelectorAll("#table tbody tr").forEach(r=>{
     const c=r.querySelectorAll("td");
     if(c.length<4) return;
-
-    body += `${c[0].innerText}\n`;
-    body += `  ${c[2].innerText}\n`;
-    body += `  Code: ${c[3].innerText}\n\n`;
+    body+=`${c[0].innerText} - ${c[2].innerText} (${c[3].innerText})\n`;
   });
-
   window.location.href=`mailto:?subject=YelloPort Set Build&body=${encodeURIComponent(body)}`;
 }
 
