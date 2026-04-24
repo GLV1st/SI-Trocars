@@ -19,8 +19,34 @@ h1{
   margin-bottom:20px;
 }
 
-/* SELECTS */
-select, button{
+/* TOP CONTROLS */
+.top-controls{
+  display:flex;
+  gap:10px;
+  margin-bottom:15px;
+}
+
+.top-controls div{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+
+.top-controls label{
+  font-size:12px;
+  margin-bottom:4px;
+  color:#94a3b8;
+}
+
+.top-controls select{
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:none;
+}
+
+/* BUTTONS */
+button{
   padding:10px;
   margin:5px;
   border-radius:8px;
@@ -104,10 +130,13 @@ th{
 
 <h1>Surgical Configurator</h1>
 
-<select id="rangeSelect"></select>
-<select id="familySelect"></select>
-<select id="cannulaSelect"></select>
-<select id="trocarSelect"></select>
+<div class="top-controls">
+  <div><label>Range</label><select id="rangeSelect"></select></div>
+  <div><label>Family</label><select id="familySelect"></select></div>
+  <div><label>Cannula</label><select id="cannulaSelect"></select></div>
+  <div><label>Trocar 1</label><select id="trocarSelect1"></select></div>
+  <div><label>Trocar 2</label><select id="trocarSelect2"></select></div>
+</div>
 
 <button onclick="toggleHasson()">Toggle Hasson</button>
 <button onclick="addConfig()">Add Config</button>
@@ -173,14 +202,14 @@ function initFamilies(range){
   sel.innerHTML = `<option>Select Family</option>`;
   families.forEach(f=> sel.innerHTML += `<option>${f}</option>`);
 
-sel.onchange = ()=> {
-  initCannulas(range, sel.value);
-  initTrocars(range, sel.value);
+  sel.onchange = ()=> {
+    initCannulas(range, sel.value);
+    initTrocars(range, sel.value);
 
-  // ✅ LOAD VALVE IMMEDIATELY
-  autoValve(range, sel.value);
-  renderCards();
-};
+    // LOAD VALVE IMMEDIATELY
+    autoValve(range, sel.value);
+    renderCards();
+  };
 }
 
 /* CANNULA */
@@ -194,20 +223,38 @@ function initCannulas(range,family){
   sel.onchange = ()=>{
     selectedCannula = list[sel.value];
     renderCards();
-    autoValve(range,family);
   };
 }
 
-/* TROCAR */
+/* TROCAR (UPDATED FOR 2 DROPDOWNS) */
 function initTrocars(range,family){
   const list = data.trocars.filter(x=>x.range===range && x.family===family);
 
-  const sel = document.getElementById("trocarSelect");
-  sel.innerHTML = `<option>Add Trocar</option>`;
-  list.forEach((t,i)=> sel.innerHTML += `<option value="${i}">${t.variant}</option>`);
+  const sel1 = document.getElementById("trocarSelect1");
+  const sel2 = document.getElementById("trocarSelect2");
 
-  sel.onchange = ()=>{
-    const t = list[sel.value];
+  sel1.innerHTML = `<option>Select Primary Trocar</option>`;
+  sel2.innerHTML = `<option>Select Optional Trocar</option>`;
+
+  sel2.disabled = true;
+
+  list.forEach((t,i)=>{
+    sel1.innerHTML += `<option value="${i}">${t.variant}</option>`;
+    sel2.innerHTML += `<option value="${i}">${t.variant}</option>`;
+  });
+
+  sel1.onchange = ()=>{
+    selectedTrocars = [];
+    const t = list[sel1.value];
+    if(!t) return;
+
+    selectedTrocars.push(t);
+    sel2.disabled = false;
+    renderCards();
+  };
+
+  sel2.onchange = ()=>{
+    const t = list[sel2.value];
     if(!t) return;
 
     if(!selectedTrocars.find(x=>x.part_no===t.part_no)){
@@ -277,7 +324,7 @@ function makeCard(item){
   return div;
 }
 
-/* RESET CONFIGURATOR */
+/* RESET */
 function resetConfigurator(){
   selectedCannula = null;
   selectedTrocars = [];
@@ -286,17 +333,18 @@ function resetConfigurator(){
 
   document.getElementById("familySelect").innerHTML = `<option>Select Family</option>`;
   document.getElementById("cannulaSelect").innerHTML = `<option>Select Cannula</option>`;
-  document.getElementById("trocarSelect").innerHTML = `<option>Add Trocar</option>`;
+  document.getElementById("trocarSelect1").innerHTML = `<option>Select Primary Trocar</option>`;
+  document.getElementById("trocarSelect2").innerHTML = `<option>Select Optional Trocar</option>`;
+  document.getElementById("trocarSelect2").disabled = true;
 
   document.getElementById("cards").innerHTML = "";
 }
 
-/* ADD CONFIG */
+/* ADD CONFIG (UNCHANGED STRUCTURE) */
 function addConfig(){
 
   const tbody = document.querySelector("#table tbody");
 
-  // CANNULA
   if(selectedCannula){
     const row = document.createElement("tr");
     row.innerHTML = `
@@ -308,7 +356,6 @@ function addConfig(){
     tbody.appendChild(row);
   }
 
-  // TROCAR(S)
   selectedTrocars.forEach(t=>{
     const row = document.createElement("tr");
     row.innerHTML = `
@@ -320,7 +367,6 @@ function addConfig(){
     tbody.appendChild(row);
   });
 
-  // VALVE
   if(selectedValve){
     const row = document.createElement("tr");
     row.innerHTML = `
@@ -332,7 +378,6 @@ function addConfig(){
     tbody.appendChild(row);
   }
 
-  // HASSON
   if(selectedHasson){
     const row = document.createElement("tr");
     row.innerHTML = `
@@ -344,12 +389,10 @@ function addConfig(){
     tbody.appendChild(row);
   }
 
-  // OPTIONAL SPACER ROW (visual gap)
   const spacer = document.createElement("tr");
   spacer.innerHTML = `<td colspan="4"></td>`;
   tbody.appendChild(spacer);
 
-  // RESET
   resetConfigurator();
 }
 
