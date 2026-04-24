@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>YelloPort Set Builder</title>
 
-<!-- jsPDF -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
 
@@ -17,7 +16,6 @@ body{
   padding:20px;
 }
 
-/* BACK BUTTON */
 #backBtn{
   position:absolute;
   top:20px;
@@ -30,14 +28,12 @@ body{
   cursor:pointer;
 }
 
-/* HEADER */
 h1{
   text-align:center;
   margin-bottom:20px;
   color:#1F8A86;
 }
 
-/* DROPDOWNS */
 .top-row{
   display:grid;
   grid-template-columns: repeat(5,1fr);
@@ -56,7 +52,6 @@ select{
   border:2px solid #1F8A86;
 }
 
-/* ACTION ROW */
 #actionRow{
   display:flex;
   justify-content:center;
@@ -75,7 +70,6 @@ select{
   cursor:pointer;
 }
 
-/* ADD BUTTON */
 .center-btn{
   display:block;
   margin:20px auto;
@@ -88,7 +82,6 @@ select{
   font-weight:bold;
 }
 
-/* GRID */
 .grid{
   display:grid;
   grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
@@ -110,7 +103,6 @@ select{
   object-fit:contain;
 }
 
-/* TABLE */
 table{
   width:100%;
   margin-top:20px;
@@ -125,6 +117,7 @@ th{
 td{
   border:1px solid #e2e8f0;
   padding:10px;
+  vertical-align:middle;
 }
 
 td img{
@@ -135,16 +128,21 @@ td img{
   margin:auto;
 }
 
+td:last-child, th:last-child{
+  text-align:center;
+}
+
 .remove-btn{
   background:red;
   color:#fff;
   border:none;
-  padding:5px 8px;
+  padding:5px 10px;
   border-radius:6px;
   cursor:pointer;
+  display:block;
+  margin:auto;
 }
 
-/* EXPORT BUTTONS UNDER TABLE */
 .export-row{
   display:flex;
   justify-content:center;
@@ -193,16 +191,15 @@ td img{
 <th>Image</th>
 <th>Description</th>
 <th>Part Number</th>
-<th></th>
+<th style="text-align:center;">Remove</th>
 </tr>
 </thead>
 <tbody></tbody>
 </table>
 
-<!-- EXPORT BUTTONS UNDER TABLE -->
 <div class="export-row">
-  <button onclick="exportPDF()">Export PDF</button>
-  <button onclick="emailList()">Email</button>
+<button onclick="exportPDF()">Export PDF</button>
+<button onclick="emailList()">Email</button>
 </div>
 
 <script>
@@ -228,7 +225,6 @@ function initFamilies(range){
   const families=[...new Set(data.cannulas.filter(x=>x.range===range).map(x=>x.family))];
   sel.innerHTML=`<option>Select Size</option>`;
   families.forEach(f=> sel.innerHTML+=`<option>${f}</option>`);
-
   sel.onchange=()=>{
     initCannulas(range,sel.value);
     initTrocars(range,sel.value);
