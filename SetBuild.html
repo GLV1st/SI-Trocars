@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Surgical Configurator</title>
+<title>YelloPort Kit Builder</title>
+
 <style>
 body{
   font-family: Arial;
@@ -129,12 +130,17 @@ td{
   text-align:left;
 }
 
+td img{
+  height:50px;
+  display:block;
+  margin:auto;
+}
+
 /* SPACER */
 .spacer{
   background:#f1f5f9;
   height:8px;
 }
-
 </style>
 </head>
 
@@ -186,10 +192,10 @@ td{
 <table id="table">
 <thead>
 <tr>
+<th>Image</th>
 <th>Type</th>
 <th>Description</th>
 <th>Part Number</th>
-<th></th>
 </tr>
 </thead>
 <tbody></tbody>
@@ -341,39 +347,39 @@ function makeCard(item){
   return div;
 }
 
-/* ADD (PICK LIST STYLE) */
+/* ADD */
 function addConfig(){
   const tbody = document.querySelector("#table tbody");
 
-  function addRow(type, name, code){
+  function addRow(type, name, code, image){
     const row = document.createElement("tr");
     row.innerHTML = `
+      <td><img src="${image || ''}"></td>
       <td>${type}</td>
       <td>${name}</td>
       <td>${code}</td>
-      <td></td>
     `;
     tbody.appendChild(row);
   }
 
   if(selectedCannula){
-    addRow("Cannula", `${selectedCannula.family} - ${selectedCannula.variant}`, selectedCannula.part_no);
+    addRow("Cannula", `${selectedCannula.family} - ${selectedCannula.variant}`, selectedCannula.part_no, selectedCannula.variant_image);
   }
 
   if(selectedTrocar1){
-    addRow("Trocar", selectedTrocar1.variant, selectedTrocar1.part_no);
+    addRow("Trocar", selectedTrocar1.variant, selectedTrocar1.part_no, selectedTrocar1.variant_image);
   }
 
   if(selectedTrocar2){
-    addRow("Trocar", selectedTrocar2.variant, selectedTrocar2.part_no);
+    addRow("Trocar", selectedTrocar2.variant, selectedTrocar2.part_no, selectedTrocar2.variant_image);
   }
 
   if(selectedValve){
-    addRow("Accessory", "Valve", selectedValve.part_no);
+    addRow("Accessory", "Valve", selectedValve.part_no, selectedValve.variant_image);
   }
 
   if(selectedHasson){
-    addRow("Accessory", "Hasson", selectedHasson.part_no);
+    addRow("Accessory", "Hasson", selectedHasson.part_no, selectedHasson.variant_image);
   }
 
   const spacer = document.createElement("tr");
