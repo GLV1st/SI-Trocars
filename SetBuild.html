@@ -13,6 +13,20 @@ body{
   padding:20px;
 }
 
+/* BACK BUTTON */
+.back-btn{
+  position:fixed;
+  top:15px;
+  left:15px;
+  z-index:999;
+  padding:10px 14px;
+  background:#1e293b;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
 /* HEADER */
 h1{
   text-align:center;
@@ -121,6 +135,9 @@ th{
 
 <body>
 
+<!-- BACK BUTTON -->
+<button class="back-btn" onclick="goBack()">← Back to Menu</button>
+
 <h1>Surgical Configurator</h1>
 
 <div class="top-bar">
@@ -152,7 +169,7 @@ th{
 
 </div>
 
-<button id="hassonBtn" onclick="toggleHasson()" style="display:none;">Toggle Hasson</button>
+<button id="hassonBtn" onclick="toggleHasson()" style="display:none;">Add Hasson Adpater</button>
 
 <div style="text-align:center; margin:20px 0;">
   <button onclick="addConfig()" style="
@@ -190,6 +207,11 @@ let selectedCannula = null;
 let selectedTrocars = [];
 let selectedValve = null;
 let selectedHasson = null;
+
+/* BACK FUNCTION */
+function goBack(){
+  window.location.href = "index.html"; // change if needed
+}
 
 /* DEBUG */
 function log(msg){
@@ -252,7 +274,7 @@ function initCannulas(range,family){
   };
 }
 
-/* TROCAR (PRIMARY + SECONDARY) */
+/* TROCAR */
 function initTrocars(range,family){
   const list = data.trocars.filter(x=>x.range===range && x.family===family);
 
@@ -312,7 +334,7 @@ function toggleHasson(){
   renderCards();
 }
 
-/* SHOW / HIDE HASSon BUTTON */
+/* SHOW/HIDE HASSOn */
 function updateHassonButton(){
   const btn = document.getElementById("hassonBtn");
 
@@ -357,7 +379,7 @@ function renderCards(){
   }
 }
 
-/* CARD BUILDER */
+/* CARD */
 function makeCard(item){
   const div = document.createElement("div");
   div.className="card selected";
