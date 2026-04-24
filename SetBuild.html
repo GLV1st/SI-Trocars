@@ -19,36 +19,29 @@ h1{
   margin-bottom:20px;
 }
 
-/* TOP CONTROLS */
-.top-controls{
-  display:flex;
+/* TOP BAR */
+.top-bar{
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
   gap:10px;
   margin-bottom:15px;
 }
 
-.top-controls div{
-  flex:1;
+.top-bar div{
   display:flex;
   flex-direction:column;
 }
 
-.top-controls label{
+label{
   font-size:12px;
   margin-bottom:4px;
   color:#94a3b8;
 }
 
-.top-controls select{
-  width:100%;
+/* SELECTS */
+select, button{
   padding:10px;
-  border-radius:8px;
-  border:none;
-}
-
-/* BUTTONS */
-button{
-  padding:10px;
-  margin:5px;
+  margin:5px 0;
   border-radius:8px;
   border:none;
 }
@@ -130,16 +123,50 @@ th{
 
 <h1>Surgical Configurator</h1>
 
-<div class="top-controls">
-  <div><label>Range</label><select id="rangeSelect"></select></div>
-  <div><label>Family</label><select id="familySelect"></select></div>
-  <div><label>Cannula</label><select id="cannulaSelect"></select></div>
-  <div><label>Trocar 1</label><select id="trocarSelect1"></select></div>
-  <div><label>Trocar 2</label><select id="trocarSelect2"></select></div>
+<div class="top-bar">
+
+  <div>
+    <label>Selected YelloPort Range</label>
+    <select id="rangeSelect"></select>
+  </div>
+
+  <div>
+    <label>Select Cannula Size</label>
+    <select id="familySelect"></select>
+  </div>
+
+  <div>
+    <label>Select Cannula Variant</label>
+    <select id="cannulaSelect"></select>
+  </div>
+
+  <div>
+    <label>Select Trocar 1</label>
+    <select id="trocarSelect"></select>
+  </div>
+
+  <div>
+    <label>Select Trocar 2</label>
+    <select id="trocarSelect2"></select>
+  </div>
+
 </div>
 
-<button onclick="toggleHasson()">Toggle Hasson</button>
-<button onclick="addConfig()">Add Config</button>
+<button id="hassonBtn" onclick="toggleHasson()" style="display:none;">Toggle Hasson</button>
+
+<div style="text-align:center; margin:20px 0;">
+  <button onclick="addConfig()" style="
+    width:50%;
+    padding:14px;
+    font-size:16px;
+    background:#22c55e;
+    color:#fff;
+    border-radius:10px;
+    cursor:pointer;
+  ">
+    Add to List
+  </button>
+</div>
 
 <div class="grid" id="cards"></div>
 
@@ -205,10 +232,7 @@ function initFamilies(range){
   sel.onchange = ()=> {
     initCannulas(range, sel.value);
     initTrocars(range, sel.value);
-
-    // LOAD VALVE IMMEDIATELY
     autoValve(range, sel.value);
-    renderCards();
   };
 }
 
@@ -223,20 +247,20 @@ function initCannulas(range,family){
   sel.onchange = ()=>{
     selectedCannula = list[sel.value];
     renderCards();
+    autoValve(range,family);
+    updateHassonButton();
   };
 }
 
-/* TROCAR (UPDATED FOR 2 DROPDOWNS) */
+/* TROCAR (PRIMARY + SECONDARY) */
 function initTrocars(range,family){
   const list = data.trocars.filter(x=>x.range===range && x.family===family);
 
-  const sel1 = document.getElementById("trocarSelect1");
+  const sel1 = document.getElementById("trocarSelect");
   const sel2 = document.getElementById("trocarSelect2");
 
   sel1.innerHTML = `<option>Select Primary Trocar</option>`;
   sel2.innerHTML = `<option>Select Optional Trocar</option>`;
-
-  sel2.disabled = true;
 
   list.forEach((t,i)=>{
     sel1.innerHTML += `<option value="${i}">${t.variant}</option>`;
@@ -244,12 +268,8 @@ function initTrocars(range,family){
   });
 
   sel1.onchange = ()=>{
-    selectedTrocars = [];
     const t = list[sel1.value];
-    if(!t) return;
-
-    selectedTrocars.push(t);
-    sel2.disabled = false;
+    selectedTrocars = t ? [t] : [];
     renderCards();
   };
 
@@ -257,10 +277,13 @@ function initTrocars(range,family){
     const t = list[sel2.value];
     if(!t) return;
 
-    if(!selectedTrocars.find(x=>x.part_no===t.part_no)){
+    if(selectedTrocars.length === 1){
+      selectedTrocars[1] = t;
+    } else if(selectedTrocars.length === 0){
       selectedTrocars.push(t);
-      renderCards();
     }
+
+    renderCards();
   };
 }
 
@@ -275,12 +298,36 @@ function autoValve(range,family){
 
 /* HASSOn */
 function toggleHasson(){
+  if(!selectedCannula) return;
+
   if(selectedHasson){
     selectedHasson=null;
   }else{
-    selectedHasson = data.accessories.find(x=>x.variant==="Hasson");
+    selectedHasson = data.accessories.find(x =>
+      x.range===selectedCannula.range &&
+      x.family===selectedCannula.family &&
+      x.variant==="Hasson"
+    );
   }
   renderCards();
+}
+
+/* SHOW / HIDE HASSon BUTTON */
+function updateHassonButton(){
+  const btn = document.getElementById("hassonBtn");
+
+  if(!selectedCannula){
+    btn.style.display = "none";
+    return;
+  }
+
+  const exists = data.accessories.find(x =>
+    x.range===selectedCannula.range &&
+    x.family===selectedCannula.family &&
+    x.variant==="Hasson"
+  );
+
+  btn.style.display = exists ? "inline-block" : "none";
 }
 
 /* RENDER */
@@ -324,76 +371,40 @@ function makeCard(item){
   return div;
 }
 
-/* RESET */
-function resetConfigurator(){
+/* ADD CONFIG */
+function addConfig(){
+  const row = document.createElement("tr");
+
+  const trocarCodes = selectedTrocars.map(t=>t.part_no).join(", ");
+
+  const codes = [
+    selectedCannula?.part_no,
+    ...selectedTrocars.map(t=>t.part_no),
+    selectedValve?.part_no,
+    selectedHasson?.part_no
+  ].filter(Boolean).join(" / ");
+
+  row.innerHTML = `
+    <td>${selectedCannula?.family} - ${selectedCannula?.variant || ""}</td>
+    <td>${trocarCodes}</td>
+    <td>${selectedHasson ? "Hasson" : "Valve"}</td>
+    <td>${codes}</td>
+  `;
+
+  document.querySelector("#table tbody").appendChild(row);
+
+  /* RESET */
   selectedCannula = null;
   selectedTrocars = [];
   selectedValve = null;
   selectedHasson = null;
 
-  document.getElementById("familySelect").innerHTML = `<option>Select Family</option>`;
-  document.getElementById("cannulaSelect").innerHTML = `<option>Select Cannula</option>`;
-  document.getElementById("trocarSelect1").innerHTML = `<option>Select Primary Trocar</option>`;
-  document.getElementById("trocarSelect2").innerHTML = `<option>Select Optional Trocar</option>`;
-  document.getElementById("trocarSelect2").disabled = true;
+  document.getElementById("cannulaSelect").value = "";
+  document.getElementById("trocarSelect").value = "";
+  document.getElementById("trocarSelect2").value = "";
 
   document.getElementById("cards").innerHTML = "";
-}
-
-/* ADD CONFIG (UNCHANGED STRUCTURE) */
-function addConfig(){
-
-  const tbody = document.querySelector("#table tbody");
-
-  if(selectedCannula){
-    const row = document.createElement("tr");
-    row.innerHTML = `
-      <td>${selectedCannula.family} - ${selectedCannula.variant}</td>
-      <td></td>
-      <td></td>
-      <td>${selectedCannula.part_no}</td>
-    `;
-    tbody.appendChild(row);
-  }
-
-  selectedTrocars.forEach(t=>{
-    const row = document.createElement("tr");
-    row.innerHTML = `
-      <td></td>
-      <td>${t.variant}</td>
-      <td></td>
-      <td>${t.part_no}</td>
-    `;
-    tbody.appendChild(row);
-  });
-
-  if(selectedValve){
-    const row = document.createElement("tr");
-    row.innerHTML = `
-      <td></td>
-      <td></td>
-      <td>${selectedValve.variant}</td>
-      <td>${selectedValve.part_no}</td>
-    `;
-    tbody.appendChild(row);
-  }
-
-  if(selectedHasson){
-    const row = document.createElement("tr");
-    row.innerHTML = `
-      <td></td>
-      <td></td>
-      <td>Hasson</td>
-      <td>${selectedHasson.part_no}</td>
-    `;
-    tbody.appendChild(row);
-  }
-
-  const spacer = document.createElement("tr");
-  spacer.innerHTML = `<td colspan="4"></td>`;
-  tbody.appendChild(spacer);
-
-  resetConfigurator();
+  updateHassonButton();
 }
 
 /* INIT */
