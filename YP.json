@@ -1,69 +1,6 @@
 {
   "cannulas":[
-  {
-    "range": "YelloPort Elite",
-    "family": "YelloPort Elite 10 x 105mm",
-    "variant": "Standard",
-    "part_no": "EC1010520",
-    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
-  },
-  {
-    "range": "YelloPort Elite",
-    "family": "YelloPort Elite 10 x 150mm",
-    "variant": "Standard",
-    "part_no": "EC1015020",
-    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
-  },
-  {
-    "range": "YelloPort Elite",
-    "family": "YelloPort Elite 10 x 75mm",
-    "variant": "Standard",
-    "part_no": "EC1007520",
-    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
-  },
-  {
-    "range": "YelloPort Elite",
-    "family": "YelloPort Elite 12mm x 105mm",
-    "variant": "Standard",
-    "part_no": "EC1210520",
-    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
-  },
-  {
-    "range": "YelloPort Elite",
-    "family": "YelloPort Elite 12mm x 105mm XL",
-    "variant": "Standard",
-    "part_no": "EC1310520",
-    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
-  },
-  {
-    "range": "YelloPort Elite",
-    "family": "YelloPort Elite 12mm x 150mm",
-    "variant": "Standard",
-    "part_no": "EC1215020",
-    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
-  },
-  {
-    "range": "YelloPort Elite",
-    "family": "YelloPort Elite 12mm x 150mm XL",
-    "variant": "Standard",
-    "part_no": "EC1315020",
-    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
-  },
-  {
-    "range": "YelloPort Elite",
-    "family": "YelloPort Elite 12mm x 75mm",
-    "variant": "Standard",
-    "part_no": "EC1207520",
-    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
-  },
-  {
-    "range": "YelloPort Elite",
-    "family": "YelloPort Elite 12mm x 75mm XL",
-    "variant": "Standard",
-    "part_no": "EC1307520",
-    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
-  },
-  {
+     {
     "range": "YelloPort Elite",
     "family": "YelloPort Elite 5 x 55mm",
     "variant": "Unthreaded",
@@ -189,6 +126,70 @@
     "part_no": "EC0509532",
     "variant_image": ""
   },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 105mm",
+    "variant": "Standard",
+    "part_no": "EC1010520",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 150mm",
+    "variant": "Standard",
+    "part_no": "EC1015020",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 75mm",
+    "variant": "Standard",
+    "part_no": "EC1007520",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm",
+    "variant": "Standard",
+    "part_no": "EC1210520",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm XL",
+    "variant": "Standard",
+    "part_no": "EC1310520",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 150mm",
+    "variant": "Standard",
+    "part_no": "EC1215020",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 150mm XL",
+    "variant": "Standard",
+    "part_no": "EC1315020",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 75mm",
+    "variant": "Standard",
+    "part_no": "EC1207520",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 75mm XL",
+    "variant": "Standard",
+    "part_no": "EC1307520",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
+  },
+ 
   {
     "range": "YelloPort+",
     "family": "YelloPort+ 3 x 55mm",
