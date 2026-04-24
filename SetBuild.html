@@ -40,12 +40,6 @@ h1{
   gap:10px;
 }
 
-.top-row div{
-  display:flex;
-  flex-direction:column;
-  font-size:12px;
-}
-
 select{
   padding:10px;
   border-radius:8px;
@@ -191,7 +185,7 @@ td:last-child, th:last-child{
 <th>Image</th>
 <th>Description</th>
 <th>Part Number</th>
-<th style="text-align:center;">Remove</th>
+<th>Remove</th>
 </tr>
 </thead>
 <tbody></tbody>
@@ -213,25 +207,24 @@ async function load(){
 }
 
 function initRanges(){
-  const sel = rangeSelect;
   const ranges = [...new Set(data.cannulas.map(x=>x.range))];
-  sel.innerHTML = `<option>Select Range</option>`;
-  ranges.forEach(r=> sel.innerHTML+=`<option>${r}</option>`);
-  sel.onchange = ()=> initFamilies(sel.value);
+  rangeSelect.innerHTML = `<option>Select Range</option>`;
+  ranges.forEach(r=> rangeSelect.innerHTML+=`<option>${r}</option>`);
+  rangeSelect.onchange = ()=> initFamilies(rangeSelect.value);
 }
 
 function initFamilies(range){
-  const sel = familySelect;
   const families=[...new Set(data.cannulas.filter(x=>x.range===range).map(x=>x.family))];
-  sel.innerHTML=`<option>Select Size</option>`;
-  families.forEach(f=> sel.innerHTML+=`<option>${f}</option>`);
-  sel.onchange=()=>{
-    initCannulas(range,sel.value);
-    initTrocars(range,sel.value);
+  familySelect.innerHTML=`<option>Select Size</option>`;
+  families.forEach(f=> familySelect.innerHTML+=`<option>${f}</option>`);
 
-    selectedValve = data.accessories.find(x=>x.range===range && x.family===sel.value && x.variant==="Valve");
+  familySelect.onchange=()=>{
+    initCannulas(range,familySelect.value);
+    initTrocars(range,familySelect.value);
 
-    const hasH = data.accessories.find(x=>x.range===range && x.family===sel.value && x.variant==="Hasson");
+    selectedValve = data.accessories.find(x=>x.range===range && x.family===familySelect.value && x.variant==="Valve");
+
+    const hasH = data.accessories.find(x=>x.range===range && x.family===familySelect.value && x.variant==="Hasson");
     hassonBtn.style.display = hasH ? "block":"none";
     if(!hasH) selectedHasson=null;
 
@@ -336,22 +329,20 @@ function exportPDF(){
   doc.save("YelloPort_Set.pdf");
 }
 
-/* EMAIL */
+/* EMAIL (PLAIN TEXT - MOBILE SAFE) */
 function emailList(){
-  let html = `<h2 style="color:#1F8A86;">YelloPort Set Build</h2>
-  <table border="1" cellpadding="6" style="border-collapse:collapse;">
-  <tr style="background:#1F8A86;color:#fff;">
-  <th>Type</th><th>Description</th><th>Code</th></tr>`;
+  let body = "YelloPort Set Build\n-----------------------\n\n";
 
   document.querySelectorAll("#table tbody tr").forEach(r=>{
     const c=r.querySelectorAll("td");
     if(c.length<4) return;
-    html+=`<tr><td>${c[0].innerText}</td><td>${c[2].innerText}</td><td>${c[3].innerText}</td></tr>`;
+
+    body += `${c[0].innerText}\n`;
+    body += `  ${c[2].innerText}\n`;
+    body += `  Code: ${c[3].innerText}\n\n`;
   });
 
-  html+=`</table>`;
-
-  window.location.href=`mailto:?subject=YelloPort Set Build&body=${encodeURIComponent(html)}`;
+  window.location.href=`mailto:?subject=YelloPort Set Build&body=${encodeURIComponent(body)}`;
 }
 
 load();
