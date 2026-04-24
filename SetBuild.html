@@ -2,120 +2,145 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Set Builder</title>
+<title>Set Configurator</title>
 
 <style>
 
-/* ===== GLOBAL ===== */
+/* ================= GLOBAL ================= */
 body {
-    margin:0;
-    font-family:"Segoe UI", Arial;
-    background:#eef3f8;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1f5f9;
+  margin: 0;
+  padding: 20px;
+  color: #0f172a;
 }
 
-/* CENTERED LAYOUT */
-.app {
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-    padding:30px;
+/* ================= LAYOUT ================= */
+.container {
+  max-width: 1400px;
+  margin: auto;
 }
 
-/* MAIN CARD */
-.card {
-    width:480px;
-    background:white;
-    padding:25px;
-    border-radius:16px;
-    box-shadow:0 8px 30px rgba(0,0,0,0.08);
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
 
-/* TITLE */
-.card h1 {
-    margin:0 0 20px;
-    font-size:22px;
-    text-align:center;
-    color:#0f2e5d;
+/* ================= SECTION BOX ================= */
+.section-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
 }
 
-/* STEP */
-.step {
-    margin-bottom:18px;
+/* ================= HEADINGS ================= */
+h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
 }
 
-.step label {
-    display:block;
-    font-size:13px;
-    margin-bottom:6px;
-    color:#555;
+label {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 6px;
+  color: #475569;
 }
 
-/* INPUT */
+/* ================= DROPDOWN ================= */
 select {
-    width:100%;
-    padding:10px;
-    border-radius:8px;
-    border:1px solid #dce3ea;
-    background:#f9fbfd;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  font-size: 13px;
+  margin-bottom: 12px;
 }
 
-/* IMAGE PREVIEW */
-.preview {
-    margin-top:8px;
-    text-align:center;
+/* ================= CARD ================= */
+.card {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
 
-.preview img {
-    max-width:120px;
-    max-height:100px;
+.card:hover {
+  border-color: #2563eb;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-/* BUTTON */
-.btn {
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:10px;
-    background:#00a6c7;
-    color:white;
-    font-weight:600;
-    cursor:pointer;
+.card.selected {
+  border-color: #2563eb;
+  background: #eff6ff;
 }
 
-.btn:hover {
-    background:#008ea9;
+.card-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #fff;
+  padding: 6px;
+  border: 1px solid #e5e7eb;
 }
 
-/* TABLE */
-table {
-    width:100%;
-    margin-top:20px;
-    border-collapse:collapse;
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
-th, td {
-    padding:8px;
-    border-bottom:1px solid #eee;
+.card-title {
+  font-size: 14px;
+  font-weight: 600;
 }
 
-th {
-    background:#0f2e5d;
-    color:white;
+.card-code {
+  font-size: 12px;
+  color: #64748b;
 }
 
-/* DEBUG PANEL */
-#debugPanel {
-    position:fixed;
-    bottom:0;
-    left:0;
-    right:0;
-    height:150px;
-    background:#111;
-    color:#00ff88;
-    font-family:monospace;
-    font-size:12px;
-    overflow:auto;
-    padding:10px;
+.card-meta {
+  font-size: 12px;
+  color: #475569;
+}
+
+/* ================= BUTTON ================= */
+.btn-primary {
+  background: #1d4ed8;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 14px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background: #1e40af;
+}
+
+/* ================= DEBUG ================= */
+#debug {
+  margin-top: 20px;
+  font-size: 12px;
+  background: #000;
+  color: #0f0;
+  padding: 10px;
+  border-radius: 6px;
+  max-height: 200px;
+  overflow: auto;
 }
 
 </style>
@@ -123,259 +148,48 @@ th {
 
 <body>
 
-<div class="app">
-<div class="card">
+<div class="container">
 
-<h1>Set Builder</h1>
+  <h2>Set Configurator</h2>
 
-<!-- RANGE -->
-<div class="step">
-<label>Range</label>
-<select id="rangeSelect"></select>
-</div>
+  <div class="grid">
 
-<!-- FAMILY -->
-<div class="step">
-<label>Family</label>
-<select id="familySelect"></select>
-</div>
+    <!-- ================= CANNULA ================= -->
+    <div class="section-box">
+      <h2>1. Select Cannula</h2>
 
-<!-- CANNULA -->
-<div class="step">
-<label>Cannula</label>
-<select id="cannulaSelect"></select>
-<div class="preview"><img id="cannulaImg"></div>
-</div>
+      <label>Select Cannula</label>
+      <select id="cannulaSelect"></select>
 
-<!-- TROCAR 1 -->
-<div class="step">
-<label>Trocar 1</label>
-<select id="trocar1Select"></select>
-</div>
+      <div id="cannulaCards"></div>
+    </div>
 
-<!-- TROCAR 2 -->
-<div class="step">
-<label>Trocar 2 (optional)</label>
-<select id="trocar2Select"></select>
-</div>
+    <!-- ================= TROCAR ================= -->
+    <div class="section-box">
+      <h2>2. Select Trocar(s)</h2>
 
-<!-- ACCESSORY -->
-<div class="step">
-<label>Accessory (auto)</label>
-<select id="accessorySelect"></select>
-<div class="preview"><img id="accessoryImg"></div>
-</div>
+      <label>Trocar 1</label>
+      <select id="trocar1"></select>
 
-<button class="btn" onclick="addToSet()">Add to Set</button>
+      <div id="trocarCards"></div>
+    </div>
 
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Cannula</th>
-<th>Trocars</th>
-<th>Accessory</th>
-<th>Codes</th>
-</tr>
-</thead>
-<tbody id="configTable"></tbody>
-</table>
+    <!-- ================= REVIEW ================= -->
+    <div class="section-box">
+      <h2>3. Review</h2>
+
+      <div id="reviewBox"></div>
+
+      <br>
+      <button class="btn-primary">Add to Configuration</button>
+    </div>
+
+  </div>
+
+  <!-- DEBUG PANEL (KEEP THIS) -->
+  <div id="debug">Loading JSON...</div>
 
 </div>
-</div>
-
-<div id="debugPanel"></div>
-
-<script>
-
-/* ===== GLOBAL ===== */
-let DATA;
-let CONFIG = [];
-
-let selectedCannula;
-let selectedTrocar1;
-let selectedTrocar2;
-let selectedAccessory;
-
-/* ===== DEBUG ===== */
-function log(msg, obj=null){
-    const panel = document.getElementById("debugPanel");
-    let text = typeof msg === "string" ? msg : JSON.stringify(msg);
-    if(obj) text += " → " + JSON.stringify(obj);
-
-    console.log(msg, obj || "");
-    panel.innerHTML += text + "<br>";
-    panel.scrollTop = panel.scrollHeight;
-}
-
-/* ===== INIT ===== */
-async function init(){
-    try{
-        log("Loading JSON...");
-        const res = await fetch("./YP.json");
-        const text = await res.text();
-
-        if(text.startsWith("<!DOCTYPE")){
-            throw new Error("Got HTML instead of JSON");
-        }
-
-        DATA = JSON.parse(text);
-        log("JSON loaded", DATA);
-
-        buildRanges();
-
-    }catch(err){
-        log("ERROR:", err.message);
-        alert(err.message);
-    }
-}
-
-/* ===== RANGE ===== */
-function buildRanges(){
-    const select = document.getElementById("rangeSelect");
-    const ranges = [...new Set(DATA.cannulas.map(x=>x.range))];
-
-    select.innerHTML = "<option value=''>Select</option>";
-
-    ranges.forEach(r=>{
-        select.innerHTML += `<option value="${r}">${r}</option>`;
-    });
-
-    select.onchange = buildFamilies;
-}
-
-/* ===== FAMILY ===== */
-function buildFamilies(){
-    const range = rangeSelect.value;
-    const select = document.getElementById("familySelect");
-
-    const families = [...new Set(
-        DATA.cannulas.filter(x=>x.range===range).map(x=>x.family)
-    )];
-
-    select.innerHTML = "";
-
-    families.forEach(f=>{
-        select.innerHTML += `<option value="${f}">${f}</option>`;
-    });
-
-    buildCannulas();
-}
-
-/* ===== CANNULA ===== */
-function buildCannulas(){
-    const family = familySelect.value;
-    const select = document.getElementById("cannulaSelect");
-
-    const list = DATA.cannulas.filter(x=>x.family===family);
-
-    select.innerHTML = "";
-
-    list.forEach(c=>{
-        select.innerHTML += `<option value="${c.part_no}">${c.variant}</option>`;
-    });
-
-    select.onchange = ()=>{
-        selectedCannula = list.find(x=>x.part_no===select.value);
-        cannulaImg.src = selectedCannula.variant_image || "";
-        log("Cannula selected", selectedCannula);
-
-        buildTrocars(family);
-        buildAccessories(family);
-    };
-
-    select.onchange();
-}
-
-/* ===== TROCAR ===== */
-function buildTrocars(family){
-    const list = DATA.trocars.filter(x=>x.family===family);
-
-    trocar1Select.innerHTML = "<option value=''>None</option>";
-    trocar2Select.innerHTML = "<option value=''>None</option>";
-
-    list.forEach(t=>{
-        trocar1Select.innerHTML += `<option value="${t.part_no}">${t.variant}</option>`;
-        trocar2Select.innerHTML += `<option value="${t.part_no}">${t.variant}</option>`;
-    });
-
-    trocar1Select.onchange = ()=>{
-        selectedTrocar1 = list.find(x=>x.part_no===trocar1Select.value);
-        log("Trocar1", selectedTrocar1);
-    };
-
-    trocar2Select.onchange = ()=>{
-        selectedTrocar2 = list.find(x=>x.part_no===trocar2Select.value);
-        log("Trocar2", selectedTrocar2);
-    };
-}
-
-/* ===== ACCESSORIES ===== */
-function buildAccessories(family){
-    const list = DATA.accessories.filter(x=>x.family===family);
-
-    accessorySelect.innerHTML = "";
-
-    list.forEach(a=>{
-        accessorySelect.innerHTML += `<option value="${a.part_no}">${a.variant}</option>`;
-    });
-
-    accessorySelect.onchange = ()=>{
-        selectedAccessory = list.find(x=>x.part_no===accessorySelect.value);
-        accessoryImg.src = selectedAccessory.variant_image || "";
-        log("Accessory", selectedAccessory);
-    };
-
-    accessorySelect.onchange();
-}
-
-/* ===== ADD ===== */
-function addToSet(){
-
-    if(!selectedCannula){
-        alert("Select cannula");
-        return;
-    }
-
-    CONFIG.push({
-        cannula:selectedCannula,
-        trocar1:selectedTrocar1,
-        trocar2:selectedTrocar2,
-        accessory:selectedAccessory
-    });
-
-    log("Added", CONFIG);
-
-    renderTable();
-}
-
-/* ===== TABLE ===== */
-function renderTable(){
-    const tbody = document.getElementById("configTable");
-    tbody.innerHTML = "";
-
-    CONFIG.forEach((item,i)=>{
-        tbody.innerHTML += `
-        <tr>
-            <td>${i+1}</td>
-            <td>${item.cannula.variant}</td>
-            <td>
-                ${item.trocar1?.variant || ""} 
-                ${item.trocar2 ? " / "+item.trocar2.variant : ""}
-            </td>
-            <td>${item.accessory?.variant || ""}</td>
-            <td>
-                ${item.cannula.part_no} /
-                ${item.trocar1?.part_no || ""} 
-                ${item.trocar2?.part_no || ""}
-            </td>
-        </tr>`;
-    });
-}
-
-init();
-
-</script>
 
 </body>
 </html>
