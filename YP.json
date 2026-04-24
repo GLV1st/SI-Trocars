@@ -1,1577 +1,1255 @@
 {
-"cannulas":[
-{
-   "family": "YelloPort Elite 5 x 55mm",
-   "diameter": 5,
-   "length": 55,
-   "variant": "Unthreaded",
-   "part_no": "EC0505520",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Unthreaded.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 5 x 55mm",
-   "diameter": 5,
-   "length": 55,
-   "variant": "Unthreaded Luer",
-   "part_no": "EC0505521",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Unthreaded_Luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 5 x 55mm",
-   "diameter": 5,
-   "length": 55,
-   "variant": "Unthreaded Stopcock",
-   "part_no": "EC0505522",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Unthreaded_Stopcock.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 5 x 55mm",
-   "diameter": 5,
-   "length": 55,
-   "variant": "Threaded",
-   "part_no": "EC0505530",
-   "variant_image": "",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 5 x 55mm",
-   "diameter": 5,
-   "length": 55,
-   "variant": "Threaded Luer",
-   "part_no": "EC0505531",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Threaded_Luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 5 x 55mm",
-   "diameter": 5,
-   "length": 55,
-   "variant": "Threaded Stopcock",
-   "part_no": "EC0505532",
-   "variant_image": "",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 5 x 70mm",
-   "diameter": 5,
-   "length": 70,
-   "variant": "Unthreaded",
-   "part_no": "EC0507020",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Unthreaded.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 5 x 70mm",
-   "diameter": 5,
-   "length": 70,
-   "variant": "Unthreaded Luer",
-   "part_no": "EC0507021",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Unthreaded_Luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 5 x 70mm",
-   "diameter": 5,
-   "length": 70,
-   "variant": "Unthreaded Stopcock",
-   "part_no": "EC0507022",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Unthreaded_Stopcock.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 5 x 70mm",
-   "diameter": 5,
-   "length": 70,
-   "variant": "Threaded",
-   "part_no": "EC0507030",
-   "variant_image": "",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 5 x 70mm",
-   "diameter": 5,
-   "length": 70,
-   "variant": "Threaded Luer",
-   "part_no": "EC0507031",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Threaded_Luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 5 x 70mm",
-   "diameter": 5,
-   "length": 70,
-   "variant": "Threaded Stopcock",
-   "part_no": "EC0507032",
-   "variant_image": "",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 5 x 95mm",
-   "diameter": 5,
-   "length": 95,
-   "variant": "Unthreaded",
-   "part_no": "EC0509520",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Unthreaded.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 5 x 95mm",
-   "diameter": 5,
-   "length": 95,
-   "variant": "Unthreaded Luer",
-   "part_no": "EC0509521",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Unthreaded_Luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 5 x 95mm",
-   "diameter": 5,
-   "length": 95,
-   "variant": "Unthreaded Stopcock",
-   "part_no": "EC0509522",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Unthreaded_Stopcock.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 5 x 95mm",
-   "diameter": 5,
-   "length": 95,
-   "variant": "Threaded",
-   "part_no": "EC0509530",
-   "variant_image": "",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 5 x 95mm",
-   "diameter": 5,
-   "length": 95,
-   "variant": "Threaded Luer",
-   "part_no": "EC0509531",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Threaded_Luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 5 x 95mm",
-   "diameter": 5,
-   "length": 95,
-   "variant": "Threaded Stopcock",
-   "part_no": "EC0509532",
-   "variant_image": "",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 10 x 75mm",
-   "diameter": 10,
-   "length": 75,
-   "variant": "Standard",
-   "part_no": "EC1007520",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 10 x 105mm",
-   "diameter": 10,
-   "length": 105,
-   "variant": "Standard",
-   "part_no": "EC1010520",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 10 x 150mm",
-   "diameter": 10,
-   "length": 150,
-   "variant": "Standard",
-   "part_no": "EC1015020",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 75mm",
-   "diameter": 12,
-   "length": 75,
-   "variant": "Standard",
-   "part_no": "EC1207520",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 105mm",
-   "diameter": 12,
-   "length": 105,
-   "variant": "Standard",
-   "part_no": "EC1210520",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 150mm",
-   "diameter": 12,
-   "length": 150,
-   "variant": "Standard",
-   "part_no": "EC1215020",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 75mm XL",
-   "diameter": 12,
-   "length": 75,
-   "variant": "Standard",
-   "part_no": "EC1307520",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 105mm XL",
-   "diameter": 12,
-   "length": 105,
-   "variant": "Standard",
-   "part_no": "EC1310520",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 150mm XL",
-   "diameter": 12,
-   "length": 150,
-   "variant": "Standard",
-   "part_no": "EC1315020",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/5MM-ELITE-GROUP-SHOT0153.png"
- },
- {
-   "family": "YelloPort+ 3 x 55mm",
-   "diameter": 3,
-   "length": 55,
-   "variant": "Unthreaded",
-   "part_no": "YC0305500",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 3 x 55mm",
-   "diameter": 3,
-   "length": 55,
-   "variant": "Unthreaded Luer",
-   "part_no": "YC0305501",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 3 x 55mm",
-   "diameter": 3,
-   "length": 55,
-   "variant": "Threaded",
-   "part_no": "YC0305510",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded-scaled.jpg",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 3 x 55mm",
-   "diameter": 3,
-   "length": 55,
-   "variant": "Threaded Luer",
-   "part_no": "YC0305511",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 3 x 75mm",
-   "diameter": 3,
-   "length": 75,
-   "variant": "Unthreaded",
-   "part_no": "YC0307500",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 3 x 75mm",
-   "diameter": 3,
-   "length": 75,
-   "variant": "Unthreaded Luer",
-   "part_no": "YC0307501",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 3 x 75mm",
-   "diameter": 3,
-   "length": 75,
-   "variant": "Threaded",
-   "part_no": "YC0309500",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded-scaled.jpg",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 3 x 75mm",
-   "diameter": 3,
-   "length": 75,
-   "variant": "Threaded Luer",
-   "part_no": "YC0309501",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 3 x 95mm",
-   "diameter": 3,
-   "length": 95,
-   "variant": "Unthreaded",
-   "part_no": "YC0309500",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 3 x 95mm",
-   "diameter": 3,
-   "length": 95,
-   "variant": "Unthreaded Luer",
-   "part_no": "YC0309501",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 3 x 95mm",
-   "diameter": 3,
-   "length": 95,
-   "variant": "Threaded",
-   "part_no": "YC0309510",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded-scaled.jpg",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 3 x 95mm",
-   "diameter": 53,
-   "length": 95,
-   "variant": "Threaded Luer",
-   "part_no": "YC0309511",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 55mm",
-   "diameter": 5.5,
-   "length": 55,
-   "variant": "Unthreaded",
-   "part_no": "YC0505500",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 55mm",
-   "diameter": 5.5,
-   "length": 55,
-   "variant": "Unthreaded Luer",
-   "part_no": "YC0505501",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 55mm",
-   "diameter": 5.5,
-   "length": 55,
-   "variant": "Threaded",
-   "part_no": "YC0505510",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded-scaled.jpg",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 55mm",
-   "diameter": 5.5,
-   "length": 55,
-   "variant": "Unthreaded Stopcock",
-   "part_no": "YC0507002",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_Stopcock.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 55mm",
-   "diameter": 5.5,
-   "length": 55,
-   "variant": "Threaded Luer",
-   "part_no": "YC0505511",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 70mm",
-   "diameter": 5.5,
-   "length": 70,
-   "variant": "Unthreaded",
-   "part_no": "YC0507000",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 70mm",
-   "diameter": 5.5,
-   "length": 70,
-   "variant": "Unthreaded Luer",
-   "part_no": "YC0507001",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 70mm",
-   "diameter": 5.5,
-   "length": 70,
-   "variant": "Unthreaded Stopcock",
-   "part_no": "YC0507002",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_Stopcock.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 70mm",
-   "diameter": 5.5,
-   "length": 70,
-   "variant": "Threaded",
-   "part_no": "YC0507010",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded-scaled.jpg",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 75mm",
-   "diameter": 5.5,
-   "length": 75,
-   "variant": "Threaded Luer",
-   "part_no": "YC0507011",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 75mm",
-   "diameter": 5.5,
-   "length": 75,
-   "variant": "Threaded Stopcock",
-   "part_no": "YC0507012",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Stopcock-scaled.jpg",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 95mm",
-   "diameter": 5.5,
-   "length": 95,
-   "variant": "Unthreaded",
-   "part_no": "YC0509500",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 95mm",
-   "diameter": 5.5,
-   "length": 95,
-   "variant": "Unthreaded Luer",
-   "part_no": "YC0509501",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 95mm",
-   "diameter": 5.5,
-   "length": 95,
-   "variant": "Unthreaded Stopcock",
-   "part_no": "YC0509502",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_Stopcock.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 95mm",
-   "diameter": 5.5,
-   "length": 95,
-   "variant": "Threaded",
-   "part_no": "YC0509510",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded-scaled.jpg",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 95mm",
-   "diameter": 5.5,
-   "length": 95,
-   "variant": "Threaded Luer",
-   "part_no": "YC0509511",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 95mm",
-   "diameter": 5.5,
-   "length": 95,
-   "variant": "Threaded Stopcock",
-   "part_no": "YC0509512",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Stopcock-scaled.jpg",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 150mm",
-   "diameter": 5.5,
-   "length": 150,
-   "variant": "Unthreaded",
-   "part_no": "YC0515000",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 150mm",
-   "diameter": 5.5,
-   "length": 150,
-   "variant": "Unthreaded Luer",
-   "part_no": "YC0515001",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 150mm",
-   "diameter": 5.5,
-   "length": 150,
-   "variant": "Unthreaded Stopcock",
-   "part_no": "YC0515002",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_Stopcock.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 150mm",
-   "diameter": 5.5,
-   "length": 150,
-   "variant": "Threaded",
-   "part_no": "YC0515010",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded-scaled.jpg",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 150mm",
-   "diameter": 5.5,
-   "length": 150,
-   "variant": "Threaded Luer",
-   "part_no": "YC0515011",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Luer.png",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 150mm",
-   "diameter": 5.5,
-   "length": 150,
-   "variant": "Threaded Stopcock",
-   "part_no": "YC0515012",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Stopcock-scaled.jpg",
-   "family_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/3MM-CONFIGURATION-SHOT-WITH-STANDARD-TROCAR0144_edits-scaled.png"
- }],
-"trocars":[
- {
-   "family": "YelloPort Elite 5 x 55mm",
-   "name": "YelloPort Elite 5 x 55mm Pencil Point Trocar",
-   "type": "Pencil Point",
-   "length": "55",
-   "part_no": "ET0505503",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pencil.png"
- },
- {
-   "family": "YelloPort Elite 5 x 55mm",
-   "name": "YelloPort Elite 5 x 55mm Locking Shielded Trocar",
-   "type": "Locking Shielded",
-   "length": "55",
-   "part_no": "ET0505509",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Locking-Shielded.png"
- },
- {
-   "family": "YelloPort Elite 5 x 55mm",
-   "name": "YelloPort Elite 5 x 55mm Quill Tip Trocar",
-   "type": "Quill Tip",
-   "length": "55",
-   "part_no": "ET0505510",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Quill.png"
- },
- {
-   "family": "YelloPort Elite 5 x 55mm",
-   "name": "YelloPort Elite 5mm Single Use Seal Pk of 8",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA05XL",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA05XL-scaled.jpg"
- },
- {
-   "family": "YelloPort Elite 5 x 70mm",
-   "name": "YelloPort Elite 5 x 70mm Pencil Point Trocar",
-   "type": "Pencil Point",
-   "length": "70",
-   "part_no": "ET0507003",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pencil.png"
- },
- {
-   "family": "YelloPort Elite 5 x 70mm",
-   "name": "YelloPort Elite 5 x 70mm Locking Shielded Trocar",
-   "type": "Locking Shielded",
-   "length": "70",
-   "part_no": "ET0507009",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Locking-Shielded.png"
- },
- {
-   "family": "YelloPort Elite 5 x 70mm",
-   "name": "YelloPort Elite 5 x 70mm Quill Tip Trocar",
-   "type": "Quill Tip",
-   "length": "70",
-   "part_no": "ET0507010",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Quill.png"
- },
- {
-   "family": "YelloPort Elite 5 x 70mm",
-   "name": "YelloPort Elite 5 x 70mm Optical Bladeless Trocar",
-   "type": "Optical Bladeless",
-   "length": "70",
-   "part_no": "EO0507005",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/03/Optical.png"
- },
- {
-   "family": "YelloPort Elite 5 x 70mm",
-   "name": "YelloPort Elite 5mm Single Use Seal Pk of 8",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA05XL",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA05XL-scaled.jpg"
- },
- {
-   "family": "YelloPort Elite 5 x 95mm",
-   "name": "YelloPort Elite 5 x 95mm Pencil Point Trocar",
-   "type": "Pencil Point",
-   "length": "95",
-   "part_no": "ET0509503",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pencil.png"
- },
- {
-   "family": "YelloPort Elite 5 x 95mm",
-   "name": "YelloPort Elite 5 x 95mm Locking Shielded Trocar",
-   "type": "Locking Shielded",
-   "length": "95",
-   "part_no": "ET0509509",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Locking-Shielded.png"
- },
- {
-   "family": "YelloPort Elite 5 x 95mm",
-   "name": "YelloPort Elite 5 x 95mm Quill Tip Trocar",
-   "type": "Quill Tip",
-   "length": "95",
-   "part_no": "ET0509510",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Quill.png"
- },
- {
-   "family": "YelloPort Elite 5 x 95mm",
-   "name": "YelloPort Elite 5 x 95mm Optical Bladeless Trocar",
-   "type": "Optical Bladeless",
-   "length": "95",
-   "part_no": "EO0509505",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/03/Optical.png"
- },
- {
-   "family": "YelloPort Elite 5 x 95mm",
-   "name": "YelloPort Elite 5mm Single Use Seal Pk of 8",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA05XL",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA05XL-scaled.jpg"
- },
- {
-   "family": "YelloPort Elite 10 x 75mm",
-   "name": "Hasson Adaptor 10mm",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA10NH",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA10NH.png"
- },
- {
-   "family": "YelloPort Elite 10 x 75mm",
-   "name": "10mm Hasson Adaptor Seals Pack Of 5",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA10NH05",
-   "variant_image": ""
- },
- {
-   "family": "YelloPort Elite 10 x 75mm",
-   "name": "10x75mm Pencil Point Trocar",
-   "type": "Pencil Point",
-   "length": "75",
-   "part_no": "ET1007503",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pencil.png"
- },
- {
-   "family": "YelloPort Elite 10 x 75mm",
-   "name": "10x75mm Blunt Trocar",
-   "type": "Blunt",
-   "length": "75",
-   "part_no": "ET1007504",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Blunt.png"
- },
- {
-   "family": "YelloPort Elite 10 x 75mm",
-   "name": "10x75mm Dilating Pyramidal Trocar",
-   "type": "Pyramidal",
-   "length": "75",
-   "part_no": "ET1007507",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pyramidical.png"
- },
- {
-   "family": "YelloPort Elite 10 x 75mm",
-   "name": "10x75mm Locking Shielded Trocar",
-   "type": "Locking Shielded",
-   "length": "75",
-   "part_no": "ET1007509",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Locking-Shielded.png"
- },
- {
-   "family": "YelloPort Elite 10 x 75mm",
-   "name": "5-12mm Single Use Universal Seal Pack Of 5",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA512US",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA512US_5_12SINGLE-USE-UNIVERSAL-SEAL_1060.png"
- },
- {
-   "family": "YelloPort Elite 10 x 105mm",
-   "name": "Hasson Adaptor 10mm",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA10NH",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA10NH.png"
- },
- {
-   "family": "YelloPort Elite 10 x 105mm",
-   "name": "10mm Hasson Adaptor Seals Pack Of 5",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA10NH05",
-   "variant_image": ""
- },
- {
-   "family": "YelloPort Elite 10 x 105mm",
-   "name": "10x105mm Pencil Point Trocar",
-   "type": "Pencil Point",
-   "length": "105",
-   "part_no": "ET1010503",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pencil.png"
- },
- {
-   "family": "YelloPort Elite 10 x 105mm",
-   "name": "10x105mm Blunt Trocar",
-   "type": "Blunt",
-   "length": "105",
-   "part_no": "ET1010504",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Blunt.png"
- },
- {
-   "family": "YelloPort Elite 10 x 105mm",
-   "name": "10x105mm Dilating Pyramidal Trocar",
-   "type": "Pyramidal",
-   "length": "105",
-   "part_no": "ET1010507",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pyramidical.png"
- },
- {
-   "family": "YelloPort Elite 10 x 105mm",
-   "name": "10x105mm Locking Shielded Trocar",
-   "type": "Locking Shielded",
-   "length": "105",
-   "part_no": "ET1010509",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Locking-Shielded.png"
- },
- {
-   "family": "YelloPort Elite 10 x 105mm",
-   "name": "5-12mm Single Use Universal Seal Pack Of 5",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA512US",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA512US_5_12SINGLE-USE-UNIVERSAL-SEAL_1060.png"
- },
- {
-   "family": "YelloPort Elite 10 x 150mm",
-   "name": "Hasson Adaptor 10mm",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA10NH",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA10NH.png"
- },
- {
-   "family": "YelloPort Elite 10 x 150mm",
-   "name": "10mm Hasson Adaptor Seals Pack Of 5",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA10NH05",
-   "variant_image": ""
- },
- {
-   "family": "YelloPort Elite 10 x 150mm",
-   "name": "10x150mm Pencil Point Trocar",
-   "type": "Pencil Point",
-   "length": "150",
-   "part_no": "ET1015003",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pencil.png"
- },
- {
-   "family": "YelloPort Elite 10 x 150mm",
-   "name": "10x150mm Blunt Trocar",
-   "type": "Blunt",
-   "length": "150",
-   "part_no": "ET1015004",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Blunt.png"
- },
- {
-   "family": "YelloPort Elite 10 x 150mm",
-   "name": "10x150mm Dilating Pyramidal Trocar",
-   "type": "Pyramidal",
-   "length": "150",
-   "part_no": "ET1015007",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pyramidical.png"
- },
- {
-   "family": "YelloPort Elite 10 x 150mm",
-   "name": "10x150mm Locking Shielded Trocar",
-   "type": "Locking Shielded",
-   "length": "150",
-   "part_no": "ET1015009",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Locking-Shielded.png"
- },
- {
-   "family": "YelloPort Elite 10 x 150mm",
-   "name": "5-12mm Single Use Universal Seal Pack Of 5",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA512US",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA512US_5_12SINGLE-USE-UNIVERSAL-SEAL_1060.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 75mm",
-   "name": "Hasson Adaptor 12mm",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA12NH",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA10NH.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 75mm",
-   "name": "12mm Hasson Adaptor Seals Pack Of 5",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA12NH05",
-   "variant_image": ""
- },
- {
-   "family": "YelloPort Elite 12mm x 75mm",
-   "name": "YelloPort Elite 12x75mm Pencil Point Trocar",
-   "type": "Pencil Point",
-   "length": "75",
-   "part_no": "ET1207503",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pencil.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 75mm",
-   "name": "YelloPort Elite 12x75mm Blunt Trocar",
-   "type": "Blunt",
-   "length": "75",
-   "part_no": "ET1207504",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Blunt.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 75mm",
-   "name": "YelloPort Elite 12x75mm Dilating Pyramidal Trocar",
-   "type": "Pyramidal",
-   "length": "75",
-   "part_no": "ET1207507",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pyramidical.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 75mm",
-   "name": "YelloPort Elite 12x75mm Locking Shielded Trocar",
-   "type": "Locking Shielded",
-   "length": "75",
-   "part_no": "ET1027509",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Locking-Shielded.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 75mm",
-   "name": "5-12mm Single Use Universal Seal Pack Of 5",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA512US",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA512US_5_12SINGLE-USE-UNIVERSAL-SEAL_1060.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 105mm",
-   "name": "Hasson Adaptor 12mm",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA12NH",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA10NH.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 105mm",
-   "name": "12mm Hasson Adaptor Seals Pack Of 5",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA12NH05",
-   "variant_image": ""
- },
- {
-   "family": "YelloPort Elite 12mm x 105mm",
-   "name": "YelloPort Elite 12x105mm Pencil Point Trocar",
-   "type": "Pencil Point",
-   "length": "105",
-   "part_no": "ET1210503",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pencil.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 105mm",
-   "name": "YelloPort Elite 12x105mm Blunt Trocar",
-   "type": "Blunt",
-   "length": "105",
-   "part_no": "ET1210504",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Blunt.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 105mm",
-   "name": "YelloPort Elite 12x105mm Dilating Pyramidal Trocar",
-   "type": "Pyramidal",
-   "length": "105",
-   "part_no": "ET1210507",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pyramidical.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 105mm",
-   "name": "YelloPort Elite 12x105mm Locking Shielded Trocar",
-   "type": "Locking Shielded",
-   "length": "105",
-   "part_no": "ET1210509",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Locking-Shielded.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 105mm",
-   "name": "YelloPort Elite 12x105mm Optical Bladeless Trocar",
-   "type": "Optical Bladeless",
-   "length": "105",
-   "part_no": "EO1210505",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/03/Optical.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 105mm",
-   "name": "5-12mm Single Use Universal Seal Pack Of 5",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA512US",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA512US_5_12SINGLE-USE-UNIVERSAL-SEAL_1060.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 150mm",
-   "name": "Hasson Adaptor 12mm",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA12NH",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA10NH.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 150mm",
-   "name": "12mm Hasson Adaptor Seals Pack Of 5",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA12NH05",
-   "variant_image": ""
- },
- {
-   "family": "YelloPort Elite 12mm x 150mm",
-   "name": "YelloPort Elite 12x150mm Pencil Point Trocar",
-   "type": "Pencil Point",
-   "length": "150",
-   "part_no": "ET1215003",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pencil.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 150mm",
-   "name": "YelloPort Elite 12x150mm Blunt Trocar",
-   "type": "Blunt",
-   "length": "150",
-   "part_no": "ET1215004",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Blunt.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 150mm",
-   "name": "YelloPort Elite 12x150mm Dilating Pyramidal Trocar",
-   "type": "Pyramidal",
-   "length": "150",
-   "part_no": "ET1215007",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pyramidical.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 150mm",
-   "name": "YelloPort Elite 12x150mm Locking Shielded Trocar",
-   "type": "Locking Shielded",
-   "length": "150",
-   "part_no": "ET1215009",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Locking-Shielded.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 150mm",
-   "name": "5-12mm Single Use Universal Seal Pack Of 5",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA512US",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA512US_5_12SINGLE-USE-UNIVERSAL-SEAL_1060.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 75mm XL",
-   "name": "Hasson Adaptor 12mm",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA12NH",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA10NH.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 75mm XL",
-   "name": "12mm Hasson Adaptor Seals Pack Of 5",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA12NH05",
-   "variant_image": ""
- },
- {
-   "family": "YelloPort Elite 12mm x 75mm XL",
-   "name": "YelloPort Elite 12x75mm Pencil Point Trocar",
-   "type": "Pencil Point",
-   "length": "75",
-   "part_no": "ET1207503",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pencil.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 75mm XL",
-   "name": "YelloPort Elite 12x75mm Blunt Trocar",
-   "type": "Blunt",
-   "length": "75",
-   "part_no": "ET1207504",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Blunt.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 75mm XL",
-   "name": "YelloPort Elite 12x75mm Dilating Pyramidal Trocar",
-   "type": "Pyramidal",
-   "length": "75",
-   "part_no": "ET1207507",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pyramidical.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 75mm XL",
-   "name": "YelloPort Elite 12x75mm Locking Shielded Trocar",
-   "type": "Locking Shielded",
-   "length": "75",
-   "part_no": "ET1027509",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Locking-Shielded.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 75mm XL",
-   "name": "5-12mm Single Use Universal Seal Pack Of 5",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA512US",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA512US_5_12SINGLE-USE-UNIVERSAL-SEAL_1060.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 105mm XL",
-   "name": "Hasson Adaptor 12mm",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA12NH",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA10NH.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 105mm XL",
-   "name": "12mm Hasson Adaptor Seals Pack Of 5",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA12NH05",
-   "variant_image": ""
- },
- {
-   "family": "YelloPort Elite 12mm x 105mm XL",
-   "name": "YelloPort Elite 12x105mm Pencil Point Trocar",
-   "type": "Pencil Point",
-   "length": "105",
-   "part_no": "ET1210503",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pencil.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 105mm XL",
-   "name": "YelloPort Elite 12x105mm Blunt Trocar",
-   "type": "Blunt",
-   "length": "105",
-   "part_no": "ET1210504",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Blunt.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 105mm XL",
-   "name": "YelloPort Elite 12x105mm Dilating Pyramidal Trocar",
-   "type": "Pyramidal",
-   "length": "105",
-   "part_no": "ET1210507",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pyramidical.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 105mm XL",
-   "name": "YelloPort Elite 12x105mm Locking Shielded Trocar",
-   "type": "Locking Shielded",
-   "length": "105",
-   "part_no": "ET1210509",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Locking-Shielded.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 105mm XL",
-   "name": "YelloPort Elite 12x105mm Optical Bladeless Trocar",
-   "type": "Optical Bladeless",
-   "length": "105",
-   "part_no": "EO1210505",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/03/Optical.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 105mm XL",
-   "name": "5-12mm Single Use Universal Seal Pack Of 5",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA512US",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA512US_5_12SINGLE-USE-UNIVERSAL-SEAL_1060.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 150mm XL",
-   "name": "Hasson Adaptor 12mm",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA12NH",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA10NH.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 150mm XL",
-   "name": "12mm Hasson Adaptor Seals Pack Of 5",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA12NH05",
-   "variant_image": ""
- },
- {
-   "family": "YelloPort Elite 12mm x 150mm XL",
-   "name": "YelloPort Elite 12x150mm Pencil Point Trocar",
-   "type": "Pencil Point",
-   "length": "150",
-   "part_no": "ET1215003",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pencil.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 150mm XL",
-   "name": "YelloPort Elite 12x150mm Blunt Trocar",
-   "type": "Blunt",
-   "length": "150",
-   "part_no": "ET1215004",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Blunt.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 150mm XL",
-   "name": "YelloPort Elite 12x150mm Dilating Pyramidal Trocar",
-   "type": "Pyramidal",
-   "length": "150",
-   "part_no": "ET1215007",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pyramidical.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 150mm XL",
-   "name": "YelloPort Elite 12x150mm Locking Shielded Trocar",
-   "type": "Locking Shielded",
-   "length": "150",
-   "part_no": "ET1215009",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Locking-Shielded.png"
- },
- {
-   "family": "YelloPort Elite 12mm x 150mm XL",
-   "name": "5-12mm Single Use Universal Seal Pack Of 5",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "EA512US",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA512US_5_12SINGLE-USE-UNIVERSAL-SEAL_1060.png"
- },
- {
-   "family": "YelloPort+ 3 x 55mm",
-   "name": "YelloPort+  3 x 55mm Pencil Point Trocar",
-   "type": "Pencil Point",
-   "length": "55",
-   "part_no": "YT0305503",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pencil.png"
- },
- {
-   "family": "YelloPort+ 3 x 55mm",
-   "name": "YelloPort+  3 x 55mm Pyramidal Trocar",
-   "type": "Pyramidal",
-   "length": "55",
-   "part_no": "YT0305501",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pyramidical.png"
- },
- {
-   "family": "YelloPort+ 3 x 55mm",
-   "name": "3mm Single Use Valve ",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA03VSS01",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 3 x 55mm",
-   "name": "3mm Single Use Valve (Pack of 2)",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA03VSS02",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 3 x 55mm",
-   "name": "3mm Single Use Valve (Pack of 3)",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA03VSS03",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 3 x 75mm",
-   "name": "YelloPort+  5 x 75mm Pencil Point Trocar",
-   "type": "Pencil Point",
-   "length": "75",
-   "part_no": "YT0307503",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pencil.png"
- },
- {
-   "family": "YelloPort+ 3 x 75mm",
-   "name": "YelloPort+  5 x 75mm Pyramidal Trocar",
-   "type": "Pyramidal",
-   "length": "75",
-   "part_no": "YT0307501",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pyramidical.png"
- },
- {
-   "family": "YelloPort+ 3 x 75mm",
-   "name": "3mm Single Use Valve ",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA03VSS01",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 3 x 75mm",
-   "name": "3mm Single Use Valve (Pack of 2)",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA03VSS02",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 3 x 75mm",
-   "name": "3mm Single Use Valve (Pack of 3)",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA03VSS03",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 3 x 95mm",
-   "name": "YelloPort+  5 x 95mm Pencil Point Trocar",
-   "type": "Pencil Point",
-   "length": "95",
-   "part_no": "YT0309503",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pencil.png"
- },
- {
-   "family": "YelloPort+ 3 x 95mm",
-   "name": "YelloPort+  5 x 95mm Pyramidal Trocar",
-   "type": "Pyramidal",
-   "length": "95",
-   "part_no": "YT0309501",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pyramidical.png"
- },
- {
-   "family": "YelloPort+ 3 x 95mm",
-   "name": "3mm Single Use Valve ",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA03VSS01",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 3 x 95mm",
-   "name": "3mm Single Use Valve (Pack of 2)",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA03VSS02",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 3 x 95mm",
-   "name": "3mm Single Use Valve (Pack of 3)",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA03VSS03",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 55mm",
-   "name": "5.5mm x 55mm Pyramidal Trocar",
-   "type": "Pyramidal",
-   "length": "55",
-   "part_no": "YT0505501",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pyramidical.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 55mm",
-   "name": "5.5mm x 55mm Pencil Point Trocar",
-   "type": "Pencil Point",
-   "length": "55",
-   "part_no": "YT0505503",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pencil.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 55mm",
-   "name": "5.5mm x 55mm Blunt Trocar",
-   "type": "Blunt",
-   "length": "55",
-   "part_no": "YT0505504",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Blunt.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 55mm",
-   "name": "5.5mm x 55mm Shielded Trocar",
-   "type": "Shielded",
-   "length": "55",
-   "part_no": "YT0505505",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Shielded.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 55mm",
-   "name": "5.5mm Valve/Seal Single-Use (Tube 1) ",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA05VSS01",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 55mm",
-   "name": "5.5mm Valve/Seal Single-Use (Tube 2) ",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA05VSS02",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 55mm",
-   "name": "5.5mm Valve/Seal Single-Use (Tube 3) ",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA05VSS03",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 70mm",
-   "name": "5.5mm x 70mm Pyramidal Trocar",
-   "type": "Pyramidal",
-   "length": "70",
-   "part_no": "YT0507001",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pyramidical.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 70mm",
-   "name": "5.5mm x 70mm Pencil Point Trocar",
-   "type": "Pencil Point",
-   "length": "70",
-   "part_no": "YT0507003",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pencil.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 70mm",
-   "name": "5.5mm x 70mm Blunt Trocar",
-   "type": "Blunt",
-   "length": "70",
-   "part_no": "YT0507004",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Blunt.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 70mm",
-   "name": "5.5mm x 70mm Shielded Trocar",
-   "type": "Shielded",
-   "length": "70",
-   "part_no": "YT0507005",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Shielded.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 70mm",
-   "name": "5.5mm x 70mm Locking Shielded Trocar",
-   "type": "Locking Shielded",
-   "length": "70",
-   "part_no": "YT0507006",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Locking-Shielded.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 70mm",
-   "name": "5.5mm x 70mm Quill Tip Trocar",
-   "type": "Quill Tip",
-   "length": "70",
-   "part_no": "YT0507010",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Quill.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 70mm",
-   "name": "5.5mm Valve/Seal Single-Use (Tube 1) ",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA05VSS01",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 70mm",
-   "name": "5.5mm Valve/Seal Single-Use (Tube 2) ",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA05VSS02",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 70mm",
-   "name": "5.5mm Valve/Seal Single-Use (Tube 3) ",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA05VSS03",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 95mm",
-   "name": "5.5mm x 95mm Pyramidal Trocar",
-   "type": "Pyramidal",
-   "length": "95",
-   "part_no": "YT0509501",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pyramidical.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 95mm",
-   "name": "5.5mm x 95mm Pencil Point Trocar",
-   "type": "Pencil Point",
-   "length": "95",
-   "part_no": "YT0509503",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pencil.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 95mm",
-   "name": "5.5mm x 95mm Blunt Trocar",
-   "type": "Blunt",
-   "length": "95",
-   "part_no": "YT0509504",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Blunt.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 95mm",
-   "name": "5.5mm x 95mm Shielded Trocar",
-   "type": "Shielded",
-   "length": "95",
-   "part_no": "YT0509505",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Shielded.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 95mm",
-   "name": "5.5mm x 95mm Locking Shielded Trocar",
-   "type": "Locking Shielded",
-   "length": "95",
-   "part_no": "YT0509506",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Locking-Shielded.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 95mm",
-   "name": "5.5mm x 95mm Quill Tip Trocar",
-   "type": "Quill Tip",
-   "length": "95",
-   "part_no": "YT0509510",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Quill.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 95mm",
-   "name": "5.5mm Valve/Seal Single-Use (Tube 1) ",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA05VSS01",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 95mm",
-   "name": "5.5mm Valve/Seal Single-Use (Tube 2) ",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA05VSS02",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 95mm",
-   "name": "5.5mm Valve/Seal Single-Use (Tube 3) ",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA05VSS03",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 150mm",
-   "name": "5.5mm x 150mm Pyramidal Trocar",
-   "type": "Pyramidal",
-   "length": "95",
-   "part_no": "YT0515001",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pyramidical.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 150mm",
-   "name": "5.5mm x 150mm Pencil Point Trocar",
-   "type": "Pencil Point",
-   "length": "95",
-   "part_no": "YT0515003",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Pencil.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 150mm",
-   "name": "5.5mm x 150mm Blunt Trocar",
-   "type": "Blunt",
-   "length": "95",
-   "part_no": "YT0515004",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Blunt.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 150mm",
-   "name": "5.5mm x 150mm Shielded Trocar",
-   "type": "Shielded",
-   "length": "95",
-   "part_no": "YT0515005",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Shielded.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 150mm",
-   "name": "5.5mm x 150mm Locking Shielded Trocar",
-   "type": "Locking Shielded",
-   "length": "95",
-   "part_no": "YT0515006",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Locking-Shielded.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 150mm",
-   "name": "5.5mm Valve/Seal Single-Use (Tube 1) ",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA05VSS01",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 150mm",
-   "name": "5.5mm Valve/Seal Single-Use (Tube 2) ",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA05VSS02",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- },
- {
-   "family": "YelloPort+ 5.5 x 150mm",
-   "name": "5.5mm Valve/Seal Single-Use (Tube 3) ",
-   "type": "n/a",
-   "length": "n/a",
-   "part_no": "YA05VSS03",
-   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
- }]}
+  "cannulas": [
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 55mm",
+    "variant": "Unthreaded",
+    "part_no": "EC0505520",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Unthreaded.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 55mm",
+    "variant": "Unthreaded Luer",
+    "part_no": "EC0505521",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Unthreaded_Luer.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 55mm",
+    "variant": "Unthreaded Stopcock",
+    "part_no": "EC0505522",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Unthreaded_Stopcock.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 55mm",
+    "variant": "Threaded",
+    "part_no": "EC0505530",
+    "variant_Image": ""
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 55mm",
+    "variant": "Threaded Luer",
+    "part_no": "EC0505531",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Threaded_Luer.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 55mm",
+    "variant": "Threaded Stopcock",
+    "part_no": "EC0505532",
+    "variant_Image": ""
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 70mm",
+    "variant": "Unthreaded",
+    "part_no": "EC0507020",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Unthreaded.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 70mm",
+    "variant": "Unthreaded Luer",
+    "part_no": "EC0507021",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Unthreaded_Luer.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 70mm",
+    "variant": "Unthreaded Stopcock",
+    "part_no": "EC0507022",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Unthreaded_Stopcock.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 70mm",
+    "variant": "Threaded",
+    "part_no": "EC0507030",
+    "variant_Image": ""
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 70mm",
+    "variant": "Threaded Luer",
+    "part_no": "EC0507031",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Threaded_Luer.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 70mm",
+    "variant": "Threaded Stopcock",
+    "part_no": "EC0507032",
+    "variant_Image": ""
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 95mm",
+    "variant": "Unthreaded",
+    "part_no": "EC0509520",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Unthreaded.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 95mm",
+    "variant": "Unthreaded Luer",
+    "part_no": "EC0509521",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Unthreaded_Luer.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 95mm",
+    "variant": "Unthreaded Stopcock",
+    "part_no": "EC0509522",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Unthreaded_Stopcock.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 95mm",
+    "variant": "Threaded",
+    "part_no": "EC0509530",
+    "variant_Image": ""
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 95mm",
+    "variant": "Threaded Luer",
+    "part_no": "EC0509531",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Elite_5mm_Threaded_Luer.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 95mm",
+    "variant": "Threaded Stopcock",
+    "part_no": "EC0509532",
+    "variant_Image": ""
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 75mm",
+    "variant": "Standard",
+    "part_no": "EC1007520",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 105mm",
+    "variant": "Standard",
+    "part_no": "EC1010520",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 150mm",
+    "variant": "Standard",
+    "part_no": "EC1015020",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 75mm",
+    "variant": "Standard",
+    "part_no": "EC1207520",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm",
+    "variant": "Standard",
+    "part_no": "EC1210520",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 150mm",
+    "variant": "Standard",
+    "part_no": "EC1215020",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 75mm XL",
+    "variant": "Standard",
+    "part_no": "EC1307520",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm XL",
+    "variant": "Standard",
+    "part_no": "EC1310520",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 150mm XL",
+    "variant": "Standard",
+    "part_no": "EC1315020",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/ELITE-10_12.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 55mm",
+    "variant": "Unthreaded",
+    "part_no": "YC0305500",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 55mm",
+    "variant": "Unthreaded Luer",
+    "part_no": "YC0305501",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_luer.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 55mm",
+    "variant": "Threaded",
+    "part_no": "YC0305510",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded-scaled.jpg"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 55mm",
+    "variant": "Threaded Luer",
+    "part_no": "YC0305511",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Luer.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 75mm",
+    "variant": "Unthreaded",
+    "part_no": "YC0307500",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 75mm",
+    "variant": "Unthreaded Luer",
+    "part_no": "YC0307501",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_luer.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 75mm",
+    "variant": "Threaded",
+    "part_no": "YC0309500",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded-scaled.jpg"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 75mm",
+    "variant": "Threaded Luer",
+    "part_no": "YC0309501",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Luer.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 95mm",
+    "variant": "Unthreaded",
+    "part_no": "YC0309500",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 95mm",
+    "variant": "Unthreaded Luer",
+    "part_no": "YC0309501",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_luer.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 95mm",
+    "variant": "Threaded",
+    "part_no": "YC0309510",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded-scaled.jpg"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 95mm",
+    "variant": "Threaded Luer",
+    "part_no": "YC0309511",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Luer.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 55mm",
+    "variant": "Unthreaded",
+    "part_no": "YC0505500",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 55mm",
+    "variant": "Unthreaded Luer",
+    "part_no": "YC0505501",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_luer.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 55mm",
+    "variant": "Threaded",
+    "part_no": "YC0505510",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded-scaled.jpg"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 55mm",
+    "variant": "Unthreaded Stopcock",
+    "part_no": "YC0507002",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_Stopcock.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 55mm",
+    "variant": "Threaded Luer",
+    "part_no": "YC0505511",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Luer.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 70mm",
+    "variant": "Unthreaded",
+    "part_no": "YC0507000",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 70mm",
+    "variant": "Unthreaded Luer",
+    "part_no": "YC0507001",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_luer.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 70mm",
+    "variant": "Unthreaded Stopcock",
+    "part_no": "YC0507002",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_Stopcock.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 70mm",
+    "variant": "Threaded",
+    "part_no": "YC0507010",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded-scaled.jpg"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 75mm",
+    "variant": "Threaded Luer",
+    "part_no": "YC0507011",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Luer.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 75mm",
+    "variant": "Threaded Stopcock",
+    "part_no": "YC0507012",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Stopcock-scaled.jpg"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 95mm",
+    "variant": "Unthreaded",
+    "part_no": "YC0509500",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 95mm",
+    "variant": "Unthreaded Luer",
+    "part_no": "YC0509501",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_luer.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 95mm",
+    "variant": "Unthreaded Stopcock",
+    "part_no": "YC0509502",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_Stopcock.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 95mm",
+    "variant": "Threaded",
+    "part_no": "YC0509510",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded-scaled.jpg"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 95mm",
+    "variant": "Threaded Luer",
+    "part_no": "YC0509511",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Luer.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 95mm",
+    "variant": "Threaded Stopcock",
+    "part_no": "YC0509512",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Stopcock-scaled.jpg"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 150mm",
+    "variant": "Unthreaded",
+    "part_no": "YC0515000",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 150mm",
+    "variant": "Unthreaded Luer",
+    "part_no": "YC0515001",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_luer.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 150mm",
+    "variant": "Unthreaded Stopcock",
+    "part_no": "YC0515002",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Unthreaded_Stopcock.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 150mm",
+    "variant": "Threaded",
+    "part_no": "YC0515010",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded-scaled.jpg"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 150mm",
+    "variant": "Threaded Luer",
+    "part_no": "YC0515011",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Luer.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 150mm",
+    "variant": "Threaded Stopcock",
+    "part_no": "YC0515012",
+    "variant_Image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Plus_Threaded_Stopcock-scaled.jpg"
+  }
+],
+
+  "trocars": [
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 55mm",
+    "variant": "Pencil Point",
+    "part_no": "ET0505503"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 55mm",
+    "variant": "Locking Shielded",
+    "part_no": "ET0505509"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 55mm",
+    "variant": "Quill Tip",
+    "part_no": "ET0505510"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 70mm",
+    "variant": "Pencil Point",
+    "part_no": "ET0507003"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 70mm",
+    "variant": "Locking Shielded",
+    "part_no": "ET0507009"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 70mm",
+    "variant": "Quill Tip",
+    "part_no": "ET0507010"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 70mm",
+    "variant": "Optical Bladeless",
+    "part_no": "EO0507005"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 95mm",
+    "variant": "Pencil Point",
+    "part_no": "ET0509503"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 95mm",
+    "variant": "Locking Shielded",
+    "part_no": "ET0509509"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 95mm",
+    "variant": "Quill Tip",
+    "part_no": "ET0509510"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 95mm",
+    "variant": "Optical Bladeless",
+    "part_no": "EO0509505"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 75mm",
+    "variant": "Pencil Point",
+    "part_no": "ET1007503"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 75mm",
+    "variant": "Blunt",
+    "part_no": "ET1007504"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 75mm",
+    "variant": "Pyramidal",
+    "part_no": "ET1007507"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 75mm",
+    "variant": "Locking Shielded",
+    "part_no": "ET1007509"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 105mm",
+    "variant": "Pencil Point",
+    "part_no": "ET1010503"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 105mm",
+    "variant": "Blunt",
+    "part_no": "ET1010504"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 105mm",
+    "variant": "Pyramidal",
+    "part_no": "ET1010507"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 105mm",
+    "variant": "Locking Shielded",
+    "part_no": "ET1010509"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 150mm",
+    "variant": "Pencil Point",
+    "part_no": "ET1015003"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 150mm",
+    "variant": "Blunt",
+    "part_no": "ET1015004"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 150mm",
+    "variant": "Pyramidal",
+    "part_no": "ET1015007"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 150mm",
+    "variant": "Locking Shielded",
+    "part_no": "ET1015009"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 75mm",
+    "variant": "Pencil Point",
+    "part_no": "ET1207503"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 75mm",
+    "variant": "Blunt",
+    "part_no": "ET1207504"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 75mm",
+    "variant": "Pyramidal",
+    "part_no": "ET1207507"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 75mm",
+    "variant": "Locking Shielded",
+    "part_no": "ET1027509"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm",
+    "variant": "Pencil Point",
+    "part_no": "ET1210503"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm",
+    "variant": "Blunt",
+    "part_no": "ET1210504"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm",
+    "variant": "Pyramidal",
+    "part_no": "ET1210507"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm",
+    "variant": "Locking Shielded",
+    "part_no": "ET1210509"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm",
+    "variant": "Optical Bladeless",
+    "part_no": "EO1210505"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 150mm",
+    "variant": "Pencil Point",
+    "part_no": "ET1215003"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 150mm",
+    "variant": "Blunt",
+    "part_no": "ET1215004"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 150mm",
+    "variant": "Pyramidal",
+    "part_no": "ET1215007"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 150mm",
+    "variant": "Locking Shielded",
+    "part_no": "ET1215009"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 75mm XL",
+    "variant": "Pencil Point",
+    "part_no": "ET1207503"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 75mm XL",
+    "variant": "Blunt",
+    "part_no": "ET1207504"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 75mm XL",
+    "variant": "Pyramidal",
+    "part_no": "ET1207507"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 75mm XL",
+    "variant": "Locking Shielded",
+    "part_no": "ET1027509"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm XL",
+    "variant": "Pencil Point",
+    "part_no": "ET1210503"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm XL",
+    "variant": "Blunt",
+    "part_no": "ET1210504"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm XL",
+    "variant": "Pyramidal",
+    "part_no": "ET1210507"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm XL",
+    "variant": "Locking Shielded",
+    "part_no": "ET1210509"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm XL",
+    "variant": "Optical Bladeless",
+    "part_no": "EO1210505"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 150mm XL",
+    "variant": "Pencil Point",
+    "part_no": "ET1215003"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 150mm XL",
+    "variant": "Blunt",
+    "part_no": "ET1215004"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 150mm XL",
+    "variant": "Pyramidal",
+    "part_no": "ET1215007"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 150mm XL",
+    "variant": "Locking Shielded",
+    "part_no": "ET1215009"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 55mm",
+    "variant": "Pencil Point",
+    "part_no": "YT0305503"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 55mm",
+    "variant": "Pyramidal",
+    "part_no": "YT0305501"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 75mm",
+    "variant": "Pencil Point",
+    "part_no": "YT0307503"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 75mm",
+    "variant": "Pyramidal",
+    "part_no": "YT0307501"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 95mm",
+    "variant": "Pencil Point",
+    "part_no": "YT0309503"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 95mm",
+    "variant": "Pyramidal",
+    "part_no": "YT0309501"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 55mm",
+    "variant": "Pyramidal",
+    "part_no": "YT0505501"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 55mm",
+    "variant": "Pencil Point",
+    "part_no": "YT0505503"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 55mm",
+    "variant": "Blunt",
+    "part_no": "YT0505504"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 55mm",
+    "variant": "Shielded",
+    "part_no": "YT0505505"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 70mm",
+    "variant": "Pyramidal",
+    "part_no": "YT0507001"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 70mm",
+    "variant": "Pencil Point",
+    "part_no": "YT0507003"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 70mm",
+    "variant": "Blunt",
+    "part_no": "YT0507004"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 70mm",
+    "variant": "Shielded",
+    "part_no": "YT0507005"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 70mm",
+    "variant": "Locking Shielded",
+    "part_no": "YT0507006"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 70mm",
+    "variant": "Quill Tip",
+    "part_no": "YT0507010"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 95mm",
+    "variant": "Pyramidal",
+    "part_no": "YT0509501"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 95mm",
+    "variant": "Pencil Point",
+    "part_no": "YT0509503"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 95mm",
+    "variant": "Blunt",
+    "part_no": "YT0509504"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 95mm",
+    "variant": "Shielded",
+    "part_no": "YT0509505"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 95mm",
+    "variant": "Locking Shielded",
+    "part_no": "YT0509506"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 95mm",
+    "variant": "Quill Tip",
+    "part_no": "YT0509510"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 150mm",
+    "variant": "Pyramidal",
+    "part_no": "YT0515001"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 150mm",
+    "variant": "Pencil Point",
+    "part_no": "YT0515003"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 150mm",
+    "variant": "Blunt",
+    "part_no": "YT0515004"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 150mm",
+    "variant": "Shielded",
+    "part_no": "YT0515005"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 150mm",
+    "variant": "Locking Shielded",
+    "part_no": "YT0515006"
+  }
+],
+   "accessories": [
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 105mm",
+    "variant": "Seal",
+    "part_no": "EA10NH05",
+    "variant_image": ""
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 105mm",
+    "variant": "Valve",
+    "part_no": "EA512US",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA512US_5_12SINGLE-USE-UNIVERSAL-SEAL_1060.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 105mm",
+    "variant": "Hasson",
+    "part_no": "EA10NH",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA10NH.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 150mm",
+    "variant": "Seal",
+    "part_no": "EA10NH05",
+    "variant_image": ""
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 150mm",
+    "variant": "Valve",
+    "part_no": "EA512US",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA512US_5_12SINGLE-USE-UNIVERSAL-SEAL_1060.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 150mm",
+    "variant": "Hasson",
+    "part_no": "EA10NH",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA10NH.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 75mm",
+    "variant": "Seal",
+    "part_no": "EA10NH05",
+    "variant_image": ""
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 75mm",
+    "variant": "Valve",
+    "part_no": "EA512US",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA512US_5_12SINGLE-USE-UNIVERSAL-SEAL_1060.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 10 x 75mm",
+    "variant": "Hasson",
+    "part_no": "EA10NH",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA10NH.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm",
+    "variant": "Seal",
+    "part_no": "EA12NH05",
+    "variant_image": ""
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm",
+    "variant": "Valve",
+    "part_no": "EA512US",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA512US_5_12SINGLE-USE-UNIVERSAL-SEAL_1060.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm",
+    "variant": "Hasson",
+    "part_no": "EA12NH",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA12NH.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm XL",
+    "variant": "Seal",
+    "part_no": "EA12NH05",
+    "variant_image": ""
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm XL",
+    "variant": "Valve",
+    "part_no": "EA512US",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA512US_5_12SINGLE-USE-UNIVERSAL-SEAL_1060.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 105mm XL",
+    "variant": "Hasson",
+    "part_no": "EA12NH",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA12NH.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 150mm",
+    "variant": "Seal",
+    "part_no": "EA12NH05",
+    "variant_image": ""
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 150mm",
+    "variant": "Valve",
+    "part_no": "EA512US",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA512US_5_12SINGLE-USE-UNIVERSAL-SEAL_1060.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 150mm",
+    "variant": "Hasson",
+    "part_no": "EA12NH",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA12NH.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 150mm XL",
+    "variant": "Seal",
+    "part_no": "EA12NH05",
+    "variant_image": ""
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 150mm XL",
+    "variant": "Valve",
+    "part_no": "EA512US",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA512US_5_12SINGLE-USE-UNIVERSAL-SEAL_1060.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 150mm XL",
+    "variant": "Hasson",
+    "part_no": "EA12NH",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA12NH.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 75mm",
+    "variant": "Seal",
+    "part_no": "EA12NH05",
+    "variant_image": ""
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 75mm",
+    "variant": "Valve",
+    "part_no": "EA512US",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA512US_5_12SINGLE-USE-UNIVERSAL-SEAL_1060.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 75mm",
+    "variant": "Hasson",
+    "part_no": "EA12NH",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA12NH.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 75mm XL",
+    "variant": "Seal",
+    "part_no": "EA12NH05",
+    "variant_image": ""
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 75mm XL",
+    "variant": "Valve",
+    "part_no": "EA512US",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA512US_5_12SINGLE-USE-UNIVERSAL-SEAL_1060.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 12mm x 75mm XL",
+    "variant": "Hasson",
+    "part_no": "EA12NH",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA12NH.png"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 55mm",
+    "variant": "Valve",
+    "part_no": "EA05XL",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA05XL-scaled.jpg"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 70mm",
+    "variant": "Valve",
+    "part_no": "EA05XL",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA05XL-scaled.jpg"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort Elite 5 x 95mm",
+    "variant": "Valve",
+    "part_no": "EA05XL",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/EA05XL-scaled.jpg"
+  },
+  {
+    "range": "YelloPort Elite",
+    "family": "YelloPort+ 3 x 55mm",
+    "variant": "Valve",
+    "part_no": "YA03VSS01",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 55mm",
+    "variant": "Valve",
+    "part_no": "YA03VSS02",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 55mm",
+    "variant": "Valve",
+    "part_no": "YA03VSS03",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 75mm",
+    "variant": "Valve",
+    "part_no": "YA03VSS01",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 75mm",
+    "variant": "Valve",
+    "part_no": "YA03VSS02",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 75mm",
+    "variant": "Valve",
+    "part_no": "YA03VSS03",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 95mm",
+    "variant": "Valve",
+    "part_no": "YA03VSS01",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 95mm",
+    "variant": "Valve",
+    "part_no": "YA03VSS02",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 3 x 95mm",
+    "variant": "Valve",
+    "part_no": "YA03VSS03",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 150mm",
+    "variant": "Valve",
+    "part_no": "YA05VSS01",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 150mm",
+    "variant": "Valve",
+    "part_no": "YA05VSS02",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 150mm",
+    "variant": "Valve",
+    "part_no": "YA05VSS03",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 55mm",
+    "variant": "Valve",
+    "part_no": "YA05VSS01",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 55mm",
+    "variant": "Valve",
+    "part_no": "YA05VSS02",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 55mm",
+    "variant": "Valve",
+    "part_no": "YA05VSS03",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 70mm",
+    "variant": "Valve",
+    "part_no": "YA05VSS01",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 70mm",
+    "variant": "Valve",
+    "part_no": "YA05VSS02",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 70mm",
+    "variant": "Valve",
+    "part_no": "YA05VSS03",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 95mm",
+    "variant": "Valve",
+    "part_no": "YA05VSS01",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 95mm",
+    "variant": "Valve",
+    "part_no": "YA05VSS02",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  },
+  {
+    "range": "YelloPort+",
+    "family": "YelloPort+ 5.5 x 95mm",
+    "variant": "Valve",
+    "part_no": "YA05VSS03",
+    "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
+  }
+]
