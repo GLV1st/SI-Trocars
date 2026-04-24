@@ -18,10 +18,11 @@ body{
   padding:20px;
 }
 
-/* BACK BUTTON FIXED FOR MOBILE */
+/* BACK BUTTON */
 #backBtn{
-  position:relative;
-  margin-bottom:10px;
+  position:absolute;
+  top:20px;
+  left:20px;
   padding:8px 14px;
   background:#1F8A86;
   color:#fff;
@@ -44,7 +45,6 @@ h1{
   gap:10px;
 }
 
-/* DROPDOWN STYLE */
 select{
   padding:10px;
   border-radius:8px;
@@ -53,7 +53,7 @@ select{
   font-size:16px;
 }
 
-/* ACTION BUTTON ROW */
+/* ACTION BUTTONS */
 #actionRow{
   display:flex;
   justify-content:center;
@@ -70,7 +70,6 @@ select{
   background:#1F8A86;
   color:#fff;
   cursor:pointer;
-  min-height:44px;
 }
 
 /* ADD BUTTON */
@@ -85,7 +84,6 @@ select{
   color:#fff;
   font-weight:bold;
   cursor:pointer;
-  min-height:44px;
 }
 
 /* GRID */
@@ -96,7 +94,6 @@ select{
   margin-top:15px;
 }
 
-/* CARD */
 .card{
   background:#f1f5f9;
   border-radius:14px;
@@ -111,16 +108,16 @@ select{
   object-fit:contain;
 }
 
+/* TABLE WRAPPER (FIX) */
+.table-wrapper{
+  overflow-x:auto;
+}
+
 /* TABLE */
 table{
   width:100%;
   margin-top:20px;
   border-collapse:collapse;
-
-  /* MOBILE SCROLL FIX */
-  display:block;
-  overflow-x:auto;
-  white-space:nowrap;
 }
 
 th{
@@ -132,6 +129,7 @@ td{
   border:1px solid #e2e8f0;
   padding:10px;
   vertical-align:middle;
+  white-space:nowrap;
 }
 
 td img{
@@ -140,10 +138,6 @@ td img{
   object-fit:contain;
   display:block;
   margin:auto;
-}
-
-td:last-child, th:last-child{
-  text-align:center;
 }
 
 /* REMOVE BUTTON */
@@ -170,42 +164,38 @@ td:last-child, th:last-child{
   padding:10px 20px;
   border:none;
   border-radius:10px;
-  cursor:pointer;
   background:#1F8A86;
   color:#fff;
-  min-height:44px;
+  cursor:pointer;
 }
 
-/* ================= MOBILE ================= */
-@media (max-width: 768px){
+/* MOBILE */
+@media (max-width:768px){
 
   .top-row{
-    grid-template-columns: 1fr;
+    grid-template-columns:1fr;
   }
 
   #actionRow{
     flex-direction:column;
   }
 
-  #actionRow button{
+  #actionRow button,
+  .center-btn,
+  .export-row button{
     width:100%;
     max-width:none;
   }
 
-  .center-btn{
-    width:100%;
-  }
-
-  .export-row{
-    flex-direction:column;
-  }
-
-  .export-row button{
-    width:100%;
-  }
-
   .grid{
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:1fr 1fr;
+  }
+
+  /* STICKY ADD BUTTON */
+  .center-btn{
+    position:sticky;
+    bottom:10px;
+    z-index:999;
   }
 }
 </style>
@@ -234,6 +224,7 @@ td:last-child, th:last-child{
 
 <div class="grid" id="cards"></div>
 
+<div class="table-wrapper">
 <table id="table">
 <thead>
 <tr>
@@ -246,6 +237,7 @@ td:last-child, th:last-child{
 </thead>
 <tbody></tbody>
 </table>
+</div>
 
 <div class="export-row">
 <button onclick="exportPDF()">Export PDF</button>
@@ -265,25 +257,26 @@ async function load(){
 
 /* RANGE */
 function initRanges(){
-  const ranges = [...new Set(data.cannulas.map(x=>x.range))];
-  rangeSelect.innerHTML = `<option>Select Range</option>`;
-  ranges.forEach(r=> rangeSelect.innerHTML+=`<option>${r}</option>`);
-  rangeSelect.onchange = ()=> initFamilies(rangeSelect.value);
+  const ranges=[...new Set(data.cannulas.map(x=>x.range))];
+  rangeSelect.innerHTML=`<option>Select Range</option>`;
+  ranges.forEach(r=>rangeSelect.innerHTML+=`<option>${r}</option>`);
+  rangeSelect.onchange=()=>initFamilies(rangeSelect.value);
 }
 
 /* FAMILY */
 function initFamilies(range){
   const families=[...new Set(data.cannulas.filter(x=>x.range===range).map(x=>x.family))];
   familySelect.innerHTML=`<option>Select Size</option>`;
-  families.forEach(f=> familySelect.innerHTML+=`<option>${f}</option>`);
+  families.forEach(f=>familySelect.innerHTML+=`<option>${f}</option>`);
+
   familySelect.onchange=()=>{
     initCannulas(range,familySelect.value);
     initTrocars(range,familySelect.value);
 
-    selectedValve = data.accessories.find(x=>x.range===range && x.family===familySelect.value && x.variant==="Valve");
+    selectedValve=data.accessories.find(x=>x.range===range && x.family===familySelect.value && x.variant==="Valve");
 
-    const hasH = data.accessories.find(x=>x.range===range && x.family===familySelect.value && x.variant==="Hasson");
-    hassonBtn.style.display = hasH ? "block":"none";
+    const hasH=data.accessories.find(x=>x.range===range && x.family===familySelect.value && x.variant==="Hasson");
+    hassonBtn.style.display=hasH?"block":"none";
     if(!hasH) selectedHasson=null;
 
     renderCards();
@@ -294,7 +287,7 @@ function initFamilies(range){
 function initCannulas(range,family){
   const list=data.cannulas.filter(x=>x.range===range && x.family===family);
   cannulaSelect.innerHTML=`<option>Select Variant</option>`;
-  list.forEach((c,i)=> cannulaSelect.innerHTML+=`<option value="${i}">${c.variant}</option>`);
+  list.forEach((c,i)=>cannulaSelect.innerHTML+=`<option value="${i}">${c.variant}</option>`);
   cannulaSelect.onchange=()=>{selectedCannula=list[cannulaSelect.value];renderCards();};
 }
 
@@ -394,7 +387,7 @@ function exportPDF(){
   doc.save("YelloPort_Set.pdf");
 }
 
-/* EMAIL (SAFE) */
+/* EMAIL */
 function emailList(){
   let body="YelloPort Set Build\n\n";
   document.querySelectorAll("#table tbody tr").forEach(r=>{
