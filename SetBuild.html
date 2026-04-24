@@ -2,358 +2,302 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Set Configurator</title>
+<title>Surgical Configurator</title>
 
 <style>
-
-/* ================= GLOBAL ================= */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f1f5f9;
-  margin: 0;
-  padding: 20px;
-  color: #0f172a;
+body{
+  font-family: Arial;
+  background:#0f172a;
+  color:#fff;
+  margin:0;
+  padding:20px;
 }
 
-.container {
-  max-width: 1400px;
-  margin: auto;
+/* HEADER */
+h1{
+  text-align:center;
+  margin-bottom:20px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+/* SELECTS */
+select, button{
+  padding:10px;
+  margin:5px;
+  border-radius:8px;
+  border:none;
 }
 
-/* ================= BOX ================= */
-.section-box {
-  background: #fff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 16px;
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+  gap:15px;
+  margin-top:15px;
 }
 
-/* ================= FORM ================= */
-label {
-  font-size: 13px;
-  margin-top: 10px;
-  display: block;
+/* CARD */
+.card{
+  background:#1e293b;
+  border-radius:14px;
+  padding:15px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  transition:0.2s;
+  cursor:pointer;
 }
 
-select {
-  width: 100%;
-  padding: 8px;
-  border-radius: 8px;
-  margin-bottom: 10px;
+.card:hover{
+  background:#334155;
 }
 
-/* ================= CARD ================= */
-.card {
-  display: flex;
-  gap: 12px;
-  padding: 10px;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  background: #f8fafc;
-  cursor: pointer;
-  margin-bottom: 10px;
+.card.selected{
+  outline:3px solid #22c55e;
 }
 
-.card:hover {
-  border-color: #2563eb;
+.card img{
+  max-width:100px;
+  height:80px;
+  object-fit:contain;
+  margin-bottom:10px;
 }
 
-.card.selected {
-  background: #eff6ff;
-  border-color: #2563eb;
+.card-title{
+  font-weight:bold;
+  text-align:center;
 }
 
-.card-img {
-  width: 55px;
-  height: 55px;
-  object-fit: contain;
+.card-code{
+  font-size:12px;
+  color:#94a3b8;
 }
 
-.card-title {
-  font-weight: 600;
-  font-size: 14px;
+/* TABLE */
+table{
+  width:100%;
+  margin-top:20px;
+  border-collapse:collapse;
 }
 
-.card-code {
-  font-size: 12px;
-  color: #64748b;
+th,td{
+  border:1px solid #334155;
+  padding:8px;
+  text-align:center;
 }
 
-.card-meta {
-  font-size: 12px;
+th{
+  background:#1e293b;
 }
 
-/* ================= BUTTON ================= */
-button {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  background: #1d4ed8;
-  color: #fff;
-  border: none;
+/* DEBUG */
+#debug{
+  margin-top:20px;
+  background:#020617;
+  padding:10px;
+  font-size:12px;
+  color:#22c55e;
 }
-
-/* ================= DEBUG ================= */
-#debug {
-  margin-top: 20px;
-  background: black;
-  color: lime;
-  padding: 10px;
-  font-size: 12px;
-  max-height: 200px;
-  overflow: auto;
-}
-
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<h1>Surgical Configurator</h1>
 
-<h2>Set Configurator</h2>
-
-<div class="grid">
-
-<!-- ================= LEFT ================= -->
-<div class="section-box">
-
-<label>Range</label>
 <select id="rangeSelect"></select>
-
-<label>Family</label>
 <select id="familySelect"></select>
-
-<label>Cannula</label>
 <select id="cannulaSelect"></select>
-
-<div id="cannulaCard"></div>
-
-<div id="hassonContainer"></div>
-
-</div>
-
-<!-- ================= MIDDLE ================= -->
-<div class="section-box">
-
-<label>Trocar</label>
 <select id="trocarSelect"></select>
 
-<div id="trocarCard"></div>
+<button onclick="toggleHasson()">Toggle Hasson</button>
+<button onclick="addConfig()">Add Config</button>
 
-</div>
+<div class="grid" id="cards"></div>
 
-<!-- ================= RIGHT ================= -->
-<div class="section-box">
+<table id="table">
+<thead>
+<tr>
+<th>Cannula</th>
+<th>Trocars</th>
+<th>Accessory</th>
+<th>Codes</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
 
-<h3>Review</h3>
-<div id="review"></div>
-
-<button onclick="addConfig()">Add to Configuration</button>
-
-</div>
-
-</div>
-
-<div id="debug">Loading JSON...</div>
-
-</div>
+<div id="debug"></div>
 
 <script>
-
-let data;
+let data = {};
 let selectedCannula = null;
-let selectedTrocar = null;
+let selectedTrocars = [];
 let selectedValve = null;
 let selectedHasson = null;
 
-/* ================= LOAD JSON ================= */
-fetch('YP.json')
-.then(r => r.json())
-.then(d => {
-  data = d;
-  log("JSON Loaded");
-  initRanges();
-})
-.catch(e => log("ERROR: " + e));
-
-/* ================= DEBUG ================= */
+/* DEBUG */
 function log(msg){
-  document.getElementById("debug").innerHTML += "<br>" + msg;
+  document.getElementById("debug").innerHTML += msg + "<br>";
 }
 
-/* ================= RANGE ================= */
+/* LOAD JSON */
+async function load(){
+  log("Loading JSON...");
+  try{
+    const res = await fetch("data.json");
+    data = await res.json();
+    log("Loaded OK");
+    initRanges();
+  }catch(e){
+    log("ERROR: " + e);
+  }
+}
+
+/* RANGE */
 function initRanges(){
-  const ranges = [...new Set(data.cannulas.map(x => x.range))];
+  const ranges = [...new Set(data.cannulas.map(x=>x.range))];
   const sel = document.getElementById("rangeSelect");
+  sel.innerHTML = `<option>Select Range</option>`;
+  ranges.forEach(r=> sel.innerHTML += `<option>${r}</option>`);
 
-  sel.innerHTML = `<option value="">Select</option>`;
-  ranges.forEach(r => sel.innerHTML += `<option>${r}</option>`);
-
-  sel.onchange = () => initFamilies(sel.value);
+  sel.onchange = ()=> initFamilies(sel.value);
 }
 
-/* ================= FAMILY ================= */
+/* FAMILY */
 function initFamilies(range){
-  const fams = [...new Set(
-    data.cannulas
-      .filter(x => x.range === range)
-      .map(x => x.family)
-  )];
+  const families = [...new Set(data.cannulas
+    .filter(x=>x.range===range)
+    .map(x=>x.family))];
 
   const sel = document.getElementById("familySelect");
-  sel.innerHTML = `<option value="">Select</option>`;
-  fams.forEach(f => sel.innerHTML += `<option>${f}</option>`);
+  sel.innerHTML = `<option>Select Family</option>`;
+  families.forEach(f=> sel.innerHTML += `<option>${f}</option>`);
 
-  sel.onchange = () => initCannulas(range, sel.value);
+  sel.onchange = ()=> {
+    initCannulas(range, sel.value);
+    initTrocars(range, sel.value);
+  };
 }
 
-/* ================= CANNULA ================= */
-function initCannulas(range, family){
-  const list = data.cannulas.filter(x =>
-    x.range === range && x.family === family
-  );
+/* CANNULA */
+function initCannulas(range,family){
+  const list = data.cannulas.filter(x=>x.range===range && x.family===family);
 
   const sel = document.getElementById("cannulaSelect");
-  sel.innerHTML = `<option value="">Select</option>`;
+  sel.innerHTML = `<option>Select Cannula</option>`;
   list.forEach((c,i)=> sel.innerHTML += `<option value="${i}">${c.variant}</option>`);
 
-  sel.onchange = () => {
+  sel.onchange = ()=>{
     selectedCannula = list[sel.value];
-    renderCannula();
-    renderHasson();
-    initTrocars(range, family);
-    autoSelectValve();
-    updateReview();
+    renderCards();
+    autoValve(range,family);
   };
 }
 
-/* ================= CANNULA CARD ================= */
-function renderCannula(){
-  const c = selectedCannula;
-  document.getElementById("cannulaCard").innerHTML = `
-    <div class="card selected">
-      <img class="card-img" src="${c.variant_image || ''}">
-      <div>
-        <div class="card-title">${c.family}</div>
-        <div class="card-code">${c.part_no}</div>
-      </div>
-    </div>
-  `;
-}
-
-/* ================= TROCAR ================= */
-function initTrocars(range, family){
-  const list = data.trocars.filter(x =>
-    x.range === range && x.family === family
-  );
+/* TROCAR */
+function initTrocars(range,family){
+  const list = data.trocars.filter(x=>x.range===range && x.family===family);
 
   const sel = document.getElementById("trocarSelect");
-  sel.innerHTML = `<option value="">Select</option>`;
+  sel.innerHTML = `<option>Add Trocar</option>`;
   list.forEach((t,i)=> sel.innerHTML += `<option value="${i}">${t.variant}</option>`);
 
-  sel.onchange = () => {
-    selectedTrocar = list[sel.value];
-    renderTrocar();
-    updateReview();
+  sel.onchange = ()=>{
+    const t = list[sel.value];
+    if(!t) return;
+
+    if(!selectedTrocars.find(x=>x.part_no===t.part_no)){
+      selectedTrocars.push(t);
+      renderCards();
+    }
   };
 }
 
-function renderTrocar(){
-  const t = selectedTrocar;
-  document.getElementById("trocarCard").innerHTML = `
-    <div class="card selected">
-      <div>
-        <div class="card-title">${t.variant}</div>
-        <div class="card-code">${t.part_no}</div>
-      </div>
-    </div>
-  `;
-}
-
-/* ================= VALVE AUTO ================= */
-function autoSelectValve(){
-  selectedValve = data.accessories.find(a =>
-    a.family === selectedCannula.family &&
-    a.variant === "Valve"
+/* AUTO VALVE */
+function autoValve(range,family){
+  selectedValve = data.accessories.find(x =>
+    x.range===range &&
+    x.family===family &&
+    x.variant==="Valve"
   );
 }
 
-/* ================= HASSON OPTIONAL ================= */
-function renderHasson(){
-  const h = data.accessories.find(a =>
-    a.family === selectedCannula.family &&
-    a.variant === "Hasson"
-  );
-
-  const box = document.getElementById("hassonContainer");
-  box.innerHTML = "";
-
-  if(!h) return;
-
-  const div = document.createElement("div");
-  div.className = "card";
-
-  div.innerHTML = `
-    <div>
-      <div class="card-title">Hasson (Optional)</div>
-      <div class="card-code">${h.part_no}</div>
-    </div>
-  `;
-
-  div.onclick = () => {
-    selectedHasson = selectedHasson ? null : h;
-    div.classList.toggle("selected");
-    updateReview();
-  };
-
-  box.appendChild(div);
+/* HASSOn */
+function toggleHasson(){
+  if(selectedHasson){
+    selectedHasson=null;
+  }else{
+    selectedHasson = data.accessories.find(x=>x.variant==="Hasson");
+  }
+  renderCards();
 }
 
-/* ================= REVIEW ================= */
-function updateReview(){
-  let html = "";
+/* RENDER */
+function renderCards(){
+  const c = document.getElementById("cards");
+  c.innerHTML="";
 
   if(selectedCannula){
-    html += `<div class="card">${selectedCannula.part_no}</div>`;
+    c.appendChild(makeCard(selectedCannula));
   }
 
-  if(selectedTrocar){
-    html += `<div class="card">${selectedTrocar.part_no}</div>`;
-  }
+  selectedTrocars.forEach((t,i)=>{
+    const card = makeCard(t,true);
+    card.onclick = ()=>{
+      selectedTrocars.splice(i,1);
+      renderCards();
+    };
+    c.appendChild(card);
+  });
 
   if(selectedValve){
-    html += `<div class="card">Valve: ${selectedValve.part_no}</div>`;
+    c.appendChild(makeCard(selectedValve));
   }
 
   if(selectedHasson){
-    html += `<div class="card">Hasson: ${selectedHasson.part_no}</div>`;
+    c.appendChild(makeCard(selectedHasson));
   }
-
-  document.getElementById("review").innerHTML = html;
 }
 
-/* ================= FINAL ================= */
+/* CARD BUILDER */
+function makeCard(item){
+  const div = document.createElement("div");
+  div.className="card selected";
+
+  div.innerHTML = `
+    <img src="${item.variant_image || ''}">
+    <div class="card-title">${item.variant}</div>
+    <div class="card-code">${item.part_no}</div>
+  `;
+
+  return div;
+}
+
+/* ADD CONFIG */
 function addConfig(){
+  const row = document.createElement("tr");
+
+  const trocarCodes = selectedTrocars.map(t=>t.part_no).join(", ");
+
   const codes = [
     selectedCannula?.part_no,
-    selectedTrocar?.part_no,
-    selectedValve?.part_no
-  ];
+    ...selectedTrocars.map(t=>t.part_no),
+    selectedValve?.part_no,
+    selectedHasson?.part_no
+  ].filter(Boolean).join(" / ");
 
-  if(selectedHasson){
-    codes.push(selectedHasson.part_no);
-  }
+  row.innerHTML = `
+    <td>${selectedCannula?.variant || ""}</td>
+    <td>${trocarCodes}</td>
+    <td>${selectedHasson ? "Hasson" : ""}</td>
+    <td>${codes}</td>
+  `;
 
-  alert("Added: " + codes.join(" / "));
+  document.querySelector("#table tbody").appendChild(row);
 }
 
+/* INIT */
+load();
 </script>
 
 </body>
