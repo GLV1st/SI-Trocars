@@ -1332,4 +1332,1413 @@
     "part_no": "YA05VSS03",
     "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/YA05VSS01_3MM-SINGLE-USE-DUCKBILL-VALVE-QTY-2-LAPAROSCOPIC-SLEEVE-SEAL-REDUCER-45597_125.png"
   }
+],
+  "Logic":[
+ {
+   "family": "Logic Allis Grapser (Jaw Length 13mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47028",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48028_INSERT-ALLIS-GASPER-305MM_143.png"
+ },
+ {
+   "family": "Logic Allis Grapser (Jaw Length 13mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-48028",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48028_INSERT-ALLIS-GASPER-305MM_143.png"
+ },
+ {
+   "family": "Logic Allis Grapser (Jaw Length 13mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-49028",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48028_INSERT-ALLIS-GASPER-305MM_143.png"
+ },
+ {
+   "family": "Logic Allis Grapser (Jaw Length 13mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Allis Grapser (Jaw Length 13mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Allis Grapser (Jaw Length 13mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Allis Grapser (Jaw Length 13mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Allis Grapser (Jaw Length 13mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Allis Grapser (Jaw Length 13mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Allis Grapser (Jaw Length 13mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ },
+ {
+   "family": "Logic Babcock Grapser (Jaw Length 29mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47024",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48027_INSERT-BABCOCK-305MM_145.png"
+ },
+ {
+   "family": "Logic Babcock Grapser (Jaw Length 29mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-48027",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48027_INSERT-BABCOCK-305MM_145.png"
+ },
+ {
+   "family": "Logic Babcock Grapser (Jaw Length 29mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-49027",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48027_INSERT-BABCOCK-305MM_145.png"
+ },
+ {
+   "family": "Logic Babcock Grapser (Jaw Length 29mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Babcock Grapser (Jaw Length 29mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Babcock Grapser (Jaw Length 29mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Babcock Grapser (Jaw Length 29mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Babcock Grapser (Jaw Length 29mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Babcock Grapser (Jaw Length 29mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Babcock Grapser (Jaw Length 29mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ },
+ {
+   "family": "Logic Clinch(Jaw Length 22mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47040",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48040_305MM-CLINCH_157.png"
+ },
+ {
+   "family": "Logic Clinch(Jaw Length 22mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-48040",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48040_305MM-CLINCH_157.png"
+ },
+ {
+   "family": "Logic Clinch(Jaw Length 22mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-49040",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48040_305MM-CLINCH_157.png"
+ },
+ {
+   "family": "Logic Clinch(Jaw Length 22mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Clinch(Jaw Length 22mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Clinch(Jaw Length 22mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Clinch(Jaw Length 22mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Clinch(Jaw Length 22mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Clinch(Jaw Length 22mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Clinch(Jaw Length 22mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ },
+ {
+   "family": "Logic Cobra Grasping Forceps (Jaw Length 11mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47039",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48039_305MM-COBRA_154.png"
+ },
+ {
+   "family": "Logic Cobra Grasping Forceps (Jaw Length 11mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-48039",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48039_305MM-COBRA_154.png"
+ },
+ {
+   "family": "Logic Cobra Grasping Forceps (Jaw Length 11mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-49039",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48039_305MM-COBRA_154.png"
+ },
+ {
+   "family": "Logic Cobra Grasping Forceps (Jaw Length 11mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Cobra Grasping Forceps (Jaw Length 11mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Cobra Grasping Forceps (Jaw Length 11mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Cobra Grasping Forceps (Jaw Length 11mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Cobra Grasping Forceps (Jaw Length 11mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Cobra Grasping Forceps (Jaw Length 11mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Cobra Grasping Forceps (Jaw Length 11mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ },
+ {
+   "family": "Logic Crocodile Grapser (Jaw Length 16mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47033",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48033_305MM-CROCODILE-GRASPING-FORCEPS_147.png"
+ },
+ {
+   "family": "Logic Crocodile Grapser (Jaw Length 16mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-48033",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48033_305MM-CROCODILE-GRASPING-FORCEPS_147.png"
+ },
+ {
+   "family": "Logic Crocodile Grapser (Jaw Length 16mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-49033",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48033_305MM-CROCODILE-GRASPING-FORCEPS_147.png"
+ },
+ {
+   "family": "Logic Crocodile Grapser (Jaw Length 16mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Crocodile Grapser (Jaw Length 16mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Crocodile Grapser (Jaw Length 16mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Crocodile Grapser (Jaw Length 16mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Crocodile Grapser (Jaw Length 16mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Crocodile Grapser (Jaw Length 16mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Crocodile Grapser (Jaw Length 16mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ },
+ {
+   "family": "Logic Crocodile Grapser (Jaw Length 16mm)",
+   "variant": "",
+   "type": "",
+   "part_no": "",
+   "variant_image": ""
+ },
+ {
+   "family": "Logic Curved Dissector (Jaw Length 16mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47022",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48022_305MM-CURVED-DISSECTOR_134.png"
+ },
+ {
+   "family": "Logic Curved Dissector (Jaw Length 16mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-48022",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48022_305MM-CURVED-DISSECTOR_134.png"
+ },
+ {
+   "family": "Logic Curved Dissector (Jaw Length 16mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-49022",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48022_305MM-CURVED-DISSECTOR_134.png"
+ },
+ {
+   "family": "Logic Curved Dissector (Jaw Length 16mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Curved Dissector (Jaw Length 16mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Curved Dissector (Jaw Length 16mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Curved Dissector (Jaw Length 16mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Curved Dissector (Jaw Length 16mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Curved Dissector (Jaw Length 16mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Curved Dissector (Jaw Length 16mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper with Cup(Jaw Length 16mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47047",
+   "variant_image": ""
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper with Cup(Jaw Length 16mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-48047",
+   "variant_image": ""
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper with Cup(Jaw Length 16mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-49047",
+   "variant_image": ""
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper with Cup(Jaw Length 16mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper with Cup(Jaw Length 16mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper with Cup(Jaw Length 16mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper with Cup(Jaw Length 16mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper with Cup(Jaw Length 16mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper with Cup(Jaw Length 16mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper with Cup(Jaw Length 16mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper(Jaw Length 16mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47046",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48046_INSERT-DOLPHIN-NOSE-305MM_152.png"
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper(Jaw Length 16mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-48046",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48046_INSERT-DOLPHIN-NOSE-305MM_152.png"
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper(Jaw Length 16mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-49046",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48046_INSERT-DOLPHIN-NOSE-305MM_152.png"
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper(Jaw Length 16mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper(Jaw Length 16mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper(Jaw Length 16mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper(Jaw Length 16mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper(Jaw Length 16mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper(Jaw Length 16mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Dolphin Nose Grasper(Jaw Length 16mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ },
+ {
+   "family": "Logic Duckbill Forcep (Jaw Length 13mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47032",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48032_305MM-DUCKBILL-FORCEPS_137.png"
+ },
+ {
+   "family": "Logic Duckbill Forcep (Jaw Length 13mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-48032",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48032_305MM-DUCKBILL-FORCEPS_137.png"
+ },
+ {
+   "family": "Logic Duckbill Forcep (Jaw Length 13mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-49032",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48032_305MM-DUCKBILL-FORCEPS_137.png"
+ },
+ {
+   "family": "Logic Duckbill Forcep (Jaw Length 13mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Duckbill Forcep (Jaw Length 13mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Duckbill Forcep (Jaw Length 13mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Duckbill Forcep (Jaw Length 13mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Duckbill Forcep (Jaw Length 13mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Duckbill Forcep (Jaw Length 13mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Duckbill Forcep (Jaw Length 13mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - EXTRA LONG -  (Jaw Length 33mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47035",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_49035_355MM-EXTRA-LONG-FENSTRATED-GRASPER_144.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - EXTRA LONG -  (Jaw Length 33mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-48035",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_49035_355MM-EXTRA-LONG-FENSTRATED-GRASPER_144.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - EXTRA LONG -  (Jaw Length 33mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-49035",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_49035_355MM-EXTRA-LONG-FENSTRATED-GRASPER_144.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - EXTRA LONG -  (Jaw Length 33mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - EXTRA LONG -  (Jaw Length 33mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - EXTRA LONG -  (Jaw Length 33mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - EXTRA LONG -  (Jaw Length 33mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - EXTRA LONG -  (Jaw Length 33mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - EXTRA LONG -  (Jaw Length 33mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - EXTRA LONG -  (Jaw Length 33mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - LONG -(Jaw Length 21mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47021",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48021_305MM-LONG-FENESTRATED-GRASPER_132.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - LONG -(Jaw Length 21mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-48021",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48021_305MM-LONG-FENESTRATED-GRASPER_132.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - LONG -(Jaw Length 21mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-49021",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48021_305MM-LONG-FENESTRATED-GRASPER_132.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - LONG -(Jaw Length 21mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - LONG -(Jaw Length 21mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - LONG -(Jaw Length 21mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - LONG -(Jaw Length 21mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - LONG -(Jaw Length 21mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - LONG -(Jaw Length 21mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - LONG -(Jaw Length 21mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - SHORT - (Jaw Length 15mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-48020",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_47020_235MM-SHORT-FENESTRATED-GRASPER_149.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - SHORT - (Jaw Length 15mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-49020",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_47020_235MM-SHORT-FENESTRATED-GRASPER_149.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - SHORT - (Jaw Length 15mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - SHORT - (Jaw Length 15mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - SHORT - (Jaw Length 15mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - SHORT - (Jaw Length 15mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - SHORT - (Jaw Length 15mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - SHORT - (Jaw Length 15mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Fenestrated Grapser - SHORT - (Jaw Length 15mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ },
+ {
+   "family": "Logic Fine Tooth Forceps (Jaw Length 16mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47037",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48037_INSERT-FINE-TOOTHED-305MM_1057.png"
+ },
+ {
+   "family": "Logic Fine Tooth Forceps (Jaw Length 16mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-48037",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48037_INSERT-FINE-TOOTHED-305MM_1057.png"
+ },
+ {
+   "family": "Logic Fine Tooth Forceps (Jaw Length 16mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-49037",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48037_INSERT-FINE-TOOTHED-305MM_1057.png"
+ },
+ {
+   "family": "Logic Fine Tooth Forceps (Jaw Length 16mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Fine Tooth Forceps (Jaw Length 16mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Fine Tooth Forceps (Jaw Length 16mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Fine Tooth Forceps (Jaw Length 16mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Fine Tooth Forceps (Jaw Length 16mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Fine Tooth Forceps (Jaw Length 16mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Fine Tooth Forceps (Jaw Length 16mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ },
+ {
+   "family": "Logic Hunter Bowel Grasper (Jaw Length 21mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47042",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48042_HUNTER-BOWEL-305MM_142.png"
+ },
+ {
+   "family": "Logic Hunter Bowel Grasper (Jaw Length 21mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-48072",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48042_HUNTER-BOWEL-305MM_142.png"
+ },
+ {
+   "family": "Logic Hunter Bowel Grasper (Jaw Length 21mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-49072",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48042_HUNTER-BOWEL-305MM_142.png"
+ },
+ {
+   "family": "Logic Hunter Bowel Grasper (Jaw Length 21mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Hunter Bowel Grasper (Jaw Length 21mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Hunter Bowel Grasper (Jaw Length 21mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Hunter Bowel Grasper (Jaw Length 21mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Hunter Bowel Grasper (Jaw Length 21mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Hunter Bowel Grasper (Jaw Length 21mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Hunter Bowel Grasper (Jaw Length 21mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ },
+ {
+   "family": "Logic Maxi Grapser (Jaw Length 17mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47026",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48026_305MM-MAXI-GRASPER_151.png"
+ },
+ {
+   "family": "Logic Maxi Grapser (Jaw Length 17mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-48026",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48026_305MM-MAXI-GRASPER_151.png"
+ },
+ {
+   "family": "Logic Maxi Grapser (Jaw Length 17mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-49026",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48026_305MM-MAXI-GRASPER_151.png"
+ },
+ {
+   "family": "Logic Maxi Grapser (Jaw Length 17mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Maxi Grapser (Jaw Length 17mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Maxi Grapser (Jaw Length 17mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Maxi Grapser (Jaw Length 17mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Maxi Grapser (Jaw Length 17mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Maxi Grapser (Jaw Length 17mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Maxi Grapser (Jaw Length 17mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ },
+ {
+   "family": "Logic Needle Nose Grasper (Jaw Length 21mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47023",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48023_305MM-NEEDLE-NOSE-GRASPER_135.png"
+ },
+ {
+   "family": "Logic Needle Nose Grasper (Jaw Length 21mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-48023",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48023_305MM-NEEDLE-NOSE-GRASPER_135.png"
+ },
+ {
+   "family": "Logic Needle Nose Grasper (Jaw Length 21mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-49023",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48023_305MM-NEEDLE-NOSE-GRASPER_135.png"
+ },
+ {
+   "family": "Logic Needle Nose Grasper (Jaw Length 21mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Needle Nose Grasper (Jaw Length 21mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Needle Nose Grasper (Jaw Length 21mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Needle Nose Grasper (Jaw Length 21mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Needle Nose Grasper (Jaw Length 21mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Needle Nose Grasper (Jaw Length 21mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Needle Nose Grasper (Jaw Length 21mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ },
+ {
+   "family": "Logic Petelin Forcep (Jaw Length 14mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47029",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48029_305MM-PETELIN-ENDOSCOPIC-ELECTROSURGICAL-ELECTRODE-MONOPOLAR-REUSEABLE-60261.png"
+ },
+ {
+   "family": "Logic Petelin Forcep (Jaw Length 14mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-47029",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48029_305MM-PETELIN-ENDOSCOPIC-ELECTROSURGICAL-ELECTRODE-MONOPOLAR-REUSEABLE-60261.png"
+ },
+ {
+   "family": "Logic Petelin Forcep (Jaw Length 14mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-48029",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48029_305MM-PETELIN-ENDOSCOPIC-ELECTROSURGICAL-ELECTRODE-MONOPOLAR-REUSEABLE-60261.png"
+ },
+ {
+   "family": "Logic Petelin Forcep (Jaw Length 14mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Petelin Forcep (Jaw Length 14mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Petelin Forcep (Jaw Length 14mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Petelin Forcep (Jaw Length 14mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Petelin Forcep (Jaw Length 14mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Petelin Forcep (Jaw Length 14mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Petelin Forcep (Jaw Length 14mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ },
+ {
+   "family": "Logic Right Angle Dissector (Jaw Length 24mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47045",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48045_305MM-RIGHT-ANGLED-DISSECTOR_148.png"
+ },
+ {
+   "family": "Logic Right Angle Dissector (Jaw Length 24mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-48045",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48045_305MM-RIGHT-ANGLED-DISSECTOR_148.png"
+ },
+ {
+   "family": "Logic Right Angle Dissector (Jaw Length 24mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-49045",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48045_305MM-RIGHT-ANGLED-DISSECTOR_148.png"
+ },
+ {
+   "family": "Logic Right Angle Dissector (Jaw Length 24mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Right Angle Dissector (Jaw Length 24mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Right Angle Dissector (Jaw Length 24mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Right Angle Dissector (Jaw Length 24mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Right Angle Dissector (Jaw Length 24mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Right Angle Dissector (Jaw Length 24mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Right Angle Dissector (Jaw Length 24mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ },
+ {
+   "family": "Logic Short Fenestrated Grapser (Jaw Length 15mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47020",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_47020_235MM-SHORT-FENESTRATED-GRASPER_149.png"
+ },
+ {
+   "family": "Logic Single Action Grapser (Jaw Length 25mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47034",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48034_355MM-SINGLE-ACTION-GRASPER_156.png"
+ },
+ {
+   "family": "Logic Single Action Grapser (Jaw Length 25mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-48034",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48034_355MM-SINGLE-ACTION-GRASPER_156.png"
+ },
+ {
+   "family": "Logic Single Action Grapser (Jaw Length 25mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-49034",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_48034_355MM-SINGLE-ACTION-GRASPER_156.png"
+ },
+ {
+   "family": "Logic Single Action Grapser (Jaw Length 25mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Single Action Grapser (Jaw Length 25mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Single Action Grapser (Jaw Length 25mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Single Action Grapser (Jaw Length 25mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Single Action Grapser (Jaw Length 25mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Single Action Grapser (Jaw Length 25mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Single Action Grapser (Jaw Length 25mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ },
+ {
+   "family": "Logic Taper Wave Grasper (Jaw Length 23mm)",
+   "variant": "235",
+   "type": "Instrument",
+   "part_no": "101-47048",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Taper-Wave.png"
+ },
+ {
+   "family": "Logic Taper Wave Grasper (Jaw Length 23mm)",
+   "variant": "305",
+   "type": "Instrument",
+   "part_no": "101-48048",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Taper-Wave.png"
+ },
+ {
+   "family": "Logic Taper Wave Grasper (Jaw Length 23mm)",
+   "variant": "355",
+   "type": "Instrument",
+   "part_no": "101-49048",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/Taper-Wave.png"
+ },
+ {
+   "family": "Logic Taper Wave Grasper (Jaw Length 23mm)",
+   "variant": "235",
+   "type": "Tube and Nut",
+   "part_no": "101-47100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Taper Wave Grasper (Jaw Length 23mm)",
+   "variant": "305",
+   "type": "Tube and Nut",
+   "part_no": "101-48100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Taper Wave Grasper (Jaw Length 23mm)",
+   "variant": "355",
+   "type": "Tube and Nut",
+   "part_no": "101-49100",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/LOGIC-ASSEMBLEY-SHOT-1_no-handle.png"
+ },
+ {
+   "family": "Logic Taper Wave Grasper (Jaw Length 23mm)",
+   "variant": "Horizonatal Handle ",
+   "type": "Handle",
+   "part_no": "101-41000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4100_HORIZONTAL-HANDLE-WITHOUT-RATCHET_029.png"
+ },
+ {
+   "family": "Logic Taper Wave Grasper (Jaw Length 23mm)",
+   "variant": "Horizontal Handle (with ratchet)",
+   "type": "Handle",
+   "part_no": "101-42000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4200_HORIZONTAL-HANDLE-WITH-RATCHET_028.png"
+ },
+ {
+   "family": "Logic Taper Wave Grasper (Jaw Length 23mm)",
+   "variant": "Pistol Grip Handle",
+   "type": "Handle",
+   "part_no": "101-43000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4300_PISTOL-GRIP-HANDLE-WITHOUT-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_030.png"
+ },
+ {
+   "family": "Logic Taper Wave Grasper (Jaw Length 23mm)",
+   "variant": "Pistol Grip Handle ( with ratchet)",
+   "type": "Handle",
+   "part_no": "101-44000",
+   "variant_image": "https://1strichmond.org.uk/wp-content/uploads/2026/02/101_4400_PISTOL-GRIP-HANDLE-WITH-RATCHET-ELECTROCAUTERY-SYSTEM-HANDPIECE_45631_031.png"
+ }
 ]}
