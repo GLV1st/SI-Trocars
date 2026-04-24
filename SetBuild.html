@@ -50,16 +50,13 @@ h1{
   font-size:12px;
 }
 
-/* DROPDOWN STYLE */
 select{
   padding:10px;
   border-radius:8px;
   border:2px solid #1F8A86;
-  background:#fff;
-  color:#0f172a;
 }
 
-/* ACTION BUTTON ROW */
+/* ACTION ROW */
 #actionRow{
   display:flex;
   justify-content:center;
@@ -89,20 +86,6 @@ select{
   background:#1F8A86;
   color:#fff;
   font-weight:bold;
-  cursor:pointer;
-}
-
-/* EXPORT BUTTON */
-.export-btn{
-  display:block;
-  margin:10px auto;
-  width:50%;
-  padding:10px;
-  border:none;
-  border-radius:10px;
-  background:#0f172a;
-  color:#fff;
-  cursor:pointer;
 }
 
 /* GRID */
@@ -113,13 +96,11 @@ select{
   margin-top:15px;
 }
 
-/* CARD */
 .card{
   background:#f1f5f9;
   border-radius:14px;
   padding:15px;
   text-align:center;
-  color:#0f172a;
   border:1px solid #e2e8f0;
 }
 
@@ -144,7 +125,6 @@ th{
 td{
   border:1px solid #e2e8f0;
   padding:10px;
-  text-align:left;
 }
 
 td img{
@@ -164,10 +144,21 @@ td img{
   cursor:pointer;
 }
 
-/* SPACER */
-.spacer{
-  background:#f1f5f9;
-  height:8px;
+/* EXPORT BUTTONS UNDER TABLE */
+.export-row{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-top:20px;
+}
+
+.export-row button{
+  padding:10px 20px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  background:#1F8A86;
+  color:#fff;
 }
 </style>
 </head>
@@ -179,41 +170,19 @@ td img{
 <h1>YelloPort Set Builder</h1>
 
 <div class="top-row">
-  <div>
-    <label>Selected YelloPort Range</label>
-    <select id="rangeSelect"></select>
-  </div>
-
-  <div>
-    <label>Select Cannula Size</label>
-    <select id="familySelect"></select>
-  </div>
-
-  <div>
-    <label>Select Cannula Variant</label>
-    <select id="cannulaSelect"></select>
-  </div>
-
-  <div>
-    <label>Select Trocar 1</label>
-    <select id="trocarSelect1"></select>
-  </div>
-
-  <div>
-    <label>Select Trocar 2</label>
-    <select id="trocarSelect2"></select>
-  </div>
+<select id="rangeSelect"></select>
+<select id="familySelect"></select>
+<select id="cannulaSelect"></select>
+<select id="trocarSelect1"></select>
+<select id="trocarSelect2"></select>
 </div>
 
 <div id="actionRow">
-  <button id="hassonBtn" onclick="toggleHasson()" style="display:none;">
-    Toggle Hasson
-  </button>
-  <button onclick="clearSelection()">Clear Selection</button>
+<button id="hassonBtn" onclick="toggleHasson()" style="display:none;">Toggle Hasson</button>
+<button onclick="clearSelection()">Clear Selection</button>
 </div>
 
 <button class="center-btn" onclick="addConfig()">Add to List</button>
-<button class="export-btn" onclick="exportPDF()">Export to PDF</button>
 
 <div class="grid" id="cards"></div>
 
@@ -230,213 +199,165 @@ td img{
 <tbody></tbody>
 </table>
 
+<!-- EXPORT BUTTONS UNDER TABLE -->
+<div class="export-row">
+  <button onclick="exportPDF()">Export PDF</button>
+  <button onclick="emailList()">Email</button>
+</div>
+
 <script>
 let data = {};
+let selectedCannula=null, selectedTrocar1=null, selectedTrocar2=null, selectedValve=null, selectedHasson=null;
 
-let selectedCannula = null;
-let selectedTrocar1 = null;
-let selectedTrocar2 = null;
-let selectedValve = null;
-let selectedHasson = null;
-
-/* LOAD */
 async function load(){
   const res = await fetch("YP.json");
   data = await res.json();
   initRanges();
 }
 
-/* RANGE */
 function initRanges(){
+  const sel = rangeSelect;
   const ranges = [...new Set(data.cannulas.map(x=>x.range))];
-  const sel = document.getElementById("rangeSelect");
-
   sel.innerHTML = `<option>Select Range</option>`;
-  ranges.forEach(r=> sel.innerHTML += `<option>${r}</option>`);
-
+  ranges.forEach(r=> sel.innerHTML+=`<option>${r}</option>`);
   sel.onchange = ()=> initFamilies(sel.value);
 }
 
-/* FAMILY */
 function initFamilies(range){
-  const families = [...new Set(data.cannulas
-    .filter(x=>x.range===range)
-    .map(x=>x.family))];
+  const sel = familySelect;
+  const families=[...new Set(data.cannulas.filter(x=>x.range===range).map(x=>x.family))];
+  sel.innerHTML=`<option>Select Size</option>`;
+  families.forEach(f=> sel.innerHTML+=`<option>${f}</option>`);
 
-  const sel = document.getElementById("familySelect");
-  sel.innerHTML = `<option>Select Size</option>`;
-  families.forEach(f=> sel.innerHTML += `<option>${f}</option>`);
+  sel.onchange=()=>{
+    initCannulas(range,sel.value);
+    initTrocars(range,sel.value);
 
-  sel.onchange = ()=>{
-    initCannulas(range, sel.value);
-    initTrocars(range, sel.value);
+    selectedValve = data.accessories.find(x=>x.range===range && x.family===sel.value && x.variant==="Valve");
 
-    selectedValve = data.accessories.find(x =>
-      x.range===range && x.family===sel.value && x.variant==="Valve"
-    );
-
-    const hasHasson = data.accessories.find(x =>
-      x.range===range && x.family===sel.value && x.variant==="Hasson"
-    );
-
-    document.getElementById("hassonBtn").style.display = hasHasson ? "block" : "none";
-    if(!hasHasson) selectedHasson = null;
+    const hasH = data.accessories.find(x=>x.range===range && x.family===sel.value && x.variant==="Hasson");
+    hassonBtn.style.display = hasH ? "block":"none";
+    if(!hasH) selectedHasson=null;
 
     renderCards();
   };
 }
 
-/* CANNULA */
 function initCannulas(range,family){
-  const list = data.cannulas.filter(x=>x.range===range && x.family===family);
-  const sel = document.getElementById("cannulaSelect");
-
-  sel.innerHTML = `<option>Select Variant</option>`;
-  list.forEach((c,i)=> sel.innerHTML += `<option value="${i}">${c.variant}</option>`);
-
-  sel.onchange = ()=>{
-    selectedCannula = list[sel.value];
-    renderCards();
-  };
+  const list=data.cannulas.filter(x=>x.range===range && x.family===family);
+  cannulaSelect.innerHTML=`<option>Select Variant</option>`;
+  list.forEach((c,i)=> cannulaSelect.innerHTML+=`<option value="${i}">${c.variant}</option>`);
+  cannulaSelect.onchange=()=>{selectedCannula=list[cannulaSelect.value];renderCards();};
 }
 
-/* TROCAR */
 function initTrocars(range,family){
-  const list = data.trocars.filter(x=>x.range===range && x.family===family);
+  const list=data.trocars.filter(x=>x.range===range && x.family===family);
 
-  const sel1 = document.getElementById("trocarSelect1");
-  const sel2 = document.getElementById("trocarSelect2");
-
-  sel1.innerHTML = `<option>Select</option>`;
-  sel2.innerHTML = `<option>Optional</option>`;
+  trocarSelect1.innerHTML=`<option>Select</option>`;
+  trocarSelect2.innerHTML=`<option>Optional</option>`;
 
   list.forEach((t,i)=>{
-    sel1.innerHTML += `<option value="${i}">${t.variant}</option>`;
-    sel2.innerHTML += `<option value="${i}">${t.variant}</option>`;
+    trocarSelect1.innerHTML+=`<option value="${i}">${t.variant}</option>`;
+    trocarSelect2.innerHTML+=`<option value="${i}">${t.variant}</option>`;
   });
 
-  sel1.onchange = ()=>{
-    selectedTrocar1 = list[sel1.value] || null;
-    renderCards();
-  };
-
-  sel2.onchange = ()=>{
-    selectedTrocar2 = list[sel2.value] || null;
-    renderCards();
-  };
+  trocarSelect1.onchange=()=>{selectedTrocar1=list[trocarSelect1.value];renderCards();};
+  trocarSelect2.onchange=()=>{selectedTrocar2=list[trocarSelect2.value];renderCards();};
 }
 
-/* HASSON */
 function toggleHasson(){
-  const range = rangeSelect.value;
-  const family = familySelect.value;
-
   selectedHasson = selectedHasson ? null :
-    data.accessories.find(x => x.range===range && x.family===family && x.variant==="Hasson");
-
+  data.accessories.find(x=>x.range===rangeSelect.value && x.family===familySelect.value && x.variant==="Hasson");
   renderCards();
 }
 
-/* RENDER */
 function renderCards(){
-  const c = document.getElementById("cards");
-  c.innerHTML="";
-
-  [selectedCannula, selectedTrocar1, selectedTrocar2, selectedValve, selectedHasson]
+  cards.innerHTML="";
+  [selectedCannula,selectedTrocar1,selectedTrocar2,selectedValve,selectedHasson]
   .filter(Boolean)
-  .forEach(i=> c.appendChild(makeCard(i)));
+  .forEach(i=>cards.appendChild(makeCard(i)));
 }
 
-/* CARD */
-function makeCard(item){
-  const div = document.createElement("div");
-  div.className="card";
-  div.innerHTML = `
-    <img src="${item.variant_image || ''}">
-    <div>${item.variant}</div>
-    <div>${item.part_no}</div>
-  `;
-  return div;
+function makeCard(i){
+  const d=document.createElement("div");
+  d.className="card";
+  d.innerHTML=`<img src="${i.variant_image||''}"><div>${i.variant}</div><div>${i.part_no}</div>`;
+  return d;
 }
 
-/* ADD */
 function addConfig(){
-  const tbody = document.querySelector("#table tbody");
+  const tbody=document.querySelector("#table tbody");
 
-  function addRow(type, name, code, image){
-    const row = document.createElement("tr");
-    row.innerHTML = `
+  function addRow(type,name,code,img){
+    const r=document.createElement("tr");
+    r.innerHTML=`
       <td>${type}</td>
-      <td><img src="${image || ''}"></td>
+      <td><img src="${img||''}"></td>
       <td>${name}</td>
       <td>${code}</td>
-      <td><button class="remove-btn" onclick="this.closest('tr').remove()">X</button></td>
-    `;
-    tbody.appendChild(row);
+      <td><button class="remove-btn" onclick="this.closest('tr').remove()">X</button></td>`;
+    tbody.appendChild(r);
   }
 
-  if(selectedCannula)
-    addRow("Cannula", `${selectedCannula.family} - ${selectedCannula.variant}`, selectedCannula.part_no, selectedCannula.variant_image);
-
-  if(selectedTrocar1)
-    addRow("Trocar", selectedTrocar1.variant, selectedTrocar1.part_no, selectedTrocar1.variant_image);
-
-  if(selectedTrocar2)
-    addRow("Trocar", selectedTrocar2.variant, selectedTrocar2.part_no, selectedTrocar2.variant_image);
-
-  if(selectedValve)
-    addRow("Accessory", "Valve", selectedValve.part_no, selectedValve.variant_image);
-
-  if(selectedHasson)
-    addRow("Accessory", "Hasson", selectedHasson.part_no, selectedHasson.variant_image);
+  if(selectedCannula) addRow("Cannula",`${selectedCannula.family} - ${selectedCannula.variant}`,selectedCannula.part_no,selectedCannula.variant_image);
+  if(selectedTrocar1) addRow("Trocar",selectedTrocar1.variant,selectedTrocar1.part_no,selectedTrocar1.variant_image);
+  if(selectedTrocar2) addRow("Trocar",selectedTrocar2.variant,selectedTrocar2.part_no,selectedTrocar2.variant_image);
+  if(selectedValve) addRow("Accessory","Valve",selectedValve.part_no,selectedValve.variant_image);
+  if(selectedHasson) addRow("Accessory","Hasson",selectedHasson.part_no,selectedHasson.variant_image);
 
   clearSelection();
 }
 
-/* CLEAR */
 function clearSelection(){
-  selectedCannula = null;
-  selectedTrocar1 = null;
-  selectedTrocar2 = null;
-  selectedValve = null;
-  selectedHasson = null;
-
-  document.querySelectorAll("select").forEach(s=> s.selectedIndex = 0);
-  document.getElementById("cards").innerHTML="";
+  selectedCannula=selectedTrocar1=selectedTrocar2=selectedValve=selectedHasson=null;
+  document.querySelectorAll("select").forEach(s=>s.selectedIndex=0);
+  cards.innerHTML="";
 }
 
-/* PDF EXPORT */
-async function exportPDF(){
+/* PDF */
+function exportPDF(){
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF();
 
   doc.setTextColor(31,138,134);
-  doc.setFontSize(22);
-  doc.text("YelloPort Set Build", 105, 20, { align: "center" });
+  doc.setFontSize(20);
+  doc.text("YelloPort Set Build",105,20,{align:"center"});
 
-  let rows = [];
+  let rows=[];
   document.querySelectorAll("#table tbody tr").forEach(r=>{
-    const c = r.querySelectorAll("td");
-    if(c.length < 4) return;
-
-    rows.push([
-      c[0].innerText,
-      c[2].innerText,
-      c[3].innerText
-    ]);
+    const c=r.querySelectorAll("td");
+    if(c.length<4) return;
+    rows.push([c[0].innerText,c[2].innerText,c[3].innerText]);
   });
 
   doc.autoTable({
-    startY: 30,
-    head: [["Type","Description","Part Number"]],
-    body: rows,
-    headStyles:{ fillColor:[31,138,134] }
+    startY:30,
+    head:[["Type","Description","Part Number"]],
+    body:rows,
+    headStyles:{fillColor:[31,138,134]}
   });
 
   doc.save("YelloPort_Set.pdf");
 }
 
-/* INIT */
+/* EMAIL */
+function emailList(){
+  let html = `<h2 style="color:#1F8A86;">YelloPort Set Build</h2>
+  <table border="1" cellpadding="6" style="border-collapse:collapse;">
+  <tr style="background:#1F8A86;color:#fff;">
+  <th>Type</th><th>Description</th><th>Code</th></tr>`;
+
+  document.querySelectorAll("#table tbody tr").forEach(r=>{
+    const c=r.querySelectorAll("td");
+    if(c.length<4) return;
+    html+=`<tr><td>${c[0].innerText}</td><td>${c[2].innerText}</td><td>${c[3].innerText}</td></tr>`;
+  });
+
+  html+=`</table>`;
+
+  window.location.href=`mailto:?subject=YelloPort Set Build&body=${encodeURIComponent(html)}`;
+}
+
 load();
 </script>
 
