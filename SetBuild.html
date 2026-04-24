@@ -144,7 +144,7 @@ function log(msg){
 async function load(){
   log("Loading JSON...");
   try{
-    const res = await fetch("data.json");
+    const res = await fetch("YP.json");
     data = await res.json();
     log("Loaded OK");
     initRanges();
