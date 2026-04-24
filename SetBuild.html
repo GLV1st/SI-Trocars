@@ -45,6 +45,20 @@ h1{
   gap:10px;
 }
 
+/* NEW: wrapper + labels */
+.top-row div{
+  display:flex;
+  flex-direction:column;
+}
+
+.top-row label{
+  font-size:14px;
+  font-weight:bold;
+  margin-bottom:5px;
+  color:#1F8A86;
+}
+
+/* SELECT */
 select{
   padding:10px;
   border-radius:8px;
@@ -108,7 +122,7 @@ select{
   object-fit:contain;
 }
 
-/* TABLE WRAPPER (FIX) */
+/* TABLE WRAPPER */
 .table-wrapper{
   overflow-x:auto;
 }
@@ -191,7 +205,6 @@ td img{
     grid-template-columns:1fr 1fr;
   }
 
-  /* STICKY ADD BUTTON */
   .center-btn{
     position:sticky;
     bottom:10px;
@@ -208,11 +221,32 @@ td img{
 <h1>YelloPort Set Builder</h1>
 
 <div class="top-row">
-<select id="rangeSelect"></select>
-<select id="familySelect"></select>
-<select id="cannulaSelect"></select>
-<select id="trocarSelect1"></select>
-<select id="trocarSelect2"></select>
+
+  <div>
+    <label>Range</label>
+    <select id="rangeSelect"></select>
+  </div>
+
+  <div>
+    <label>Size</label>
+    <select id="familySelect"></select>
+  </div>
+
+  <div>
+    <label>Cannula</label>
+    <select id="cannulaSelect"></select>
+  </div>
+
+  <div>
+    <label>Trocar 1</label>
+    <select id="trocarSelect1"></select>
+  </div>
+
+  <div>
+    <label>Trocar 2</label>
+    <select id="trocarSelect2"></select>
+  </div>
+
 </div>
 
 <div id="actionRow">
@@ -267,7 +301,7 @@ function initRanges(){
 function initFamilies(range){
   const families=[...new Set(data.cannulas.filter(x=>x.range===range).map(x=>x.family))];
   familySelect.innerHTML=`<option>Select Size</option>`;
-  families.forEach(f=>familySelect.innerHTML+=`<option>${f}</option>`);
+  families.forEach(f=>familySelect.innerHTML+=`<option>${f}</option>`;
 
   familySelect.onchange=()=>{
     initCannulas(range,familySelect.value);
