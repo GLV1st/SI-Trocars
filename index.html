@@ -15,14 +15,12 @@ body {
   color:#0f172a;
 }
 
-/* HEADER */
 h1{
   text-align:center;
   color:#1F8A86;
   margin-bottom:20px;
 }
 
-/* RANGE CARDS */
 #rangeSelector{
   display:flex;
   justify-content:center;
@@ -46,12 +44,10 @@ h1{
   transform:scale(1.05);
 }
 
-/* CONFIG CARD */
 #configCard{
   border-style:dashed;
 }
 
-/* BACK BUTTON */
 #backBtn{
   margin-bottom:15px;
   padding:10px 16px;
@@ -62,7 +58,6 @@ h1{
   cursor:pointer;
 }
 
-/* DROPDOWN */
 select{
   padding:10px;
   border-radius:8px;
@@ -72,19 +67,16 @@ select{
   margin-top:10px;
 }
 
-/* FAMILY IMAGE */
 #familyImage{
   display:block;
   margin:20px auto;
   max-width:320px;
 }
 
-/* TABLE WRAPPER */
 .table-wrapper{
   overflow-x:auto;
 }
 
-/* TABLE */
 table{
   width:100%;
   border-collapse:collapse;
@@ -128,7 +120,7 @@ td img{
 
 <body>
 
-<h1>Select Product Range</h1>
+<h1>Select YelloPort Range</h1>
 
 <div id="rangeSelector"></div>
 
@@ -142,7 +134,10 @@ td img{
 
 <img id="familyImage">
 
-<h2 id="tableTitle1">Cannulas</h2>
+<!-- YELLOPORT TABLES -->
+<div id="yelloportTables">
+
+<h2>Cannulas</h2>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -156,7 +151,7 @@ td img{
 </table>
 </div>
 
-<h2 id="tableTitle2">Trocars</h2>
+<h2>Trocars</h2>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -172,17 +167,42 @@ td img{
 
 </div>
 
+<!-- LOGIC TABLE -->
+<div id="logicTableWrapper" style="display:none;">
+
+<h2>Logic Instruments</h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Image</th>
+<th>Variant</th>
+<th>Type</th>
+<th>Part Number</th>
+</tr>
+</thead>
+<tbody id="logicTable"></tbody>
+</table>
+</div>
+
+</div>
+
+</div>
+
 <script>
 
 let DATA = {};
 let activeRange = null;
-let activeMode = "yelloport"; // 🔥 NEW
 
 /* LOAD JSON */
 async function loadData(){
-  const res = await fetch("YP.json");
-  DATA = await res.json();
-  initUI();
+  try{
+    const res = await fetch("YP.json");
+    DATA = await res.json();
+    initUI();
+  }catch(e){
+    console.error("JSON LOAD ERROR", e);
+  }
 }
 
 /* INIT RANGE CARDS */
@@ -191,7 +211,7 @@ function initUI(){
   const container = document.getElementById("rangeSelector");
   container.innerHTML = "";
 
-  // CONFIG CARD
+  // CONFIG
   const config = document.createElement("div");
   config.className = "rangeCard";
   config.id = "configCard";
@@ -199,15 +219,14 @@ function initUI(){
   config.onclick = ()=> window.location.href = "SetBuild.html";
   container.appendChild(config);
 
-  // 🔥 LOGIC CARD
-  const logic = document.createElement("div");
-  logic.className = "rangeCard";
-  logic.innerHTML = "<h3>Logic Instruments</h3>";
-  logic.onclick = ()=>{
-    activeMode = "logic";
-    openLogic();
-  };
-  container.appendChild(logic);
+  // LOGIC BUTTON ✅
+  if(DATA.logic){
+    const logic = document.createElement("div");
+    logic.className = "rangeCard";
+    logic.innerHTML = "<h3>Logic Instruments</h3>";
+    logic.onclick = ()=> openLogic();
+    container.appendChild(logic);
+  }
 
   // YELLOPORT RANGES
   const ranges = [...new Set(DATA.cannulas.map(x=>x.range))];
@@ -216,10 +235,7 @@ function initUI(){
     const div = document.createElement("div");
     div.className="rangeCard";
     div.innerHTML=`<h3>${r}</h3>`;
-    div.onclick=()=>{
-      activeMode = "yelloport";
-      openRange(r);
-    };
+    div.onclick=()=>openRange(r);
     container.appendChild(div);
   });
 }
@@ -231,20 +247,20 @@ function openRange(range){
   document.getElementById("rangeSelector").style.display="none";
   document.getElementById("catalogue").style.display="block";
 
-  document.getElementById("tableTitle1").innerText = "Cannulas";
-  document.getElementById("tableTitle2").innerText = "Trocars";
+  document.getElementById("yelloportTables").style.display="block";
+  document.getElementById("logicTableWrapper").style.display="none";
 
   buildDropdown();
 }
 
-/* OPEN LOGIC */
+/* OPEN LOGIC ✅ */
 function openLogic(){
 
   document.getElementById("rangeSelector").style.display="none";
   document.getElementById("catalogue").style.display="block";
 
-  document.getElementById("tableTitle1").innerText = "Instruments";
-  document.getElementById("tableTitle2").innerText = "Components";
+  document.getElementById("yelloportTables").style.display="none";
+  document.getElementById("logicTableWrapper").style.display="block";
 
   buildLogicDropdown();
 }
@@ -277,36 +293,16 @@ function buildDropdown(){
   renderFamily(families[0]);
 }
 
-/* LOGIC DROPDOWN */
-function buildLogicDropdown(){
-
-  const families = [...new Set(
-    DATA.logic.families.map(x=>x.family)
-  )];
-
-  const dropdown = document.getElementById("familyDropdown");
-  dropdown.innerHTML="";
-
-  families.forEach(f=>{
-    const opt = document.createElement("option");
-    opt.value=f;
-    opt.textContent=f;
-    dropdown.appendChild(opt);
-  });
-
-  renderLogicFamily(families[0]);
-}
-
-/* CHANGE */
+/* CHANGE FAMILY */
 document.getElementById("familyDropdown").onchange = (e)=>{
-  if(activeMode==="logic"){
-    renderLogicFamily(e.target.value);
-  } else {
+  if(document.getElementById("logicTableWrapper").style.display==="block"){
+    renderLogic(e.target.value);
+  }else{
     renderFamily(e.target.value);
   }
 };
 
-/* YELLOPORT RENDER */
+/* RENDER YELLOPORT */
 function renderFamily(family){
 
   const cannulas = DATA.cannulas.filter(x=>x.range===activeRange && x.family===family);
@@ -319,20 +315,7 @@ function renderFamily(family){
   renderTrocars(trocars);
 }
 
-/* LOGIC RENDER */
-function renderLogicFamily(family){
-
-  const instruments = DATA.logic.families.filter(x=>x.family===family);
-  const variants = DATA.logic.variants.filter(x=>x.family===family);
-
-  document.getElementById("familyImage").src =
-    instruments[0]?.family_image || "";
-
-  renderCannulas(instruments); // reuse table
-  renderTrocars(variants);
-}
-
-/* TABLE RENDER */
+/* RENDER CANNULAS */
 function renderCannulas(list){
   const table = document.getElementById("cannulaTable");
   table.innerHTML="";
@@ -341,13 +324,14 @@ function renderCannulas(list){
     table.innerHTML+=`
       <tr>
         <td><img src="${i.variant_image || ''}"></td>
-        <td>${i.family || i.variant}</td>
+        <td>${i.family} - ${i.variant}</td>
         <td>${i.part_no}</td>
       </tr>
     `;
   });
 }
 
+/* RENDER TROCAR */
 function renderTrocars(list){
   const table = document.getElementById("trocarTable");
   table.innerHTML="";
@@ -356,8 +340,53 @@ function renderTrocars(list){
     table.innerHTML+=`
       <tr>
         <td><img src="${i.variant_image || ''}"></td>
-        <td>${i.variant || i.type}</td>
+        <td>${i.variant}</td>
         <td>${i.part_no}</td>
+      </tr>
+    `;
+  });
+}
+
+/* ================= LOGIC FIX ================= */
+
+/* BUILD LOGIC DROPDOWN */
+function buildLogicDropdown(){
+
+  const families = [...new Set(
+    DATA.logic.map(x => (x.family || "").trim())
+  )];
+
+  const dropdown = document.getElementById("familyDropdown");
+  dropdown.innerHTML = "";
+
+  families.forEach(f=>{
+    const opt = document.createElement("option");
+    opt.value = f;
+    opt.textContent = f;
+    dropdown.appendChild(opt);
+  });
+
+  renderLogic(families[0]);
+}
+
+/* RENDER LOGIC */
+function renderLogic(family){
+
+  const items = DATA.logic.filter(x => x.family === family);
+
+  document.getElementById("familyImage").src =
+    items.find(i => i.variant_image)?.variant_image || "";
+
+  const table = document.getElementById("logicTable");
+  table.innerHTML = "";
+
+  items.forEach(i=>{
+    table.innerHTML += `
+      <tr>
+        <td><img src="${i.variant_image || ''}"></td>
+        <td>${i.variant || ''}</td>
+        <td>${i.type || ''}</td>
+        <td>${i.part_no || ''}</td>
       </tr>
     `;
   });
