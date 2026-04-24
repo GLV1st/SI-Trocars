@@ -289,27 +289,63 @@ function resetConfigurator(){
 
 /* ADD CONFIG */
 function addConfig(){
-  const row = document.createElement("tr");
 
-  const trocarCodes = selectedTrocars.map(t=>t.part_no).join(", ");
+  const tbody = document.querySelector("#table tbody");
 
-  const codes = [
-    selectedCannula?.part_no,
-    ...selectedTrocars.map(t=>t.part_no),
-    selectedValve?.part_no,
-    selectedHasson?.part_no
-  ].filter(Boolean).join(" / ");
+  // CANNULA
+  if(selectedCannula){
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${selectedCannula.family} - ${selectedCannula.variant}</td>
+      <td></td>
+      <td></td>
+      <td>${selectedCannula.part_no}</td>
+    `;
+    tbody.appendChild(row);
+  }
 
-  row.innerHTML = `
-    <td>${selectedCannula?.variant || ""}</td>
-    <td>${trocarCodes}</td>
-    <td>${selectedHasson ? "Hasson" : ""}</td>
-    <td>${codes}</td>
-  `;
+  // TROCAR(S)
+  selectedTrocars.forEach(t=>{
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td></td>
+      <td>${t.variant}</td>
+      <td></td>
+      <td>${t.part_no}</td>
+    `;
+    tbody.appendChild(row);
+  });
 
-  document.querySelector("#table tbody").appendChild(row);
+  // VALVE
+  if(selectedValve){
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td></td>
+      <td></td>
+      <td>${selectedValve.variant}</td>
+      <td>${selectedValve.part_no}</td>
+    `;
+    tbody.appendChild(row);
+  }
 
-  // ✅ RESET AFTER ADD
+  // HASSON
+  if(selectedHasson){
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td></td>
+      <td></td>
+      <td>Hasson</td>
+      <td>${selectedHasson.part_no}</td>
+    `;
+    tbody.appendChild(row);
+  }
+
+  // OPTIONAL SPACER ROW (visual gap)
+  const spacer = document.createElement("tr");
+  spacer.innerHTML = `<td colspan="4"></td>`;
+  tbody.appendChild(spacer);
+
+  // RESET
   resetConfigurator();
 }
 
